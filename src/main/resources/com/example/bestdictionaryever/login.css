@@ -1,5 +1,5 @@
 .login-button {
-    -fx-background-color: #32fc49;
+    -fx-background-color: back;
     -fx-border-radius: 5;
     -fx-background-radius: 5;
     -fx-cursor: HAND;
@@ -8,7 +8,7 @@
 }
 
 .login-button:hover {
-    -fx-background-color: #00fd22;
+    -fx-background-color: #fdb500;
     -fx-border-color: black;
     -fx-border-radius: 5;
     -fx-background-radius: 5;
@@ -17,7 +17,7 @@
 
 
 .signUp-button {
-    -fx-background-color: #3580c5;
+    -fx-background-color: #c53535;
     -fx-border-radius: 5;
     -fx-background-radius: 5;
     -fx-cursor: HAND;

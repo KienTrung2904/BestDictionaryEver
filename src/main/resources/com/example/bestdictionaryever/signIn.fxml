@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane
+        fx:id="anchorPane"
+        prefHeight="1024" prefWidth="640"
+        stylesheets="@signIn.css"
+        xmlns="http://javafx.com/javafx/21"
+        xmlns:fx="http://javafx.com/fxml/1">
+
+    <Rectangle
+            height="420"
+            layoutX="201" layoutY="132"
+            style="--body-background-color: black"
+            styleClass="fixed-box" width="643" />
+
+    <ImageView
+            fitHeight="173" fitWidth="800"
+            layoutX="165" layoutY="0"
+            preserveRatio="true">
+        <image>
+            <Image url="@Login/Image/image_login.png" />
+        </image>
+    </ImageView>
+
+    <Button fx:id="Sign_in" alignment="CENTER"
+            layoutX="346.0" layoutY="222.0"
+            mnemonicParsing="false"
+            prefHeight="33.0" prefWidth="104.0"
+            style="-fx-background-color: transparent;
+            -fx-text-fill: rgba(255, 77, 86, 1);
+            -fx-font-size: 20px;
+            -fx-font-family: 'Montserrat SemiBold'"
+            styleClass="Login"
+            text="Sign in" textAlignment="CENTER"
+            wrapText="true" />
+
+    <Button fx:id="Sign_up" alignment="CENTER"
+            layoutX="569.0" layoutY="222.0"
+            mnemonicParsing="false"
+            prefHeight="39.0" prefWidth="110.0"
+            style="-fx-background-color: transparent;
+            -fx-text-fill: rgba(0, 0, 0, 1);
+            -fx-font-size: 20px;
+            -fx-font-family: 'Montserrat SemiBold'"
+            styleClass="Login"
+            text="Sign up" textAlignment="CENTER"
+            wrapText="true" />
+
+    <TextField fx:id="username"
+               layoutX="345.78" layoutY="301"
+               prefHeight="45.78" prefWidth="334.22"
+               promptText="Username"
+               styleClass="Field" />
+
+    <PasswordField fx:id="password"
+                   layoutX="345.78" layoutY="385"
+                   prefHeight="45.78" prefWidth="334.22"
+                   promptText="Password"
+                   styleClass="Field" />
+
+    <Button fx:id="SignInButton"
+            alignment="CENTER"
+            layoutX="446" layoutY="472"
+            prefHeight="44" prefWidth="133"
+            styleClass="LoginButton" text="Sign in"
+            textAlignment="CENTER" wrapText="true" />
+</AnchorPane>

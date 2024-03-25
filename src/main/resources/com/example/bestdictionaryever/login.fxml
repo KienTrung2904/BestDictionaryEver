@@ -51,7 +51,7 @@
                         <Font name="Segoe UI" size="16.0" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink layoutX="250.0" layoutY="134.0" text="Sign up" textFill="#ff4d56">
+                  <Hyperlink layoutX="250.0" layoutY="134.0" text="Sign up" textFill="violet">
                      <font>
                         <Font name="Segoe UI" size="16.0" />
                      </font>
