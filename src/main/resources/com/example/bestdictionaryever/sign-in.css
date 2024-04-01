@@ -1,0 +1,67 @@
+.window {
+    -fx-background-width: 1024;
+    -fx-height: 640;
+    -fx-background-color: linear-gradient(rgba(245, 192, 184, 0.59), rgba(243, 125, 108, 0.9));
+}
+
+.transparent {
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.innerBackground {
+    -fx-width: 643;
+    -fx-height: 420;
+    -fx-background-color: rgba(255,255,255,0.8);
+    -fx-border-radius: 22;
+    -fx-background-radius: 22;
+}
+
+.signInButton {
+    -fx-text-fill: rgba(255, 77, 86, 1);
+    -fx-font-family: "Semi Bold";
+    -fx-font-size: 20;
+    -fx-font-weight: 800;
+}
+
+.enterField {
+    -fx-width: 334.22;
+    -fx-height: 49.78;
+    -fx-background-color: rgba(255,255,255,1);
+    -fx-border-radius: 10.67;
+    -fx-background-radius: 10.67;
+    -fx-border-width: 3;
+    -fx-border-color: rgb(231, 231, 231);
+}
+
+.button {
+    -fx-text-fill: rgba(255, 255, 255, 1);
+    -fx-background-color: linear-gradient(to right, rgba(240, 13, 54, 0.88), rgba(217, 120, 31, 0.86));
+    -fx-width: 133;
+    -fx-height: 44;
+    -fx-border-radius: 10.67;
+    -fx-background-radius: 10.67;
+}
+
+.textField {
+    -fx-text-fill: rgba(154, 154, 154, 1);
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 11.60;
+    -fx-font-weight: 580;
+}
+
+.signInlabel {
+    -fx-text-fill: rgba(255, 77, 86, 1);
+    -fx-font-family: "Semi Bold";
+    -fx-font-size: 20;
+    -fx-font-weight: 800;
+}
+.hyperlink {
+    -fx-text-fill: rgba(0, 0, 0, 1);
+}
+
+.labelMessage {
+    -fx-text-fill: rgba(255, 150, 140, 1);
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 15;
+    -fx-alignment: center;
+}

@@ -2,21 +2,19 @@ package com.example.bestdictionaryever;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.control.PasswordField;
+
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.net.URL;
+
 import java.sql.Connection;
 import java.sql.Statement;
 
 
 public class RegisterController {
-    @FXML
-    private Button closeButton;
+
     @FXML
     private Label registerMessageLabel;
     @FXML
@@ -24,46 +22,90 @@ public class RegisterController {
     @FXML
     private PasswordField confirmPasswordField;
     @FXML
-    private Label confirmPasswordMessageLabel;
-    @FXML
-    private TextField firstnameTextField;
-    @FXML
-    private TextField lastnameTextField;
+    private TextField fullnameTextField;
     @FXML
     private TextField usernameTextField;
 
+    @FXML
+    private Hyperlink signIn;
+
+    public void changeSceneToSignIn() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("sign-in.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dashboard = new Stage();
+            //registerStage.setTitle("Dictionary");
+            dashboard.setScene(scene);
+            dashboard.show();
+
+        } catch(Exception e) {
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
+    public void signInChangeScene(ActionEvent Event) {
+        changeSceneToSignIn();
+        Stage stage = (Stage) setPasswordField.getScene().getWindow();
+        stage.close();
+    }
+
+    public void changeSceneToDashboard() {
+        openDashboard();
+        Stage stage = (Stage) setPasswordField.getScene().getWindow();
+        stage.close();
+    }
+
+
     public void registerButtonOnAction(ActionEvent event) {
-        if (setPasswordField.getText().equals(confirmPasswordField.getText())) {
-            registerUser();
+
+        if (fullnameTextField.getText().isEmpty()
+                || usernameTextField.getText().isEmpty()
+                || setPasswordField.getText().isEmpty()
+                || confirmPasswordField.getText().isEmpty()) {
+            registerMessageLabel.setText("Please enter all field!");
+        } else if (!setPasswordField.getText().equals(confirmPasswordField.getText())) {
+            registerMessageLabel.setText("Password does not match!");
         } else {
-            confirmPasswordMessageLabel.setText("Password does not match!");
+            registerUser();
         }
     }
 
-    public void closeButtonOnAction(ActionEvent event) {
-        Stage stage = (Stage) closeButton.getScene().getWindow();
-        stage.close();
-    }
 
     public void registerUser() {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
 
-        String firstname = firstnameTextField.getText();
-        String lastname = lastnameTextField.getText();
+        String fullname = fullnameTextField.getText();
         String username = usernameTextField.getText();
         String password = setPasswordField.getText();
 
-        String insertField = "insert into user_account(firstname, lastname, username, password) values('";
-        String insertValues = firstname + "','" + lastname + "','" + username + "','" + password + "');";
+        String insertField = "insert into user_account(fullname, username, password) values('";
+        String insertValues = fullname + "','" + username + "','" + password + "');";
         String insertRegister = insertField + insertValues;
         try {
 
             Statement statement = connectDB.createStatement();
             statement.executeUpdate(insertRegister);
-            confirmPasswordMessageLabel.setText("User registered successfully!");
-
+            //confirmPasswordMessageLabel.setText("User registered successfully!");
+            changeSceneToDashboard();
         } catch (Exception e) {
+            System.out.println("Can not register user");
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
+
+    public void openDashboard() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("dashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dashboard = new Stage();
+            //registerStage.setTitle("Dictionary");
+            dashboard.setScene(scene);
+            dashboard.show();
+
+        } catch(Exception e) {
+            System.out.println("Can not open dashboard");
             e.printStackTrace();
             e.getCause();
         }

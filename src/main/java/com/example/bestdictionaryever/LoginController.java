@@ -1,27 +1,16 @@
 package com.example.bestdictionaryever;
-import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
-import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
 
-import java.io.File;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ResourceBundle;
-import java.net.URL;
 
 public class LoginController {
-
-    @FXML
-    private Button cancelButton;
     @FXML
     private Label loginMessageLabel;
     @FXML
@@ -29,11 +18,24 @@ public class LoginController {
     @FXML
     private PasswordField enterPasswordField;
 
+
+    public void changeSceneToDashboard() {
+        openDashboard();
+        Stage stage = (Stage) usernameTextField.getScene().getWindow();
+        stage.close();
+    }
+
+    public void signUpChangeScene(ActionEvent event) {
+        createAccountForm();
+        Stage stage = (Stage) usernameTextField.getScene().getWindow();
+        stage.close();
+    }
+
     public void loginButtonOnAction(ActionEvent event) {
-        if (!usernameTextField.getText().isBlank() && !enterPasswordField.getText().isBlank()) {
+        if (!usernameTextField.getText().isBlank() && ! enterPasswordField.getText().isBlank()) {
             validateLogin();
         } else {
-            loginMessageLabel.setText("Please enter username and password");
+            loginMessageLabel.setText("Please enter username and password!");
         }
     }
 
@@ -50,35 +52,45 @@ public class LoginController {
 
             while (queryResult.next()) {
                 if (queryResult.getInt(1) == 1) {
-                   // loginMessageLabel.setText("Successfully login!");
-                    Stage stage = (Stage) cancelButton.getScene().getWindow();
-                    stage.close();
-                    createAccountForm();
+                    changeSceneToDashboard();
                 } else {
-                   loginMessageLabel.setText("Invalid login. Please try again!");
+                    loginMessageLabel.setText("Invalid login. Please try again!");
                 }
             }
 
         } catch (Exception e) {
+            System.out.println("Can not connect database");
             e.printStackTrace();
             e.getCause();
         }
     }
 
-    public void setCancelButtonOnAction(ActionEvent event) {
-        Stage stage = (Stage) cancelButton.getScene().getWindow();
-        stage.close();
-    }
     public void createAccountForm() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("register.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 768, 480);
-            Stage registerStage = new Stage();
-            registerStage.setTitle("Dictionary");
-            registerStage.setScene(scene);
-            registerStage.show();
+            FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("sign-up.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dashboard = new Stage();
+            //registerStage.setTitle("Dictionary");
+            dashboard.setScene(scene);
+            dashboard.show();
 
         } catch(Exception e) {
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
+
+    public void openDashboard() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(com.example.bestdictionaryever.Application.class.getResource("dashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage dashboard = new Stage();
+            //registerStage.setTitle("Dictionary");
+            dashboard.setScene(scene);
+            dashboard.show();
+
+        } catch(Exception e) {
+            System.out.println("Can not open dashboard");
             e.printStackTrace();
             e.getCause();
         }

@@ -1,0 +1,6 @@
+.window {
+    -fx-background-width: 1024;
+    -fx-height: 640;
+    -fx-background-color: linear-gradient(rgba(245, 184, 213, 0.59), rgba(243, 125, 108, 0.9));
+}
+
