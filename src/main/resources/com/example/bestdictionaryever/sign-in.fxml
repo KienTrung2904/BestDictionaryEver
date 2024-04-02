@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.79" prefHeight="640.0" prefWidth="1024.0" styleClass="window" stylesheets="@sign-in.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bestdictionaryever.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.79" prefHeight="640.0" prefWidth="1024.0" styleClass="window" stylesheets="@sign-in.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bestdictionaryever.LoginController">
    <children>
       <AnchorPane focusTraversable="true" layoutX="201.0" layoutY="129.0" prefHeight="420.0" prefWidth="643.0" styleClass="innerBackground" stylesheets="@sign-in.css">
          <children>
@@ -50,7 +50,7 @@
             <Label fx:id="loginMessageLabel" layoutY="315.0" prefHeight="18.0" prefWidth="643.0" styleClass="labelMessage" stylesheets="@sign-in.css" />
          </children>
       </AnchorPane>
-      <ImageView fitHeight="211.0" fitWidth="784.0" layoutX="137.0" layoutY="-21.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="211.0" fitWidth="784.0" layoutX="131.0" layoutY="-33.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Login/Image/sign_in_cat.png" />
          </image>
