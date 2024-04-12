@@ -172,15 +172,30 @@
          <Image url = "@Login/Image/user-circle.png" />
       </ImageView>
 
-      <ImageView fitWidth="21.33" fitHeight="21.33"
-                 layoutX="283.84" layoutY="245.6">
-         <Image url = "@Login/Image/left.png" />
-      </ImageView>
+      <Button
 
-      <ImageView fitWidth="21.33" fitHeight="21.33"
-                 layoutX="625.18" layoutY="245.6">
-         <Image url = "@Login/Image/right.png" />
-      </ImageView>
+              layoutX="283.84" layoutY="245.6"
+              style="-fx-background-color: transparent;"
+               styleClass="leftButton">
+         <graphic>
+            <ImageView fitWidth="21.33" fitHeight="21.33">
+               <Image url = "@Login/Image/left.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+
+      <Button
+
+              layoutX="625.18" layoutY="245.6"
+              style="-fx-background-color: transparent;"
+              styleClass="rightButton">
+               <graphic>
+                  <ImageView fitWidth="21.33" fitHeight="21.33">
+                     <Image url = "@Login/Image/right.png" />
+                  </ImageView>
+               </graphic>
+      </Button>
+
 
          </children>
       </AnchorPane>
