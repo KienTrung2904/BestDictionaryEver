@@ -1,12 +1,11 @@
 package com.example.bestdictionaryever;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.*;
 
 public class DatabaseConnection {
-    public Connection databaseLink;
+    public static Connection databaseLink;
 
-    public Connection getConnection() {
+    public static Connection getConnection() {
         String databaseName = "trungdic";
         String databaseUser = "root";
         String databasePassword = "";
@@ -21,6 +20,26 @@ public class DatabaseConnection {
             e.printStackTrace();
         }
         return databaseLink;
+    }
+
+    protected static void close(ResultSet rs) {
+        try {
+            if (rs != null) {
+                rs.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    protected static void close(PreparedStatement ps) {
+        try {
+            if (ps != null) {
+                ps.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 }

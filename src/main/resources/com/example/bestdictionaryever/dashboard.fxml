@@ -8,7 +8,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import java.lang.String?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0"
+            style="-fx-background-color: rgba(240, 240, 240, 1);"
+            stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="640.0" prefWidth="213.0" styleClass="leftPanel" stylesheets="@dashboard.css">
          <children>
@@ -35,47 +42,59 @@
                   </AnchorPane>
                </graphic>
             </Button>
+
             <Button layoutX="46.2" layoutY="242.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="143.85" styleClass="leftPanelButton" stylesheets="@dashboard.css" text="      Game" />
             <Button layoutX="46.2" layoutY="283.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="143.85" styleClass="leftPanelButton" stylesheets="@dashboard.css" text="          Settings" />
+
             <ImageView fitHeight="18.0" fitWidth="19.0" layoutX="71.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Login/Image/setting1.png" />
                </image>
             </ImageView>
+
             <ImageView fitHeight="6.3" fitWidth="6.3" layoutX="77.3" layoutY="300.3" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Login/Image/setting2.png" />
                </image>
             </ImageView>
+
             <ImageView fitHeight="18.0" fitWidth="19.0" layoutX="70.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Login/Image/puzzle.png" />
                </image>
             </ImageView>
+
             <Button layoutX="37.0" layoutY="561.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="143.85" styleClass="leftPanelButton" stylesheets="@dashboard.css" text="       Log out" />
+
             <ImageView fitHeight="18.0" fitWidth="19.0" layoutX="71.0" layoutY="574.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Login/Image/logout.png" />
                </image>
             </ImageView>
+
          </children>
       </AnchorPane>
+
+
       <Button layoutX="46.2" layoutY="160.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="143.85" styleClass="leftPanelButton" stylesheets="@dashboard.css" text="My library">
          <opaqueInsets>
             <Insets left="30.0" />
          </opaqueInsets>
+
          <graphic>
             <AnchorPane prefHeight="18.0" prefWidth="39.0">
                <children>
                   <ImageView fitHeight="18.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@Login/Image/star%20icon.png" />
+                        <Image url="@Login/Image/star.png" />
                      </image>
                   </ImageView>
                </children>
             </AnchorPane>
          </graphic>
       </Button>
+
+
       <AnchorPane layoutX="251.13" layoutY="104.06" prefHeight="492.83" prefWidth="428.8" styleClass="centerBoard" stylesheets="@dashboard.css">
          <children>
             <AnchorPane layoutX="26.71" layoutY="285.89" prefHeight="180.62" prefWidth="362.67" styleClass="animalBoard" stylesheets="@dashboard.css">
@@ -86,6 +105,7 @@
                   <Button layoutX="132.16" layoutY="135.36" mnemonicParsing="false" prefHeight="27.0" prefWidth="99.0" styleClass="practiceButton" stylesheets="@dashboard.css" text="Practice" />
                </children>
             </AnchorPane>
+
             <ImageView fitHeight="215.0" fitWidth="308.0" layoutX="58.87" layoutY="42.94" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Login/Image/rabbit.png" />
@@ -93,18 +113,89 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="715.0" layoutY="104.0" prefHeight="492.89" prefWidth="294.18" styleClass="leaderBoard" stylesheets="@dashboard.css">
+
+
+      <ImageView fitWidth="294.18" fitHeight="492.89"
+                  layoutX="715" layoutY="104">
+         <Image url = "@Login/Image/leaderBoard.png" />
+      </ImageView>
+
+<!--      <TextField fx:id = "searchField"-->
+<!--                 prefWidth="341.33" prefHeight="35.56"-->
+<!--                 layoutX="522.78" layoutY="30.13"-->
+<!--                  promptText = "Search Something"-->
+<!--                 styleClass="searchField"-->
+<!--      />-->
+
+      <HBox layoutX="522.78" layoutY="19"
+            maxHeight="-Infinity" maxWidth="-Infinity"
+            prefHeight="35.56" prefWidth="341.33"
+            styleClass="searchField" stylesheets="@dashboard.css">
          <children>
-            <Label contentDisplay="CENTER" layoutX="20.155" layoutY="60.0" prefHeight="33.42" prefWidth="253.87" styleClass="ranklabel" stylesheets="@dashboard.css" />
-            <Label contentDisplay="CENTER" layoutX="20.155" layoutY="102.66" prefHeight="33.42" prefWidth="253.87" styleClass="ranklabel" stylesheets="@dashboard.css" />
-            <Label contentDisplay="CENTER" layoutX="20.155" layoutY="145.32" prefHeight="33.42" prefWidth="253.87" styleClass="ranklabel" stylesheets="@dashboard.css" />
-            <Label contentDisplay="CENTER" layoutX="20.155" layoutY="187.98" prefHeight="33.42" prefWidth="253.87" styleClass="ranklabel" stylesheets="@dashboard.css" />
-            <Label contentDisplay="CENTER" layoutX="20.155" layoutY="230.64" prefHeight="33.42" prefWidth="253.87" styleClass="ranklabel" stylesheets="@dashboard.css" />
-            <Label contentDisplay="CENTER" layoutX="20.155" layoutY="273.3" prefHeight="33.42" prefWidth="253.87" styleClass="ranklabel" stylesheets="@dashboard.css" />
-            <Label contentDisplay="CENTER" layoutX="20.155" layoutY="315.96" prefHeight="33.42" prefWidth="253.87" styleClass="ranklabel" stylesheets="@dashboard.css" />
-            <Label contentDisplay="CENTER" layoutX="20.155" layoutY="358.62" prefHeight="33.42" prefWidth="253.87" styleClass="ranklabel" stylesheets="@dashboard.css" />
-            <Label contentDisplay="CENTER" layoutX="20.155" layoutY="401.28" prefHeight="33.42" prefWidth="253.87" styleClass="ranklabel" stylesheets="@dashboard.css" />
-            <Label contentDisplay="CENTER" layoutX="20.155" layoutY="443.94" prefHeight="33.42" prefWidth="253.87" styleClass="ranklabel" stylesheets="@dashboard.css" />
-         </children></AnchorPane>
-   </children>
-</AnchorPane>
+            <AnchorPane prefHeight="49.78" prefWidth="25.0">
+               <children>
+                  <ImageView fitHeight="17.07" fitWidth="27.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Login/Image/search.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="search"
+                       prefHeight="36.0" prefWidth="279.0"
+                       promptText="Search Something"
+                       stylesheets="@sign-in.css">
+               <styleClass>
+                  -fx-font-family: "Montserrat Light";
+                  -fx-translate-x: 10,91px;
+                  <String fx:value="textField" />
+                  <String fx:value="transparent" />
+               </styleClass>
+            </TextField>
+         </children>
+      </HBox>
+
+      <Text
+              fx:id="greeting"
+              layoutX="282" layoutY="34"
+               text="Good day, Thao"
+      />
+
+      <Text
+               fx:id="userID"
+               layoutX="282.42" layoutY="54.31"
+               text = "User ID:22021157"
+     />
+
+      <ImageView fitWidth="27.02" fitHeight="27.02"
+                 layoutX="247.58" layoutY="24.4">
+         <Image url = "@Login/Image/user-circle.png" />
+      </ImageView>
+
+      <Button
+
+              layoutX="283.84" layoutY="245.6"
+              style="-fx-background-color: transparent;"
+               styleClass="leftButton">
+         <graphic>
+            <ImageView fitWidth="21.33" fitHeight="21.33">
+               <Image url = "@Login/Image/left.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+
+      <Button
+
+              layoutX="625.18" layoutY="245.6"
+              style="-fx-background-color: transparent;"
+              styleClass="rightButton">
+               <graphic>
+                  <ImageView fitWidth="21.33" fitHeight="21.33">
+                     <Image url = "@Login/Image/right.png" />
+                  </ImageView>
+               </graphic>
+      </Button>
+
+
+         </children>
+      </AnchorPane>
