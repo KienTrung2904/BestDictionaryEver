@@ -20,6 +20,7 @@ public class Dictionary extends DatabaseConnection {
     public static void lookUpWord(String targetPrefix, int searchLimit) {
         prefixList.clear();
         ArrayList<String> word = Trie.searchWords(targetPrefix, searchLimit);
+        for (String s: word) System.out.println(s);
         prefixList.addAll(word);
     }
 
