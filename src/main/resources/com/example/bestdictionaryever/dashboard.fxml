@@ -116,12 +116,7 @@
          <Image url="@Login/Image/leaderBoard.png" />
       </ImageView>
 
-<!--      <TextField fx:id = "searchField"-->
-<!--                 prefWidth="341.33" prefHeight="35.56"-->
-<!--                 layoutX="522.78" layoutY="30.13"-->
-<!--                  promptText = "Search Something"-->
-<!--                 styleClass="searchField"-->
-<!--      />-->
+
 
       <HBox fx:id="hbox" layoutX="522.78" layoutY="19" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.56" prefWidth="341.33" styleClass="searchField" stylesheets="@dashboard.css">
          <children>
