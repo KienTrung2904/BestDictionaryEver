@@ -46752,10 +46752,11 @@ INSERT INTO `trieDictionary` (`id`, `word`) VALUES
 (46641, 'onion'),
 (46642, 'onions'),
 (46643, 'online');
-INSERT INTO `trieDictionary` (`id`, `word) VALUES
+
+INSERT INTO `trieDictionary` (`id`, `word`) VALUES
 (46644, 'onlooker'),
 (46645, 'onlookers'),
-(46646, 'only'),
+(46646, "only"),
 (46647, 'ono'),
 (46648, 'onomastic'),
 (46649, 'onomastics'),
@@ -78270,7 +78271,7 @@ INSERT INTO `trieDictionary` (`id`, `word`) VALUES
                                               (78146, 'visitor'),
                                               (78147, 'visitorial'),
                                               (78148, 'visitors'),
-                                              (78149, 'visitors\' book'),
+                                              (78149, 'visitors'),
 (78150, 'visits'),
 (78151, 'visor'),
 (78152, 'visors'),
