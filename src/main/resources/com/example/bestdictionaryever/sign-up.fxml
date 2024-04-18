@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.79" prefHeight="640.0" prefWidth="1024.0" styleClass="window" stylesheets="@sign-up.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bestdictionaryever.RegisterController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.79" prefHeight="640.0" prefWidth="1024.0" styleClass="window" stylesheets="@sign-up.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.login.SignUp">
     <children>
         <AnchorPane focusTraversable="true" layoutX="247.0" layoutY="113.0" prefHeight="471.0" prefWidth="564.0" styleClass="innerBackground" stylesheets="@sign-in.css">
             <children>

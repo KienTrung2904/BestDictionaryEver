@@ -24,7 +24,7 @@ public class Dictionary extends DatabaseConnection {
     }
 
     public static void trieStruct() {
-        final String sql_query = "SELECT word FROM dictination";
+        final String sql_query = "SELECT word FROM trieDictionary";
 
         try {
             PreparedStatement ps = databaseLink.prepareStatement(sql_query);

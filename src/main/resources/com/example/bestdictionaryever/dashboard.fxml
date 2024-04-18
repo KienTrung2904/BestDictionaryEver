@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.control.ScrollPane?>
-<?import java.lang.String?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0"
-            style="-fx-background-color: rgba(240, 240, 240, 1);"
-            stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" style="-fx-background-color: rgba(240, 240, 240, 1);" fx:controller="controller.dashboard.DashboardControl" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="640.0" prefWidth="213.0" styleClass="leftPanel" stylesheets="@dashboard.css">
          <children>
@@ -115,9 +112,8 @@
       </AnchorPane>
 
 
-      <ImageView fitWidth="294.18" fitHeight="492.89"
-                  layoutX="715" layoutY="104">
-         <Image url = "@Login/Image/leaderBoard.png" />
+      <ImageView fitHeight="492.89" fitWidth="294.18" layoutX="715" layoutY="104">
+         <Image url="@Login/Image/leaderBoard.png" />
       </ImageView>
 
 <!--      <TextField fx:id = "searchField"-->
@@ -127,10 +123,7 @@
 <!--                 styleClass="searchField"-->
 <!--      />-->
 
-      <HBox layoutX="522.78" layoutY="19"
-            maxHeight="-Infinity" maxWidth="-Infinity"
-            prefHeight="35.56" prefWidth="341.33"
-            styleClass="searchField" stylesheets="@dashboard.css">
+      <HBox fx:id="hbox" layoutX="522.78" layoutY="19" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.56" prefWidth="341.33" styleClass="searchField" stylesheets="@dashboard.css">
          <children>
             <AnchorPane prefHeight="49.78" prefWidth="25.0">
                <children>
@@ -141,10 +134,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <TextField fx:id="search"
-                       prefHeight="36.0" prefWidth="279.0"
-                       promptText="Search Something"
-                       stylesheets="@sign-in.css">
+            <TextField fx:id="search" prefHeight="36.0" prefWidth="279.0" promptText="Search Something" stylesheets="@sign-in.css">
                <styleClass>
                   -fx-font-family: "Montserrat Light";
                   -fx-translate-x: 10,91px;
@@ -155,43 +145,28 @@
          </children>
       </HBox>
 
-      <Text
-              fx:id="greeting"
-              layoutX="282" layoutY="34"
-               text="Good day, Thao"
-      />
+      <VBox fx:id="suggestedList" layoutX="523.0" layoutY="62.0"  prefWidth="342.0" />
 
-      <Text
-               fx:id="userID"
-               layoutX="282.42" layoutY="54.31"
-               text = "User ID:22021157"
-     />
+      <Text fx:id="greeting" layoutX="282" layoutY="34" />
 
-      <ImageView fitWidth="27.02" fitHeight="27.02"
-                 layoutX="247.58" layoutY="24.4">
-         <Image url = "@Login/Image/user-circle.png" />
+      <Text fx:id="userID" layoutX="282.42" layoutY="54.31" />
+
+      <ImageView fitHeight="27.02" fitWidth="27.02" layoutX="247.58" layoutY="24.4">
+         <Image url="@Login/Image/user-circle.png" />
       </ImageView>
 
-      <Button
-
-              layoutX="283.84" layoutY="245.6"
-              style="-fx-background-color: transparent;"
-               styleClass="leftButton">
+      <Button layoutX="283.84" layoutY="245.6" style="-fx-background-color: transparent;" styleClass="leftButton">
          <graphic>
-            <ImageView fitWidth="21.33" fitHeight="21.33">
-               <Image url = "@Login/Image/left.png" />
+            <ImageView fitHeight="21.33" fitWidth="21.33">
+               <Image url="@Login/Image/left.png" />
             </ImageView>
          </graphic>
       </Button>
 
-      <Button
-
-              layoutX="625.18" layoutY="245.6"
-              style="-fx-background-color: transparent;"
-              styleClass="rightButton">
+      <Button layoutX="625.18" layoutY="245.6" style="-fx-background-color: transparent;" styleClass="rightButton">
                <graphic>
-                  <ImageView fitWidth="21.33" fitHeight="21.33">
-                     <Image url = "@Login/Image/right.png" />
+                  <ImageView fitHeight="21.33" fitWidth="21.33">
+                     <Image url="@Login/Image/right.png" />
                   </ImageView>
                </graphic>
       </Button>

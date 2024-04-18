@@ -6,7 +6,12 @@ module com.example.bestdictionaryever {
     requires org.kordamp.bootstrapfx.core;
     requires java.sql;
 
-
     opens com.example.bestdictionaryever to javafx.fxml;
     exports com.example.bestdictionaryever;
+    exports controller.login;
+    opens controller.login ;
+    exports controller.dashboard;
+    opens controller.dashboard;
+
 }
+
