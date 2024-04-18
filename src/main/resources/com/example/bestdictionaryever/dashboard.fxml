@@ -129,7 +129,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <TextField fx:id="search" prefHeight="36.0" prefWidth="279.0" promptText="Search Something" stylesheets="@sign-in.css">
+            <TextField fx:id="searchField" prefHeight="36.0" prefWidth="279.0" promptText="Search Something" stylesheets="@sign-in.css">
                <styleClass>
                   -fx-font-family: "Montserrat Light";
                   -fx-translate-x: 10,91px;

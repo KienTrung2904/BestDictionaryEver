@@ -11,26 +11,27 @@ import javafx.scene.text.Text;
 
 public class DashboardControl extends ScreenControl {
     @FXML
+    protected AnchorPane anchorPane;
+    @FXML
     protected Text greeting;
     @FXML
     protected  Text userID;
     @FXML
     protected HBox hbox;
     @FXML
-    protected TextField search;
+    protected TextField searchField;
     @FXML
     protected VBox suggestedList;
-    @FXML
-    protected AnchorPane anchorPane;
 
-//    protected SearchBar searchBar;
+    protected SearchBar searchBar;
+
 
     public void decor() {
         String _greeting = "Good day, " + user.getUserName();
         greeting.setText(_greeting);
         String _userID = "User ID: " + user.getId();
         userID.setText(_userID);
-//        searchBar = new SearchBar(anchorPane, hbox, search, suggestedList);
+        searchBar = new SearchBar(anchorPane, hbox, searchField, suggestedList);
     }
 
 }
