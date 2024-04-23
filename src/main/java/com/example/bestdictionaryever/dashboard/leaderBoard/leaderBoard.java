@@ -50,7 +50,7 @@ public class leaderBoard implements ComponentManager {
             user.getStyleClass().add("leaderboard-box");
 
             user.setText(leaderBoard.get(i).getUserName());
-            user.setFill(Color.rgb(0, 0, 0, 0.6));
+            user.setFill(Color.rgb(28, 27, 27, 0.6));
 
             userInTable.getChildren().add(user);
             tableUserName.getChildren().add(userInTable);
@@ -67,7 +67,7 @@ public class leaderBoard implements ComponentManager {
 
 
             score.setText(String.valueOf(leaderBoard.get(i).getScore()));
-            score.setFill(Color.rgb(0, 0, 0, 0.6));
+            score.setFill(Color.rgb(28, 27, 27, 0.6));
 
             userInTable.getChildren().add(score);
             tableScore.getChildren().add(userInTable);
