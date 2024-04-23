@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" style="-fx-background-color: rgba(240, 240, 240, 1);" fx:controller="controller.dashboard.DashboardControl" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" style="-fx-background-color: rgba(240, 240, 240, 1);" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboard.DashboardControl">
    <children>
       <AnchorPane prefHeight="640.0" prefWidth="213.0" styleClass="leftPanel" stylesheets="@dashboard.css">
          <children>
@@ -112,10 +112,9 @@
       </AnchorPane>
 
 
-      <ImageView fitHeight="492.89" fitWidth="294.18" layoutX="715" layoutY="104">
+      <ImageView fitHeight="492.89" fitWidth="294.18" layoutX="715.0" layoutY="104.0">
          <Image url="@Login/Image/leaderBoard.png" />
       </ImageView>
-
 
 
       <HBox fx:id="hbox" layoutX="522.78" layoutY="19" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.56" prefWidth="341.33" styleClass="searchField" stylesheets="@dashboard.css">
@@ -140,11 +139,6 @@
          </children>
       </HBox>
 
-      <VBox fx:id="suggestedList" layoutX="523.0" layoutY="62.0"  prefWidth="342.0" />
-
-      <Text fx:id="greeting" layoutX="282" layoutY="34" />
-
-      <Text fx:id="userID" layoutX="282.42" layoutY="54.31" />
 
       <ImageView fitHeight="27.02" fitWidth="27.02" layoutX="247.58" layoutY="24.4">
          <Image url="@Login/Image/user-circle.png" />
@@ -159,12 +153,23 @@
       </Button>
 
       <Button layoutX="625.18" layoutY="245.6" style="-fx-background-color: transparent;" styleClass="rightButton">
-               <graphic>
-                  <ImageView fitHeight="21.33" fitWidth="21.33">
-                     <Image url="@Login/Image/right.png" />
-                  </ImageView>
-               </graphic>
+         <graphic>
+            <ImageView fitHeight="21.33" fitWidth="21.33">
+               <Image url="@Login/Image/right.png" />
+            </ImageView>
+         </graphic>
       </Button>
+
+
+      <VBox fx:id="tableUserName" layoutX="795.0" layoutY="170" prefHeight="0.0" prefWidth="100" />
+      <VBox fx:id="tableScore" layoutX="930.0" layoutY="170" prefHeight="0.0" prefWidth="80" />
+
+      <VBox fx:id="suggestedList" layoutX="523.0" layoutY="62.0" prefWidth="342.0" />
+
+      <Text fx:id="greeting" layoutX="282" layoutY="34" />
+
+      <Text fx:id="userID" layoutX="282.42" layoutY="54.31" />
+
 
 
          </children>

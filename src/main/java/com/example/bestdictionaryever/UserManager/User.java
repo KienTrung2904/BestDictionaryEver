@@ -10,17 +10,15 @@ public class User extends DatabaseConnection {
     private String fullName;
     private String userName;
     private String password;
-    private String checkPassword;
     private int score;
     private int id;
 
     public User() {}
 
-    public User(String fullName, String userName, String password, String checkPassword, int score, int id ) {
+    public User(String fullName, String userName, String password, int score, int id ) {
         this.fullName = fullName;
         this.userName = userName;
         this.password = password;
-        this.checkPassword = checkPassword;
         this.score = score;
         this.id = id;
     }
@@ -49,13 +47,6 @@ public class User extends DatabaseConnection {
         return password;
     }
 
-    public void setCheckPassword(String checkPassword) {
-        this.checkPassword = checkPassword;
-    }
-
-    public String getCheckPassword() {
-        return checkPassword;
-    }
 
     public void setScore(int score) {
         this.score = score;
@@ -119,7 +110,7 @@ public class User extends DatabaseConnection {
         return "Invalid username or password.";
     }
 
-    public String signUp(String fullName, String userName, String password, String checkPassword) {
+    public String signUp(String fullName, String userName, String password) {
         final String sql_query = "SELECT * FROM user_account WHERE username = ?;";
 
         try {
@@ -143,9 +134,6 @@ public class User extends DatabaseConnection {
             e.printStackTrace();
         }
 
-        if (!checkPassword.equals(password)) {
-            return "Incorrect password";
-        }
 
         final String sqlQuery = "INSERT INTO user_account(fullname, username, password, score) VALUES(?, ?, ?, ?);";
 

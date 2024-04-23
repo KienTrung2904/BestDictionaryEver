@@ -1,15 +1,11 @@
 package com.example.bestdictionaryever.dashboard.search;
 
 import com.example.bestdictionaryever.ComponentManager;
-import com.example.bestdictionaryever.dashboard.search.Dictionary;
 import controller.ScreenControl;
-import controller.dashboard.DashboardControl;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -56,7 +52,6 @@ public class SearchBar implements ComponentManager {
 
     private void showPrefixList() {
         suggestedList.setSpacing(11);
-        int historySz = history.size();
         prefixList.addAll(0, history);
         for (String w : prefixList) {
             HBox prefixBox = new HBox(6);
