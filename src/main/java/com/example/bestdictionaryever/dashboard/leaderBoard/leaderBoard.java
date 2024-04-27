@@ -1,20 +1,14 @@
 package com.example.bestdictionaryever.dashboard.leaderBoard;
 
+
 import com.example.bestdictionaryever.ComponentManager;
 import com.example.bestdictionaryever.UserManager.User;
 import com.example.bestdictionaryever.UserManager.UserLeaderBoard;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableView;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
 

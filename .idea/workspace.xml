@@ -6,13 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f1a62af0-7fc9-44f6-98a9-a3793cdaeab6" name="Changes" comment="add commandline&#10;test login, register, connect database and scene">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/UserManager/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/UserManager/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/UserManager/UserLeaderBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/UserManager/UserLeaderBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dashboard/search/SearchBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dashboard/search/SearchBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/ComponentManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dashboard/leaderBoard/leaderBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dashboard/leaderBoard/leaderBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/dashboard/DashboardControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/dashboard/DashboardControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/login/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/login/SignUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/database/trungdic.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/database/trungdic.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,14 +77,14 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/DictionaryAssignment-main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/BestDictionaryEver&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
@@ -138,6 +138,17 @@
       <workItem from="1713550807113" duration="4988000" />
       <workItem from="1713847861755" duration="2190000" />
       <workItem from="1713877501430" duration="13622000" />
+      <workItem from="1713893366017" duration="335000" />
+      <workItem from="1713943074202" duration="1814000" />
+      <workItem from="1713971615276" duration="2863000" />
+      <workItem from="1714183316707" duration="21000" />
+      <workItem from="1714183359164" duration="9000" />
+      <workItem from="1714183380803" duration="62000" />
+      <workItem from="1714183463198" duration="32000" />
+      <workItem from="1714183754049" duration="134000" />
+      <workItem from="1714183902812" duration="759000" />
+      <workItem from="1714184687544" duration="6511000" />
+      <workItem from="1714193635459" duration="13603000" />
     </task>
     <task id="LOCAL-00001" summary="add commandline&#10;test login, register, connect database and scene">
       <option name="closed" value="true" />
