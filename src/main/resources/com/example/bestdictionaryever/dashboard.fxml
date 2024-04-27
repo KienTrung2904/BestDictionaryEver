@@ -105,7 +105,8 @@
                           textAlignment="CENTER"
                           styleClass="textLabel"
                             stylesheets="@dashboard.css" />
-                  <Button layoutX="132.16" layoutY="135.36"
+                  <Button onAction="#practice"
+                          layoutX="132.16" layoutY="135.36"
                           mnemonicParsing="false"
                           prefHeight="27.0" prefWidth="99.0"
                           styleClass="practiceButton"

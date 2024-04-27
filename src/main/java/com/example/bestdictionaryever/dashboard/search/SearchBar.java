@@ -37,7 +37,7 @@ public class SearchBar implements ComponentManager {
         searchBar.setEditable(false);
         searchBar.setOnKeyReleased(this::handleKeyPressed);
         searchBar.setOnMouseClicked(this::searchWord);
-//        anchorPane.setOnMousePressed(this::quitSearch);
+        anchorPane.setOnMousePressed(this::quitSearch);
     }
 
     private void addHistoryToSearch() {
@@ -102,14 +102,9 @@ public class SearchBar implements ComponentManager {
         }
     }
 
-//    private void quitSearch(MouseEvent event) {
-//        suggestedList.getChildren().clear();
-//        searchBar.setEditable(false);
-//        searchBar.setFocusTraversable(false);
-//        hbox.setPrefHeight(0);
-//        hbox.getStyleClass().remove("searchField");
-//
-//
-//        hbox.setStyle("-fx-fill: transparent");
-//    }
+    private void quitSearch(MouseEvent event) {
+        suggestedList.getChildren().clear();
+        searchBar.setEditable(false);
+        searchBar.setFocusTraversable(false);
+    }
 }

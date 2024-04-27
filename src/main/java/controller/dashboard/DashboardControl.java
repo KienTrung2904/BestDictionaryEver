@@ -68,4 +68,8 @@ public class DashboardControl extends ScreenControl {
     public void toLeft() {
         topic.toLeft();
     }
+
+    public void practice() {
+
+    }
 }
