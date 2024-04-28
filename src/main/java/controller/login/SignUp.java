@@ -48,7 +48,7 @@ public class SignUp extends SignIn {
         String checkPassword = confirmPasswordField.getText();
 
         User user = new User();
-        String result = user.signUp(fullName, userName, password, checkPassword);
+        String result = user.signUp(fullName, userName, password);
 
         if (result.equals("Signed up successffully!")) {
             super.started();

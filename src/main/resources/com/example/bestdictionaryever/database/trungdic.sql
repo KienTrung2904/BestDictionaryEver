@@ -22,7 +22,9 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-DROP TABLE IF EXISTS `dictionary`;
+
+
+/*DROP TABLE IF EXISTS `dictionary`;*/
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `dictionary` (
@@ -88,8 +90,24 @@ CREATE TABLE `trieDictionary` (
     `word` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+CREATE TABLE `topic` (
+    `topicIndex` int(10) UNSIGNED NOT NULL,
+    `topicName` varchar(255) NOT NULL,
+    `topicAvatar` varchar(255) NOT NULL,
+    `topicDescrition` varchar(500) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
-
+INSERT INTO `topic` (`topicIndex`, `topicName`, `topicAvatar`, `topicDescrition`) VALUES
+(1, 'BodyPart', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\1.png', 'Explore English while discovering fascinating body part from around the world.'),
+(2, 'Career', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\2.png', 'Explore English while discovering fascinating careers from around the world.'),
+(3, 'Culture', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\3.png', 'Explore English while discovering fascinating cultures from around the world.'),
+(4, 'Environment', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\4.png', 'Explore English while discovering fascinating environment from around the world.'),
+(5, 'Family', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\5.png', 'Explore English while discovering fascinating family from around the world.'),
+(6, 'Food', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\6.png', 'Explore English while discovering fascinating food from around the world.'),
+(7, 'School', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\7.png', 'Explore English while discovering fascinating school from around the world.'),
+(8, 'Sport', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\8.png', 'Explore English while discovering fascinating sport from around the world.'),
+(9, 'Technology', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\9.png', 'Explore English while discovering fascinating technology from around the world.'),
+(10, 'Travel', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\10.png', 'Explore English while discovering fascinating travel from around the world.');
 
 INSERT INTO `trieDictionary` (`id`, `word`) VALUES
                                               (1, '\'em'),
@@ -46752,10 +46770,11 @@ INSERT INTO `trieDictionary` (`id`, `word`) VALUES
 (46641, 'onion'),
 (46642, 'onions'),
 (46643, 'online');
-INSERT INTO `trieDictionary` (`id`, `word) VALUES
+
+INSERT INTO `trieDictionary` (`id`, `word`) VALUES
 (46644, 'onlooker'),
 (46645, 'onlookers'),
-(46646, 'only'),
+(46646, "only"),
 (46647, 'ono'),
 (46648, 'onomastic'),
 (46649, 'onomastics'),
@@ -78270,7 +78289,7 @@ INSERT INTO `trieDictionary` (`id`, `word`) VALUES
                                               (78146, 'visitor'),
                                               (78147, 'visitorial'),
                                               (78148, 'visitors'),
-                                              (78149, 'visitors\' book'),
+                                              (78149, 'visitors'),
 (78150, 'visits'),
 (78151, 'visor'),
 (78152, 'visors'),

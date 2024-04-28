@@ -1,15 +1,11 @@
 package com.example.bestdictionaryever.dashboard.search;
 
 import com.example.bestdictionaryever.ComponentManager;
-import com.example.bestdictionaryever.dashboard.search.Dictionary;
 import controller.ScreenControl;
-import controller.dashboard.DashboardControl;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -20,7 +16,7 @@ import java.util.ArrayList;
 
 public class SearchBar implements ComponentManager {
     private HBox hbox;
-    private TextField search;
+    private TextField searchBar;
     private VBox suggestedList;
     private AnchorPane anchorPane;
     private ScreenControl screen;
@@ -28,57 +24,35 @@ public class SearchBar implements ComponentManager {
     private static ArrayList<String> prefixList = new ArrayList<>();
     private final static int searchLimit = 10;
 
-    public SearchBar(AnchorPane anchorPane, HBox hbox, TextField search, VBox suggestedList) {
+    public SearchBar(AnchorPane anchorPane, HBox hbox, TextField searchBar, VBox suggestedList) {
         this.anchorPane = anchorPane;
         this.hbox = hbox;
-        this.search = search;
+        this.searchBar = searchBar;
         this.suggestedList = suggestedList;
         screen = ScreenControl.getScreen();
         this.initialize();
     }
     @Override
     public void initialize() {
-        search.setEditable(false);
-        search.setOnKeyReleased(this::handleKeyPressed);
-        search.setOnMouseClicked(this::searchWord);
+        searchBar.setEditable(false);
+        searchBar.setOnKeyReleased(this::handleKeyPressed);
+        searchBar.setOnMouseClicked(this::searchWord);
         anchorPane.setOnMousePressed(this::quitSearch);
     }
 
-    private void handleKeyPressed(KeyEvent event) {
-        if (search.isEditable()) {
-            prefixList.clear();
-            suggestedList.getChildren().clear();
-
-            addHistoryToSearch();
-            Dictionary.lookUpWord(search.getText(), searchLimit - history.size());
-            prefixList.addAll(Dictionary.getPrefixList());
-            showPrefixList();
+    private void addHistoryToSearch() {
+        history.clear();
+        String target = searchBar.getText();
+        for (String word: WordHistory.getHistoryList()) {
+            if (word.startsWith(target) || target.isEmpty()) {
+                history.add(word);
+            }
         }
     }
-
-
-    private void searchWord(MouseEvent event) {
-        prefixList.clear();
-        addHistoryToSearch();
-
-        hbox.setStyle("");
-        hbox.getStyleClass().add("grey-box");
-
-        if (!search.isEditable()) {
-            search.setEditable(true);
-            showPrefixList();
-        }
-    }
-
-    private void quitSearch(MouseEvent event) {}
-
-    private void addHistoryToSearch() {}
 
     private void showPrefixList() {
-        suggestedList.setSpacing(12);
-        int historySz = history.size();
+        suggestedList.setSpacing(11);
         prefixList.addAll(0, history);
-        double h = 92;
         for (String w : prefixList) {
             HBox prefixBox = new HBox(6);
             prefixBox.setAlignment(Pos.CENTER);
@@ -86,29 +60,15 @@ public class SearchBar implements ComponentManager {
 
             Button prefix = new Button();
             prefix.getStyleClass().add("transparent-box");
-            prefix.setPrefWidth(search.getPrefWidth());
+            prefix.setPrefWidth(searchBar.getPrefWidth());
             prefix.setText(w);
 
-            prefixBox.setPadding(new Insets(4, 0, 4, 12));
+            prefixBox.setPadding(new Insets(3, 0, 3, 12));
             prefix.setOnMouseClicked(this::wordShow);
-
-            ImageView icon;
-
-//            if (historySz > 0) {
-//                icon = new ImageView(new Image("resources/icons/clock.png"));
-//                historySz--;
-//            } else {
-//                icon = new ImageView(new Image("resources/icons/search.png"));
-//            }
-//            icon.setFitHeight(21);
-//            icon.setFitWidth(21);
-
-//            prefixBox.getChildren().add(icon);
             prefixBox.getChildren().add(prefix);
             suggestedList.getChildren().add(prefixBox);
-            h += 47.5;
+            suggestedList.getStyleClass().add("suggestedList");
         }
-//        hbox.getHeight(h);
     }
 
     private void wordShow(MouseEvent event) {
@@ -119,5 +79,32 @@ public class SearchBar implements ComponentManager {
 //            DictionaryControl.setTopicFrom(false);
 //        }
 //        screen.dictionaryStarted(target);
+    }
+
+    private void handleKeyPressed(KeyEvent event) {
+        if (searchBar.isEditable()) {
+            prefixList.clear();
+            suggestedList.getChildren().clear();
+
+            addHistoryToSearch();
+            Dictionary.lookUpWord(searchBar.getText(), searchLimit - history.size());
+            prefixList.addAll(Dictionary.getPrefixList());
+            showPrefixList();
+        }
+    }
+
+    private void searchWord(MouseEvent event) {
+        prefixList.clear();
+        addHistoryToSearch();
+        if (!searchBar.isEditable()) {
+            searchBar.setEditable(true);
+            showPrefixList();
+        }
+    }
+
+    private void quitSearch(MouseEvent event) {
+        suggestedList.getChildren().clear();
+        searchBar.setEditable(false);
+        searchBar.setFocusTraversable(false);
     }
 }

@@ -11,30 +11,30 @@ import java.util.Map;
 public class Trie {
     private  static class TrieNode {
         Map<Character, TrieNode> children;
-        boolean checkEndWord;
+        boolean isEndCharacterOfWord;
         char character;
 
         private TrieNode(char character) {
             this.character = character;
             this.children = new HashMap<>();
-            checkEndWord = false;
+            isEndCharacterOfWord = false;
         }
 
     }
     private  final static TrieNode root = new TrieNode('\0');
 
-    private static void dfs(TrieNode current, String prefix, List<String> word, int limit) {
-        if (word.size() >= limit) return;
+    private static void dfs(TrieNode node, String word, List<String> matches, int limit) {
+        if (matches.size() >= limit) return;
 
-        if (current.checkEndWord) word.add(prefix);
+        if (node.isEndCharacterOfWord) matches.add(word);
 
-        for (TrieNode child : current.children.values()) {
-            dfs(current, prefix + child.character, word, limit);
+        for (TrieNode child : node.children.values()) {
+            dfs(child, word + child.character, matches, limit);
         }
     }
 
     public static ArrayList<String> searchWords(String prefix, int limit) {
-        ArrayList<String> word = new ArrayList<>();
+        ArrayList<String> matches = new ArrayList<>();
         TrieNode current = root;
 
         for (char c : prefix.toCharArray()) {
@@ -43,8 +43,8 @@ public class Trie {
             current = current.children.get(c);
         }
 
-        dfs(current, prefix, word, limit);
-        return word;
+        dfs(current, prefix, matches, limit);
+        return matches;
     }
 
     public static void insertWord(String word) {
@@ -58,7 +58,7 @@ public class Trie {
             }
             current = node;
         }
-        current.checkEndWord = true;
+        current.isEndCharacterOfWord = true;
     }
 
     public static  void deleteWord(String word) {
@@ -71,10 +71,10 @@ public class Trie {
             current = current.children.get(x);
         }
 
-        if  (!current.checkEndWord) return;
+        if  (!current.isEndCharacterOfWord) return;
 
         if (current.children.isEmpty()) preNode.children.remove(current.character);
 
-        else current.checkEndWord = false;
+        else current.isEndCharacterOfWord = false;
     }
 }

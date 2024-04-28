@@ -18,6 +18,11 @@
     src: url("font/Montserrat-Medium.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url("font/Montserrat-Regular.ttf") format("truetype");
+}
+
 .dictionaryLabel {
     -fx-text-fill: rgba(0,0,0, 0.8);
     -fx-font-family: "Inter";
@@ -104,8 +109,8 @@
 .textLabel {
     -fx-font-family: "Montserrat Light";
     /*-fx-font-weight: semi-bold;*/
-    -fx-font-size: 12.09;
-    -fx-text-align: center;
+    -fx-font-size: 12.09px;
+    /*-fx-text-align: center;*/
     -fx-text-fill: rgb(0,0,0,0.8);
 }
 
@@ -152,6 +157,38 @@
     -fx-font-size: 9.96;
     -fx-font-family: "Montserrat Light";
 }
+
+.transparent-box {
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-background-color: transparent;
+    -fx-font-size: 15px;
+    -fx-alignment: baseline-left;
+}
+
+.transparent-box:hover {
+    -fx-background-color: rgba(228, 228, 228, 1);
+    -fx-font-size: 15px;
+    -fx-arc-width: 20px;
+    -fx-arc-height: 15px;
+    -fx-background-radius: 15px;
+    -fx-alignment: baseline-left;
+}
+
+.suggestedList {
+    -fx-background-color:rgba(240, 240, 240, 1);
+    -fx-background-radius: 20px;
+    -fx-arc-height: 450px;
+    -fx-arc-width: 360px;
+}
+
+.leaderboard-box {
+    -fx-font-family: "Montserrat Medium";
+    -fx-font-size: 12.5px;
+    -fx-alignment: baseline-left;
+    -fx-text-fill: rgba(28, 27, 27, 0.6);
+}
+
+
 
 
 
