@@ -5,18 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1a62af0-7fc9-44f6-98a9-a3793cdaeab6" name="Changes" comment="add commandline&#10;test login, register, connect database and scene">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_28_2024_10_53_PM_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_25_2024_10_04_PM_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_25_2024_10_04_PM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_13_2024_7_22_PM_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_13_2024_7_22_PM_[Changes]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_13_2024_7_22_PM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Audio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/GoogleTranslation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/TextToSpeech.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Translation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/translation/TranslationPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/English.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/Vietnamese.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/arrow-narrow-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/back-button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/cloud-upload.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/help-button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/image 38.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/listen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/question-mark-circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/switch-vertical.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/volume-up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/translation-page.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/translation-page.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dashboard/search/SearchBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dashboard/search/SearchBar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dashboard/topic/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dashboard/topic/Topic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dashboard/topic/topicIntroduction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dashboard/topic/topicIntroduction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ScreenControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ScreenControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/dashboard/DashboardControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/dashboard/DashboardControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/login/SignIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/login/SignIn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/rabbit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/database/trungdic.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/database/trungdic.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/back.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/back.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,14 +46,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="CSS File" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;history&quot;: [
@@ -68,33 +89,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/BestDictionaryEver&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Application.executor": "Run",
+    "Application.Audio.executor": "Run",
+    "Application.GoogleTranslation.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "Application.TextToSpeech.executor": "Run",
+    "Application.TranslationPage.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Merging master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="Push.Settings">
+    <option name="SHOW_DETAILS_PANEL" value="false" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\BestDictionaryEver\src\main\resources\com\example\bestdictionaryever\Login\Image\topic\Avatar" />
@@ -109,7 +137,6 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-20.0.2-corretto-20.0.2.1-4caba194b151-5bc9ecd2" />
         <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
@@ -158,6 +185,7 @@
       <workItem from="1714229136013" duration="13975000" />
       <workItem from="1714278150728" duration="14069000" />
       <workItem from="1714312034815" duration="5227000" />
+      <workItem from="1713406979164" duration="1653000" />
     </task>
     <task id="LOCAL-00001" summary="add commandline&#10;test login, register, connect database and scene">
       <option name="closed" value="true" />
@@ -167,7 +195,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710936455516</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="google translate, text to speech, translation page">
+      <option name="closed" value="true" />
+      <created>1714295524784</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714295524784</updated>
+    </task>
+    <task id="LOCAL-00003" summary="translation page">
+      <option name="closed" value="true" />
+      <created>1714313209261</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714313209261</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +222,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -186,7 +236,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add commandline&#10;test login, register, connect database and scene" />
-    <option name="LAST_COMMIT_MESSAGE" value="add commandline&#10;test login, register, connect database and scene" />
+    <MESSAGE value="google translate, text to speech, translation page" />
+    <MESSAGE value="translation page" />
+    <option name="LAST_COMMIT_MESSAGE" value="translation page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
