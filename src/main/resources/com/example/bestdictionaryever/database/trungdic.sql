@@ -97,6 +97,31 @@ CREATE TABLE `topic` (
     `topicDescrition` varchar(500) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+CREATE TABLE `moreDetailTopic` (
+    `topicIndex` int(11) UNSIGNED NOT NULL,
+    `target` varchar(30) NOT NULL,
+    `word_image` varchar(200) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+INSERT INTO `moreDetailTopic` (`topicIndex`, `target`, `word_image`) VALUES
+(2,'head','E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\head.png'),
+(2,'buttocks','E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\buttocks.png'),
+(2,'instep','E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\instep.png'),
+(2,'shoulder','E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\shoulder.png'),
+(2,'tooth','E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\tooth.png'),
+
+(3,'jam','E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\jam.png');
+
+INSERT INTO `moreDetailTopic` (`topicIndex`, `target`, `word_image`) VALUES
+(4,'head','E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\head.png'),
+(5,'buttocks','E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\buttocks.png'),
+(6,'instep','E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\instep.png'),
+(7,'shoulder','E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\shoulder.png'),
+(8,'tooth','E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\tooth.png'),
+(9,'head','E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\head.png'),
+(10,'buttocks','E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\buttocks.png'),
+(1,'instep','E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\instep.png');
+
 INSERT INTO `topic` (`topicIndex`, `topicName`, `topicAvatar`, `topicDescrition`) VALUES
 (1, 'BodyPart', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\1.png', 'Explore English while discovering fascinating body part from around the world.'),
 (2, 'Career', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\2.png', 'Explore English while discovering fascinating careers from around the world.'),

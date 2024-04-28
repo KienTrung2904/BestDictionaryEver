@@ -18,5 +18,12 @@ public abstract  class ScreenControl extends  FXMLControl{
         super.loadScreenFXML("dashboard");
     }
 
+    public void topic() {
+        super.loadScreenFXML("topic");
+    }
+
+    public void library() {
+        super.loadScreenFXML("library");
+    }
 
 }

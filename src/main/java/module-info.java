@@ -13,6 +13,10 @@ module com.example.bestdictionaryever {
     opens controller.login ;
     exports controller.dashboard;
     opens controller.dashboard;
+    exports controller.topic;
+    opens controller.topic;
+    exports controller.library;
+    opens controller.library;
 
 }
 

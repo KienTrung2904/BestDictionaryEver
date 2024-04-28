@@ -11,8 +11,8 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
-
 <?import javafx.scene.text.TextFlow?>
+
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" style="-fx-background-color: rgba(240, 240, 240, 1);" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboard.DashboardControl">
    <children>
       <AnchorPane prefHeight="640.0" prefWidth="213.0" styleClass="leftPanel" stylesheets="@dashboard.css">
@@ -95,29 +95,15 @@
 
       <AnchorPane layoutX="251.13" layoutY="104.06" prefHeight="492.83" prefWidth="428.8" styleClass="centerBoard" stylesheets="@dashboard.css">
          <children>
-            <AnchorPane layoutX="26.71" layoutY="285.89" prefHeight="180.62" prefWidth="362.67" styleClass="animalBoard" stylesheets="@dashboard.css">
+            <AnchorPane layoutX="32.0" layoutY="290.0" prefHeight="180.62" prefWidth="362.67" styleClass="animalBoard" stylesheets="@dashboard.css">
                <children>
                   <Label fx:id="topicName" alignment="CENTER" contentDisplay="CENTER" layoutX="109.16" layoutY="20.05" prefHeight="11.0" prefWidth="136.0" styleClass="animalLabel" stylesheets="@dashboard.css" />
-                  <TextFlow
-                          fx:id="topicDescription"
-                          layoutX="45" layoutY="70.0"
-                            prefHeight="30.0" prefWidth="280.0"
-                          textAlignment="CENTER"
-                          styleClass="textLabel"
-                            stylesheets="@dashboard.css" />
-                  <Button onAction="#practice"
-                          layoutX="132.16" layoutY="135.36"
-                          mnemonicParsing="false"
-                          prefHeight="27.0" prefWidth="99.0"
-                          styleClass="practiceButton"
-                          stylesheets="@dashboard.css"
-                          text="Practice" />
+                  <TextFlow fx:id="topicDescription" layoutX="45.0" layoutY="70.0" prefHeight="30.0" prefWidth="280.0" styleClass="textLabel" stylesheets="@dashboard.css" textAlignment="CENTER" />
+                  <Button layoutX="132.16" layoutY="135.36" mnemonicParsing="false" onAction="#practice" prefHeight="27.0" prefWidth="99.0" styleClass="practiceButton" stylesheets="@dashboard.css" text="Practice" />
                </children>
             </AnchorPane>
 
-            <ImageView fx:id="topicAvatar"
-                       layoutX="68" layoutY="10"
-                       pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="topicAvatar" layoutX="68" layoutY="10" pickOnBounds="true" preserveRatio="true">
             </ImageView>
          </children>
       </AnchorPane>
@@ -128,7 +114,7 @@
       </ImageView>
 
 
-      <HBox fx:id="hbox" layoutX="522.78" layoutY="19" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.56" prefWidth="341.33" styleClass="searchField" stylesheets="@dashboard.css">
+      <HBox fx:id="hbox" layoutX="522.78" layoutY="19" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.56" prefWidth="341.33" styleClass="searchField" stylesheets="@dashboard.css" style="-fx-background-radius:15px ">
          <children>
             <AnchorPane prefHeight="49.78" prefWidth="25.0">
                <children>
@@ -142,7 +128,7 @@
             <TextField fx:id="searchField" prefHeight="36.0" prefWidth="279.0" promptText="Search Something" stylesheets="@sign-in.css">
                <styleClass>
                   -fx-font-family: "Montserrat Light";
-                  -fx-translate-x: 10,91px;
+                  -fx-translate-x: 100,91px;
                   <String fx:value="textField" />
                   <String fx:value="transparent" />
                </styleClass>
@@ -150,28 +136,21 @@
          </children>
       </HBox>
 
+      <ImageView fitHeight="30" fitWidth="30" layoutX="277.0" layoutY="243.0">
+         <Image url="@Login/Image/left1.png" />
+      </ImageView>
+      <ImageView fitHeight="30" fitWidth="30" layoutX="626.0" layoutY="243.0">
+         <Image url="@Login/Image/right1.png" />
+      </ImageView>
+
 
       <ImageView fitHeight="27.02" fitWidth="27.02" layoutX="247.58" layoutY="24.4">
          <Image url="@Login/Image/user-circle.png" />
       </ImageView>
 
-      <Button onAction="#toLeft" layoutX="283.84" layoutY="245.6" style="-fx-background-color: transparent;" styleClass="leftButton">
-         <graphic>
-            <ImageView fitHeight="21.33" fitWidth="21.33">
-               <Image url="@Login/Image/left.png" />
-            </ImageView>
-         </graphic>
-      </Button>
+      <Button layoutX="283.84" layoutY="245.6" onAction="#toLeft" style="-fx-background-color: transparent;" styleClass="leftButton" />
 
-      <Button
-              onAction="#toRight"
-              layoutX="625.18" layoutY="245.6" style="-fx-background-color: transparent;" styleClass="rightButton">
-         <graphic>
-            <ImageView fitHeight="21.33" fitWidth="21.33">
-               <Image url="@Login/Image/right.png" />
-            </ImageView>
-         </graphic>
-      </Button>
+      <Button layoutX="625.18" layoutY="245.6" onAction="#toRight" style="-fx-background-color: transparent;" styleClass="rightButton" />
 
 
       <VBox fx:id="tableUserName" layoutX="795.0" layoutY="170" prefHeight="0.0" prefWidth="100" />
@@ -182,6 +161,7 @@
       <Text fx:id="greeting" layoutX="282" layoutY="34" />
 
       <Text fx:id="userID" layoutX="282.42" layoutY="54.31" />
+
 
 
          </children>
