@@ -1,13 +1,23 @@
 package controller.translation;
 
-import com.example.bestdictionaryever.Audio;
+import com.example.bestdictionaryever.Application;
+import com.example.bestdictionaryever.DatabaseConnection;
 import com.example.bestdictionaryever.GoogleTranslation;
+import com.example.bestdictionaryever.TextToSpeech;
+import controller.FXMLControl;
 import controller.ScreenControl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+import static javafx.application.Application.launch;
 
 public class TranslationPage extends ScreenControl {
     @FXML
@@ -35,6 +45,7 @@ public class TranslationPage extends ScreenControl {
         translate();
     }
 
+
     private void translate() {
         String source = inputText.getText();
         if (enToVi) {
@@ -61,11 +72,14 @@ public class TranslationPage extends ScreenControl {
     }
 
     public void listenButtonOnAction(ActionEvent actionEvent) {
-        String text = outputText.getText();
+        String inputTextText = inputText.getText();
+        String outputTextText = outputText.getText();
+        TextToSpeech textToSpeech = new TextToSpeech();
         if (enToVi) {
-            Audio.playAudio(text, "en");
+            textToSpeech.speak(inputTextText);
         } else {
-            Audio.playAudio(text, "vi");
+            textToSpeech.speak(outputTextText);
         }
     }
+
 }

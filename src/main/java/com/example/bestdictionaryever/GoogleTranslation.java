@@ -9,7 +9,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
-public class GoogleTranslation implements Translation {
+public class GoogleTranslation {
 
     private static final String scriptURL = "https://script.google.com/macros/s/AKfycbyVpfwhmbUSeWveS4uNynNJjvwZTAh356HljddZArlE8MKRlqdMUSWR-0EpP65Kno1rbQ/exec";
 
@@ -38,14 +38,19 @@ public class GoogleTranslation implements Translation {
         }
     }
 
-    public static String getAudioLink(String text, String languageCode) {
-        String encodedText = URLEncoder.encode(text, StandardCharsets.UTF_8);
-        String url = translateURL
-                + encodedText
-                + "&tl="
-                + languageCode
-                + "&client=tw-ob";
+//    public static String getAudioLink(String text, String languageCode) {
+//        String encodedText = URLEncoder.encode(text, StandardCharsets.UTF_8);
+//        String url = translateURL
+//                + encodedText
+//                + "&tl="
+//                + languageCode
+//                + "&client=tw-ob";
+//
+//        return url;
+//    }
 
-        return url;
+    public static void main(String[] args) {
+        System.out.println(GoogleTranslation.getTranslation("This is a book", "en", "vi"));
     }
+
 }
