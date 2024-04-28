@@ -22,4 +22,8 @@ public abstract class ScreenControl extends FXMLControl{
         super.loadScreenFXML("translation-page");
     }
 
+    public void chooseGame() {
+        super.loadScreenFXML("Game/FXML/ChooseGame");
+    }
+
 }

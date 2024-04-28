@@ -9,6 +9,8 @@ module com.example.bestdictionaryever {
     requires freetts;
 
     opens com.example.bestdictionaryever to javafx.fxml;
+    opens controller.game to javafx.fxml;
+    exports controller.game;
     exports com.example.bestdictionaryever;
     exports controller.translation;
     exports controller.login;

@@ -47,6 +47,8 @@ public class DashboardControl extends ScreenControl {
     @FXML
     private Button toRight;
     private topicIntroduction topic;
+    @FXML
+    private Button gameButton;
 
     public void decor() {
         String _greeting = "Good day, " + user.getUserName();
@@ -71,5 +73,8 @@ public class DashboardControl extends ScreenControl {
 
     public void practice() {
 
+    }
+    public void playGame(ActionEvent event) {
+        super.chooseGame();
     }
 }
