@@ -10,7 +10,7 @@
         <Button layoutX="20" layoutY="20" onAction="#back" style="-fx-background-color: transparent">
             <graphic>
                 <ImageView fitHeight="30" fitWidth="30">
-                    <Image url="@Login/Image/back.png" />
+                    <Image url="@Login/Image/chevron.png" />
                 </ImageView>
             </graphic>
         </Button>

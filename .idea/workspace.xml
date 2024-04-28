@@ -5,38 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1a62af0-7fc9-44f6-98a9-a3793cdaeab6" name="Changes" comment="add commandline&#10;test login, register, connect database and scene">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Changes/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_28_2024_10_53_PM_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_25_2024_10_04_PM_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_25_2024_10_04_PM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_13_2024_7_22_PM_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_13_2024_7_22_PM_[Changes]1/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_13_2024_7_22_PM__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Audio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/GoogleTranslation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/TextToSpeech.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Translation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/translation/TranslationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/English.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/Vietnamese.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/arrow-narrow-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/back-button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/cloud-upload.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/help-button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/help.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/image 38.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/listen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/question-mark-circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/switch-vertical.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/volume-up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/translation-page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/translation-page.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_25_2024_10_04_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_25_2024_10_04_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_13_2024_7_22_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_13_2024_7_22_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ScreenControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ScreenControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/back.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/back.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/topic.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/topic.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +78,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Merging master",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar",
     "list.type.of.created.stylesheet": "CSS",

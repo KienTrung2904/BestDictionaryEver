@@ -52,7 +52,16 @@
             <artifactId>aether-util</artifactId>
             <version>1.0.0.v20140518</version>
         </dependency>
+
+        <dependency>
+            <groupId>net.sf.sociaal</groupId>
+            <artifactId>freetts</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+
     </dependencies>
+
+
 
     <build>
         <plugins>
