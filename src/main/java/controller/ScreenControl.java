@@ -1,7 +1,7 @@
 package controller;
 
 // add link page
-public abstract  class ScreenControl extends  FXMLControl{
+public abstract class ScreenControl extends FXMLControl{
     public static ScreenControl getScreen() {
         return screen;
     }
@@ -18,5 +18,8 @@ public abstract  class ScreenControl extends  FXMLControl{
         super.loadScreenFXML("dashboard");
     }
 
+    public void translationPage() {
+        super.loadScreenFXML("translation-page");
+    }
 
 }

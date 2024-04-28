@@ -1,0 +1,1647 @@
+Index: src/main/java/com/example/bestdictionaryever/LoginController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.bestdictionaryever;\r\nimport javafx.application.Application;\r\nimport javafx.fxml.FXML;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.fxml.Initializable;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.PasswordField;\r\nimport javafx.scene.control.TextField;\r\nimport javafx.stage.Stage;\r\nimport javafx.scene.control.Label;\r\nimport javafx.event.ActionEvent;\r\n\r\nimport java.io.File;\r\nimport java.sql.Connection;\r\nimport java.sql.ResultSet;\r\nimport java.sql.Statement;\r\nimport java.util.ResourceBundle;\r\nimport java.net.URL;\r\n\r\npublic class LoginController {\r\n\r\n    @FXML\r\n    private Button cancelButton;\r\n    @FXML\r\n    private Label loginMessageLabel;\r\n    @FXML\r\n    private TextField usernameTextField;\r\n    @FXML\r\n    private PasswordField enterPasswordField;\r\n\r\n    public void loginButtonOnAction(ActionEvent event) {\r\n        if (!usernameTextField.getText().isBlank() && !enterPasswordField.getText().isBlank()) {\r\n            validateLogin();\r\n        } else {\r\n            loginMessageLabel.setText(\"Please enter username and password\");\r\n        }\r\n    }\r\n\r\n    private void validateLogin() {\r\n        DatabaseConnection connectNow = new DatabaseConnection();\r\n        Connection connectDB = connectNow.getConnection();\r\n\r\n        String verifyLogin = \"select count(1) from user_account where username = '\" + usernameTextField.getText()\r\n                + \"' and password = '\" + enterPasswordField.getText() + \"';\";\r\n        try {\r\n\r\n            Statement statement = connectDB.createStatement();\r\n            ResultSet queryResult = statement.executeQuery(verifyLogin);\r\n\r\n            while (queryResult.next()) {\r\n                if (queryResult.getInt(1) == 1) {\r\n                   // loginMessageLabel.setText(\"Successfully login!\");\r\n                    Stage stage = (Stage) cancelButton.getScene().getWindow();\r\n                    stage.close();\r\n                    createAccountForm();\r\n                } else {\r\n                   loginMessageLabel.setText(\"Invalid login. Please try again!\");\r\n                }\r\n            }\r\n\r\n        } catch (Exception e) {\r\n            e.printStackTrace();\r\n            e.getCause();\r\n        }\r\n    }\r\n\r\n    public void setCancelButtonOnAction(ActionEvent event) {\r\n        Stage stage = (Stage) cancelButton.getScene().getWindow();\r\n        stage.close();\r\n    }\r\n    public void createAccountForm() {\r\n        try {\r\n            FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource(\"register.fxml\"));\r\n            Scene scene = new Scene(fxmlLoader.load(), 768, 480);\r\n            Stage registerStage = new Stage();\r\n            registerStage.setTitle(\"Dictionary\");\r\n            registerStage.setScene(scene);\r\n            registerStage.show();\r\n\r\n        } catch(Exception e) {\r\n            e.printStackTrace();\r\n            e.getCause();\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/bestdictionaryever/LoginController.java b/src/main/java/com/example/bestdictionaryever/LoginController.java
+--- a/src/main/java/com/example/bestdictionaryever/LoginController.java	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
++++ b/src/main/java/com/example/bestdictionaryever/LoginController.java	(date 1711413801252)
+@@ -1,27 +1,16 @@
+ package com.example.bestdictionaryever;
+-import javafx.application.Application;
+ import javafx.fxml.FXML;
+ import javafx.fxml.FXMLLoader;
+-import javafx.fxml.Initializable;
+ import javafx.scene.Scene;
+-import javafx.scene.control.Button;
+-import javafx.scene.control.PasswordField;
+-import javafx.scene.control.TextField;
++import javafx.scene.control.*;
+ import javafx.stage.Stage;
+-import javafx.scene.control.Label;
+ import javafx.event.ActionEvent;
+ 
+-import java.io.File;
+ import java.sql.Connection;
+ import java.sql.ResultSet;
+ import java.sql.Statement;
+-import java.util.ResourceBundle;
+-import java.net.URL;
+ 
+ public class LoginController {
+-
+-    @FXML
+-    private Button cancelButton;
+     @FXML
+     private Label loginMessageLabel;
+     @FXML
+@@ -29,11 +18,24 @@
+     @FXML
+     private PasswordField enterPasswordField;
+ 
++
++    public void changeSceneToDashboard() {
++        openDashboard();
++        Stage stage = (Stage) usernameTextField.getScene().getWindow();
++        stage.close();
++    }
++
++    public void signUpChangeScene(ActionEvent event) {
++        createAccountForm();
++        Stage stage = (Stage) usernameTextField.getScene().getWindow();
++        stage.close();
++    }
++
+     public void loginButtonOnAction(ActionEvent event) {
+-        if (!usernameTextField.getText().isBlank() && !enterPasswordField.getText().isBlank()) {
++        if (!usernameTextField.getText().isBlank() && ! enterPasswordField.getText().isBlank()) {
+             validateLogin();
+         } else {
+-            loginMessageLabel.setText("Please enter username and password");
++            loginMessageLabel.setText("Please enter username and password!");
+         }
+     }
+ 
+@@ -50,37 +52,47 @@
+ 
+             while (queryResult.next()) {
+                 if (queryResult.getInt(1) == 1) {
+-                   // loginMessageLabel.setText("Successfully login!");
+-                    Stage stage = (Stage) cancelButton.getScene().getWindow();
+-                    stage.close();
+-                    createAccountForm();
++                    changeSceneToDashboard();
+                 } else {
+                    loginMessageLabel.setText("Invalid login. Please try again!");
+                 }
+             }
+ 
+         } catch (Exception e) {
++            System.out.println("Can not connect database");
+             e.printStackTrace();
+             e.getCause();
+         }
+     }
+ 
+-    public void setCancelButtonOnAction(ActionEvent event) {
+-        Stage stage = (Stage) cancelButton.getScene().getWindow();
+-        stage.close();
+-    }
+     public void createAccountForm() {
+         try {
+-            FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("register.fxml"));
+-            Scene scene = new Scene(fxmlLoader.load(), 768, 480);
+-            Stage registerStage = new Stage();
+-            registerStage.setTitle("Dictionary");
+-            registerStage.setScene(scene);
+-            registerStage.show();
++            FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("sign-up.fxml"));
++            Scene scene = new Scene(fxmlLoader.load());
++            Stage dashboard = new Stage();
++            //registerStage.setTitle("Dictionary");
++            dashboard.setScene(scene);
++            dashboard.show();
+ 
+         } catch(Exception e) {
+             e.printStackTrace();
+             e.getCause();
+         }
+     }
++
++    public void openDashboard() {
++        try {
++            FXMLLoader fxmlLoader = new FXMLLoader(com.example.bestdictionaryever.Application.class.getResource("dashboard.fxml"));
++            Scene scene = new Scene(fxmlLoader.load());
++            Stage dashboard = new Stage();
++            //registerStage.setTitle("Dictionary");
++            dashboard.setScene(scene);
++            dashboard.show();
++
++        } catch(Exception e) {
++            System.out.println("Can not open dashboard");
++            e.printStackTrace();
++            e.getCause();
++        }
++    }
+ }
+Index: src/main/java/com/example/bestdictionaryever/DatabaseConnection.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.bestdictionaryever;\r\n\r\nimport java.sql.Connection;\r\nimport java.sql.DriverManager;\r\n\r\npublic class DatabaseConnection {\r\n    public Connection databaseLink;\r\n\r\n    public Connection getConnection() {\r\n        String databaseName = \"trungdic\";\r\n        String databaseUser = \"root\";\r\n        String databasePassword = \"\";\r\n        String url = \"jdbc:mysql://localhost/\" + databaseName;\r\n\r\n        try{\r\n            Class.forName(\"com.mysql.cj.jdbc.Driver\");\r\n            databaseLink = DriverManager.getConnection(url, databaseUser, databasePassword);\r\n\r\n        } catch (Exception e) {\r\n            e.printStackTrace();\r\n        }\r\n        return databaseLink;\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/bestdictionaryever/DatabaseConnection.java b/src/main/java/com/example/bestdictionaryever/DatabaseConnection.java
+--- a/src/main/java/com/example/bestdictionaryever/DatabaseConnection.java	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
++++ b/src/main/java/com/example/bestdictionaryever/DatabaseConnection.java	(date 1711413194900)
+@@ -10,13 +10,14 @@
+         String databaseName = "trungdic";
+         String databaseUser = "root";
+         String databasePassword = "";
+-        String url = "jdbc:mysql://localhost/" + databaseName;
++        String url = "jdbc:mysql://127.0.0.1/" + databaseName;
+ 
+         try{
+             Class.forName("com.mysql.cj.jdbc.Driver");
+             databaseLink = DriverManager.getConnection(url, databaseUser, databasePassword);
+ 
+         } catch (Exception e) {
++            System.out.println("Can not get connection to database");
+             e.printStackTrace();
+         }
+         return databaseLink;
+Index: src/main/java/com/example/bestdictionaryever/Application.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// package com.example.bestdictionaryever;\r\n\r\n// import javafx.fxml.FXMLLoader;\r\n// import javafx.scene.Scene;\r\n// import javafx.stage.Stage;\r\n\r\n// import java.io.IOException;\r\n\r\n// public class Application extends javafx.application.Application {\r\n//     @Override\r\n//     public void start(Stage stage) throws IOException {\r\n//         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource(\"login.fxml\"));\r\n//         Scene scene = new Scene(fxmlLoader.load(), 768, 480);\r\n//         stage.setTitle(\"Dictionary\");\r\n//         stage.setScene(scene);\r\n//         stage.show();\r\n//     }\r\n\r\n//     public static void main(String[] args) throws IOException {\r\n// //        //DictionaryCommandLine.dictionaryBasis();\r\n// //        DictionaryCommandLine.dictionaryAdvanced();\r\n//              launch();\r\n// //        return;\r\n//     }\r\n// }
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/bestdictionaryever/Application.java b/src/main/java/com/example/bestdictionaryever/Application.java
+--- a/src/main/java/com/example/bestdictionaryever/Application.java	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
++++ b/src/main/java/com/example/bestdictionaryever/Application.java	(date 1711413879759)
+@@ -1,25 +1,25 @@
+-// package com.example.bestdictionaryever;
++package com.example.bestdictionaryever;
+ 
+-// import javafx.fxml.FXMLLoader;
+-// import javafx.scene.Scene;
+-// import javafx.stage.Stage;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Scene;
++import javafx.stage.Stage;
+ 
+-// import java.io.IOException;
++import java.io.IOException;
+ 
+-// public class Application extends javafx.application.Application {
+-//     @Override
+-//     public void start(Stage stage) throws IOException {
+-//         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("login.fxml"));
+-//         Scene scene = new Scene(fxmlLoader.load(), 768, 480);
+-//         stage.setTitle("Dictionary");
+-//         stage.setScene(scene);
+-//         stage.show();
+-//     }
++public class Application extends javafx.application.Application {
++    @Override
++    public void start(Stage stage) throws IOException {
++        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("sign-in.fxml"));
++        Scene scene = new Scene(fxmlLoader.load());
++//        stage.setTitle("Dictionary");
++        stage.setScene(scene);
++        stage.show();
++    }
+ 
+-//     public static void main(String[] args) throws IOException {
+-// //        //DictionaryCommandLine.dictionaryBasis();
+-// //        DictionaryCommandLine.dictionaryAdvanced();
+-//              launch();
+-// //        return;
+-//     }
+-// }
+\ No newline at end of file
++    public static void main(String[] args) throws IOException {
++//        //DictionaryCommandLine.dictionaryBasis();
++//        DictionaryCommandLine.dictionaryAdvanced();
++             launch();
++//        return;
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/example/bestdictionaryever/RegisterController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.bestdictionaryever;\r\n\r\nimport javafx.event.ActionEvent;\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.Label;\r\nimport javafx.scene.control.TextField;\r\nimport javafx.scene.control.PasswordField;\r\nimport javafx.stage.Stage;\r\n\r\nimport java.io.File;\r\nimport java.net.URL;\r\nimport java.sql.Connection;\r\nimport java.sql.Statement;\r\n\r\n\r\npublic class RegisterController {\r\n    @FXML\r\n    private Button closeButton;\r\n    @FXML\r\n    private Label registerMessageLabel;\r\n    @FXML\r\n    private PasswordField setPasswordField;\r\n    @FXML\r\n    private PasswordField confirmPasswordField;\r\n    @FXML\r\n    private Label confirmPasswordMessageLabel;\r\n    @FXML\r\n    private TextField firstnameTextField;\r\n    @FXML\r\n    private TextField lastnameTextField;\r\n    @FXML\r\n    private TextField usernameTextField;\r\n\r\n    public void registerButtonOnAction(ActionEvent event) {\r\n        if (setPasswordField.getText().equals(confirmPasswordField.getText())) {\r\n            registerUser();\r\n        } else {\r\n            confirmPasswordMessageLabel.setText(\"Password does not match!\");\r\n        }\r\n    }\r\n\r\n    public void closeButtonOnAction(ActionEvent event) {\r\n        Stage stage = (Stage) closeButton.getScene().getWindow();\r\n        stage.close();\r\n    }\r\n\r\n    public void registerUser() {\r\n        DatabaseConnection connectNow = new DatabaseConnection();\r\n        Connection connectDB = connectNow.getConnection();\r\n\r\n        String firstname = firstnameTextField.getText();\r\n        String lastname = lastnameTextField.getText();\r\n        String username = usernameTextField.getText();\r\n        String password = setPasswordField.getText();\r\n\r\n        String insertField = \"insert into user_account(firstname, lastname, username, password) values('\";\r\n        String insertValues = firstname + \"','\" + lastname + \"','\" + username + \"','\" + password + \"');\";\r\n        String insertRegister = insertField + insertValues;\r\n        try {\r\n\r\n            Statement statement = connectDB.createStatement();\r\n            statement.executeUpdate(insertRegister);\r\n            confirmPasswordMessageLabel.setText(\"User registered successfully!\");\r\n\r\n        } catch (Exception e) {\r\n            e.printStackTrace();\r\n            e.getCause();\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/bestdictionaryever/RegisterController.java b/src/main/java/com/example/bestdictionaryever/RegisterController.java
+--- a/src/main/java/com/example/bestdictionaryever/RegisterController.java	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
++++ b/src/main/java/com/example/bestdictionaryever/RegisterController.java	(date 1711410804018)
+@@ -2,21 +2,19 @@
+ 
+ import javafx.event.ActionEvent;
+ import javafx.fxml.FXML;
+-import javafx.scene.control.Button;
+-import javafx.scene.control.Label;
+-import javafx.scene.control.TextField;
+-import javafx.scene.control.PasswordField;
++
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Scene;
++import javafx.scene.control.*;
+ import javafx.stage.Stage;
+ 
+-import java.io.File;
+-import java.net.URL;
++
+ import java.sql.Connection;
+ import java.sql.Statement;
+ 
+ 
+ public class RegisterController {
+-    @FXML
+-    private Button closeButton;
++
+     @FXML
+     private Label registerMessageLabel;
+     @FXML
+@@ -24,46 +22,90 @@
+     @FXML
+     private PasswordField confirmPasswordField;
+     @FXML
+-    private Label confirmPasswordMessageLabel;
++    private TextField fullnameTextField;
+     @FXML
+-    private TextField firstnameTextField;
++    private TextField usernameTextField;
++
+     @FXML
+-    private TextField lastnameTextField;
+-    @FXML
+-    private TextField usernameTextField;
++    private Hyperlink signIn;
++
++    public void changeSceneToSignIn() {
++        try {
++            FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("sign-in.fxml"));
++            Scene scene = new Scene(fxmlLoader.load());
++            Stage dashboard = new Stage();
++            //registerStage.setTitle("Dictionary");
++            dashboard.setScene(scene);
++            dashboard.show();
++
++        } catch(Exception e) {
++            e.printStackTrace();
++            e.getCause();
++        }
++    }
++    public void signInChangeScene(ActionEvent Event) {
++        changeSceneToSignIn();
++        Stage stage = (Stage) setPasswordField.getScene().getWindow();
++        stage.close();
++    }
++
++    public void changeSceneToDashboard() {
++        openDashboard();
++        Stage stage = (Stage) setPasswordField.getScene().getWindow();
++        stage.close();
++    }
++
+ 
+     public void registerButtonOnAction(ActionEvent event) {
+-        if (setPasswordField.getText().equals(confirmPasswordField.getText())) {
+-            registerUser();
++
++        if (fullnameTextField.getText().isEmpty()
++                || usernameTextField.getText().isEmpty()
++                || setPasswordField.getText().isEmpty()
++                || confirmPasswordField.getText().isEmpty()) {
++            registerMessageLabel.setText("Please enter all field!");
++        } else if (!setPasswordField.getText().equals(confirmPasswordField.getText())) {
++            registerMessageLabel.setText("Password does not match!");
+         } else {
+-            confirmPasswordMessageLabel.setText("Password does not match!");
++            registerUser();
+         }
+     }
+ 
+-    public void closeButtonOnAction(ActionEvent event) {
+-        Stage stage = (Stage) closeButton.getScene().getWindow();
+-        stage.close();
+-    }
+ 
+     public void registerUser() {
+         DatabaseConnection connectNow = new DatabaseConnection();
+         Connection connectDB = connectNow.getConnection();
+ 
+-        String firstname = firstnameTextField.getText();
+-        String lastname = lastnameTextField.getText();
++        String fullname = fullnameTextField.getText();
+         String username = usernameTextField.getText();
+         String password = setPasswordField.getText();
+ 
+-        String insertField = "insert into user_account(firstname, lastname, username, password) values('";
+-        String insertValues = firstname + "','" + lastname + "','" + username + "','" + password + "');";
++        String insertField = "insert into user_account(fullname, username, password) values('";
++        String insertValues = fullname + "','" + username + "','" + password + "');";
+         String insertRegister = insertField + insertValues;
+         try {
+ 
+             Statement statement = connectDB.createStatement();
+             statement.executeUpdate(insertRegister);
+-            confirmPasswordMessageLabel.setText("User registered successfully!");
+-
++            //confirmPasswordMessageLabel.setText("User registered successfully!");
++            changeSceneToDashboard();
+         } catch (Exception e) {
++            System.out.println("Can not register user");
++            e.printStackTrace();
++            e.getCause();
++        }
++    }
++
++    public void openDashboard() {
++        try {
++            FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("dashboard.fxml"));
++            Scene scene = new Scene(fxmlLoader.load());
++            Stage dashboard = new Stage();
++            //registerStage.setTitle("Dictionary");
++            dashboard.setScene(scene);
++            dashboard.show();
++
++        } catch(Exception e) {
++            System.out.println("Can not open dashboard");
+             e.printStackTrace();
+             e.getCause();
+         }
+Index: src/main/resources/com/example/bestdictionaryever/connectDatabase.fxml
+===================================================================
+diff --git a/src/main/resources/com/example/bestdictionaryever/connectDatabase.fxml b/src/main/resources/com/example/bestdictionaryever/connectDatabase.fxml
+deleted file mode 100644
+--- a/src/main/resources/com/example/bestdictionaryever/connectDatabase.fxml	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
++++ /dev/null	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
+@@ -1,21 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-
+-<?import javafx.scene.control.Button?>
+-<?import javafx.scene.control.Label?>
+-<?import javafx.scene.effect.Glow?>
+-<?import javafx.scene.layout.AnchorPane?>
+-<?import javafx.scene.text.Font?>
+-
+-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bestdictionaryever.DatabaseController">
+-   <children>
+-      <Label fx:id="showUsernameLabel" layoutX="248.0" layoutY="141.0" text="[username shown here]" />
+-      <Button fx:id="connectButton" layoutX="253.0" layoutY="187.0" mnemonicParsing="false" onAction="#connectButton" text="Connect Database" textFill="#a12323">
+-         <font>
+-            <Font size="14.0" />
+-         </font>
+-         <effect>
+-            <Glow />
+-         </effect>
+-      </Button>
+-   </children>
+-</AnchorPane>
+Index: src/main/resources/com/example/bestdictionaryever/hello-view.fxml
+===================================================================
+diff --git a/src/main/resources/com/example/bestdictionaryever/hello-view.fxml b/src/main/resources/com/example/bestdictionaryever/hello-view.fxml
+deleted file mode 100644
+--- a/src/main/resources/com/example/bestdictionaryever/hello-view.fxml	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
++++ /dev/null	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
+@@ -1,16 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-
+-<?import javafx.geometry.Insets?>
+-<?import javafx.scene.control.Label?>
+-<?import javafx.scene.layout.VBox?>
+-
+-<?import javafx.scene.control.Button?>
+-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+-      fx:controller="com.example.bestdictionaryever.HelloController">
+-  <padding>
+-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+-  </padding>
+-
+-  <Label fx:id="welcomeText"/>
+-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
+-</VBox>
+Index: src/main/java/com/example/bestdictionaryever/HelloApplication.java
+===================================================================
+diff --git a/src/main/java/com/example/bestdictionaryever/HelloApplication.java b/src/main/java/com/example/bestdictionaryever/HelloApplication.java
+deleted file mode 100644
+--- a/src/main/java/com/example/bestdictionaryever/HelloApplication.java	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
++++ /dev/null	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
+@@ -1,23 +0,0 @@
+-package com.example.bestdictionaryever;
+-
+-import javafx.application.Application;
+-import javafx.fxml.FXMLLoader;
+-import javafx.scene.Scene;
+-import javafx.stage.Stage;
+-
+-import java.io.IOException;
+-
+-public class HelloApplication extends Application {
+-    @Override
+-    public void start(Stage stage) throws IOException {
+-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("signIn.fxml"));
+-        Scene scene = new Scene(fxmlLoader.load(),1024 , 640);
+-        stage.setTitle("BestDictionaryEver");
+-        stage.setScene(scene);
+-        stage.show();
+-    }
+-
+-    public static void main(String[] args) {
+-        launch();
+-    }
+-}
+\ No newline at end of file
+Index: src/main/java/com/example/bestdictionaryever/HelloController.java
+===================================================================
+diff --git a/src/main/java/com/example/bestdictionaryever/HelloController.java b/src/main/java/com/example/bestdictionaryever/HelloController.java
+deleted file mode 100644
+--- a/src/main/java/com/example/bestdictionaryever/HelloController.java	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
++++ /dev/null	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
+@@ -1,14 +0,0 @@
+-package com.example.bestdictionaryever;
+-
+-import javafx.fxml.FXML;
+-import javafx.scene.control.Label;
+-
+-public class HelloController {
+-    @FXML
+-    private Label welcomeText;
+-
+-    @FXML
+-    protected void onHelloButtonClick() {
+-        welcomeText.setText("Welcome to Application of Genghis.Trung!");
+-    }
+-}
+\ No newline at end of file
+Index: src/main/resources/com/example/bestdictionaryever/login.css
+===================================================================
+diff --git a/src/main/resources/com/example/bestdictionaryever/login.css b/src/main/resources/com/example/bestdictionaryever/login.css
+deleted file mode 100644
+--- a/src/main/resources/com/example/bestdictionaryever/login.css	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
++++ /dev/null	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
+@@ -1,55 +0,0 @@
+-.login-button {
+-    -fx-background-color: back;
+-    -fx-border-radius: 5;
+-    -fx-background-radius: 5;
+-    -fx-cursor: HAND;
+-    -fx-font-weight: BOLD;
+-    -fx-font-size: 15;
+-}
+-
+-.login-button:hover {
+-    -fx-background-color: #fdb500;
+-    -fx-border-color: black;
+-    -fx-border-radius: 5;
+-    -fx-background-radius: 5;
+-    -fx-font-size: 15;
+-}
+-
+-
+-.signUp-button {
+-    -fx-background-color: #c53535;
+-    -fx-border-radius: 5;
+-    -fx-background-radius: 5;
+-    -fx-cursor: HAND;
+-}
+-.signUp-button:hover {
+-    -fx-background-color: #0059a4;
+-    -fx-border-color: black;
+-    -fx-border-radius: 5;
+-    -fx-background-radius: 5;
+-}
+-.title {
+-    -fx-font-weight: BOLD;
+-}
+-
+-.text-field:hover {
+-    -fx-border-color: black;
+-}
+-#usernameTextField1.text-field {
+-    -fx-border-color: none;
+-}
+-
+-#usernameTextField1.text-field:hover {
+-    -fx-border: none;
+-}
+-
+-.forgotPasswordHpl {
+-    -fx-cursor: HAND;
+-}
+-
+-.password-field:hover {
+-    -fx-border-color: black;
+-}
+-
+-
+-
+Index: src/main/resources/com/example/bestdictionaryever/login.fxml
+===================================================================
+diff --git a/src/main/resources/com/example/bestdictionaryever/login.fxml b/src/main/resources/com/example/bestdictionaryever/login.fxml
+deleted file mode 100644
+--- a/src/main/resources/com/example/bestdictionaryever/login.fxml	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
++++ /dev/null	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
+@@ -1,70 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-
+-<?import javafx.scene.control.Button?>
+-<?import javafx.scene.control.Hyperlink?>
+-<?import javafx.scene.control.Label?>
+-<?import javafx.scene.control.PasswordField?>
+-<?import javafx.scene.control.TextField?>
+-<?import javafx.scene.image.Image?>
+-<?import javafx.scene.image.ImageView?>
+-<?import javafx.scene.layout.AnchorPane?>
+-<?import javafx.scene.shape.Rectangle?>
+-<?import javafx.scene.text.Font?>
+-
+-<AnchorPane prefHeight="480.0" prefWidth="768.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bestdictionaryever.LoginController">
+-   <children>
+-      <AnchorPane prefHeight="480.0" prefWidth="330.0">
+-         <children>
+-            <ImageView fitHeight="505.0" fitWidth="481.0" layoutX="-60.0" layoutY="2.0" opacity="0.63" pickOnBounds="true" preserveRatio="true">
+-               <image>
+-                  <Image url="@Login/Image/avt.jpg" />
+-               </image>
+-            </ImageView>
+-            <AnchorPane layoutX="370.0" layoutY="-6.0" prefHeight="490.0" prefWidth="400.0" style="-fx-background-color: A3D3EE;">
+-               <children>
+-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="26.0" layoutX="94.0" layoutY="180.0" stroke="BLACK" strokeType="INSIDE" width="227.0" />
+-                  <Label layoutX="92.0" layoutY="162.0" text="Username" />
+-                  <Label layoutX="94.0" layoutY="229.0" text="Password" />
+-                  <ImageView fitHeight="86.0" fitWidth="180.0" layoutX="118.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+-                     <image>
+-                        <Image url="@Login/Image/logo.jpg" />
+-                     </image>
+-                  </ImageView>
+-                  <Button fx:id="cancelButton" layoutX="99.0" layoutY="415.0" mnemonicParsing="false" onAction="#setCancelButtonOnAction" prefHeight="26.0" prefWidth="227.0" style="-fx-background-color: E3652A;" styleClass="signUp-button" text="Cancel">
+-                     <font>
+-                        <Font name="Times New Roman" size="17.0" />
+-                     </font>
+-                  </Button>
+-                  <Button fx:id="loginButton" layoutX="99.0" layoutY="374.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="26.0" prefWidth="227.0" style="-fx-background-color: E3652A;" styleClass="login-button" text="Login">
+-                     <font>
+-                        <Font name="Times New Roman" size="17.0" />
+-                     </font>
+-                  </Button>
+-                  <Label fx:id="loginMessageLabel" layoutX="124.0" layoutY="287.0" textFill="#e42020">
+-                     <font>
+-                        <Font name="Times New Roman" size="14.0" />
+-                     </font>
+-                  </Label>
+-                  <PasswordField fx:id="enterPasswordField" layoutX="94.0" layoutY="245.0" prefHeight="26.0" prefWidth="227.0" styleClass="password-field" />
+-                  <Hyperlink layoutX="95.0" layoutY="134.0" text="Sign in" textFill="#ff4d56">
+-                     <font>
+-                        <Font name="Segoe UI" size="16.0" />
+-                     </font>
+-                  </Hyperlink>
+-                  <Hyperlink layoutX="250.0" layoutY="134.0" text="Sign up" textFill="violet">
+-                     <font>
+-                        <Font name="Segoe UI" size="16.0" />
+-                     </font>
+-                  </Hyperlink>
+-                  <TextField fx:id="usernameTextField" layoutX="121.0" layoutY="180.0" prefHeight="26.0" prefWidth="200.0" promptText="type your username" styleClass="text-field" />
+-                  <ImageView fitHeight="26.0" fitWidth="20.0" layoutX="99.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+-                     <image>
+-                        <Image url="@Login/Image/user_icon.png" />
+-                     </image>
+-                  </ImageView>
+-               </children>
+-            </AnchorPane>
+-         </children>
+-      </AnchorPane>
+-   </children>
+-</AnchorPane>
+Index: src/main/resources/com/example/bestdictionaryever/register.fxml
+===================================================================
+diff --git a/src/main/resources/com/example/bestdictionaryever/register.fxml b/src/main/resources/com/example/bestdictionaryever/register.fxml
+deleted file mode 100644
+--- a/src/main/resources/com/example/bestdictionaryever/register.fxml	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
++++ /dev/null	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
+@@ -1,49 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-
+-<?import javafx.scene.control.Button?>
+-<?import javafx.scene.control.Label?>
+-<?import javafx.scene.control.PasswordField?>
+-<?import javafx.scene.control.TextField?>
+-<?import javafx.scene.image.Image?>
+-<?import javafx.scene.image.ImageView?>
+-<?import javafx.scene.layout.AnchorPane?>
+-<?import javafx.scene.text.Font?>
+-
+-<AnchorPane prefHeight="480.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bestdictionaryever.RegisterController">
+-   <children>
+-      <AnchorPane prefHeight="100.0" prefWidth="768.0" style="-fx-background-color: #88A9D6;">
+-         <children>
+-            <ImageView fitHeight="80.0" fitWidth="150.0" layoutX="42.0" layoutY="10.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+-               <image>
+-                  <Image url="@../../../../resources/com/example/bestdictionaryever/Login/Image/cat.png" />
+-               </image>
+-            </ImageView>
+-            <Label layoutX="159.0" layoutY="33.0" prefHeight="44.0" prefWidth="115.0" text="User Registration" textFill="#b52222" underline="true" wrapText="true">
+-               <font>
+-                  <Font size="14.0" />
+-               </font></Label>
+-         </children>
+-      </AnchorPane>
+-      <Label layoutX="222.0" layoutY="123.0" text="Firstname" />
+-      <Label layoutX="222.0" layoutY="184.0" text="Username" />
+-      <Label layoutX="223.0" layoutY="245.0" text="Password" />
+-      <TextField fx:id="firstnameTextField" layoutX="222.0" layoutY="141.0" prefHeight="26.0" prefWidth="138.0" promptText="Firstname" />
+-      <TextField fx:id="usernameTextField" layoutX="222.0" layoutY="202.0" prefHeight="26.0" prefWidth="323.0" promptText="Username" />
+-      <Label layoutX="405.0" layoutY="123.0" text="Lastname" />
+-      <TextField fx:id="lastnameTextField" layoutX="405.0" layoutY="141.0" prefHeight="26.0" prefWidth="138.0" promptText="Lastname" />
+-      <Label layoutX="223.0" layoutY="313.0" text="Confirm Password" />
+-      <Button fx:id="registerButton" layoutX="223.0" layoutY="400.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: E7E547;" text="Register">
+-         <font>
+-            <Font name="Times New Roman" size="15.0" />
+-         </font>
+-      </Button>
+-      <PasswordField fx:id="setPasswordField" layoutX="223.0" layoutY="263.0" prefWidth="323.0" promptText="Password" />
+-      <PasswordField fx:id="confirmPasswordField" layoutX="223.0" layoutY="331.0" prefWidth="323.0" promptText="Confirm Password" />
+-      <Button fx:id="closeButton" layoutX="393.0" layoutY="400.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: E7E547;" text="Close">
+-         <font>
+-            <Font name="Times New Roman" size="15.0" />
+-         </font>
+-      </Button>
+-      <Label fx:id="confirmPasswordMessageLabel" layoutX="224.0" layoutY="367.0" />
+-   </children>
+-</AnchorPane>
+Index: src/main/resources/com/example/bestdictionaryever/signIn.css
+===================================================================
+diff --git a/src/main/resources/com/example/bestdictionaryever/signIn.css b/src/main/resources/com/example/bestdictionaryever/signIn.css
+deleted file mode 100644
+--- a/src/main/resources/com/example/bestdictionaryever/signIn.css	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
++++ /dev/null	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
+@@ -1,53 +0,0 @@
+-@font-face {
+-    font-family: "Montserrat SemiBold";
+-    src: url("font/Montserrat-SemiBold.ttf") format("truetype");
+-}
+-
+-@font-face {
+-    font-family: "Montserrat Italic";
+-    src: url("font/Montserrat-Italic.ttf") format("truetype");
+-}
+-
+-@font-face {
+-    font-family: "Montserrat Light";
+-    src: url("font/Montserrat-Light.ttf") format("truetype");
+-}
+-
+-#anchorPane {
+-    -fx-background-radius: 10,67px;
+-    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%,
+-    rgba(245, 184, 213, 0.59) 0%,
+-    rgba(243, 125, 108, 0.8) 60%);
+-}
+-.fixed-box {
+-    -fx-background-radius: 22px;
+-    -fx-fill: #fff;
+-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 0, 2, 0, 0);
+-    -fx-arc-height: 30px;
+-    -fx-arc-width: 30px;
+-}
+-
+-.Field {
+-    -fx-background-color: #FFF;
+-    -fx-border-color: #E7E7E7;
+-    -fx-border-width: 3px;
+-    -fx-border-radius: 10.67px;
+-    -fx-effect: dropshadow(gaussian, #E7E7E7, 0, 10, 0, 0);
+-}
+-
+-.LoginButton {
+-    -fx-background-radius: 10.67;
+-    -fx-font-family: "Montserrat SemiBold";
+-    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%,
+-                            rgba(217, 120, 31, 0.6) 0%,
+-    rgba(243, 125, 108, 0.9) 60%);
+-    -fx-font-size: 19.94px;
+-    -fx-text-fill: #fff;
+-}
+-.LoginButton:hover {
+-    -fx-cursor:hand;
+-}
+-
+-.Login:hover {
+-    -fx-cursor:hand;
+-}
+\ No newline at end of file
+Index: src/main/resources/com/example/bestdictionaryever/signIn.fxml
+===================================================================
+diff --git a/src/main/resources/com/example/bestdictionaryever/signIn.fxml b/src/main/resources/com/example/bestdictionaryever/signIn.fxml
+deleted file mode 100644
+--- a/src/main/resources/com/example/bestdictionaryever/signIn.fxml	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
++++ /dev/null	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
+@@ -1,75 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-
+-<?import javafx.scene.control.Button?>
+-<?import javafx.scene.control.PasswordField?>
+-<?import javafx.scene.control.TextField?>
+-<?import javafx.scene.image.Image?>
+-<?import javafx.scene.image.ImageView?>
+-<?import javafx.scene.layout.AnchorPane?>
+-<?import javafx.scene.shape.Rectangle?>
+-
+-<AnchorPane
+-        fx:id="anchorPane"
+-        prefHeight="1024" prefWidth="640"
+-        stylesheets="@signIn.css"
+-        xmlns="http://javafx.com/javafx/21"
+-        xmlns:fx="http://javafx.com/fxml/1">
+-
+-    <Rectangle
+-            height="420"
+-            layoutX="201" layoutY="132"
+-            style="--body-background-color: black"
+-            styleClass="fixed-box" width="643" />
+-
+-    <ImageView
+-            fitHeight="173" fitWidth="800"
+-            layoutX="165" layoutY="0"
+-            preserveRatio="true">
+-        <image>
+-            <Image url="@Login/Image/image_login.png" />
+-        </image>
+-    </ImageView>
+-
+-    <Button fx:id="Sign_in" alignment="CENTER"
+-            layoutX="346.0" layoutY="222.0"
+-            mnemonicParsing="false"
+-            prefHeight="33.0" prefWidth="104.0"
+-            style="-fx-background-color: transparent;
+-            -fx-text-fill: rgba(255, 77, 86, 1);
+-            -fx-font-size: 20px;
+-            -fx-font-family: 'Montserrat SemiBold'"
+-            styleClass="Login"
+-            text="Sign in" textAlignment="CENTER"
+-            wrapText="true" />
+-
+-    <Button fx:id="Sign_up" alignment="CENTER"
+-            layoutX="569.0" layoutY="222.0"
+-            mnemonicParsing="false"
+-            prefHeight="39.0" prefWidth="110.0"
+-            style="-fx-background-color: transparent;
+-            -fx-text-fill: rgba(0, 0, 0, 1);
+-            -fx-font-size: 20px;
+-            -fx-font-family: 'Montserrat SemiBold'"
+-            styleClass="Login"
+-            text="Sign up" textAlignment="CENTER"
+-            wrapText="true" />
+-
+-    <TextField fx:id="username"
+-               layoutX="345.78" layoutY="301"
+-               prefHeight="45.78" prefWidth="334.22"
+-               promptText="Username"
+-               styleClass="Field" />
+-
+-    <PasswordField fx:id="password"
+-                   layoutX="345.78" layoutY="385"
+-                   prefHeight="45.78" prefWidth="334.22"
+-                   promptText="Password"
+-                   styleClass="Field" />
+-
+-    <Button fx:id="SignInButton"
+-            alignment="CENTER"
+-            layoutX="446" layoutY="472"
+-            prefHeight="44" prefWidth="133"
+-            styleClass="LoginButton" text="Sign in"
+-            textAlignment="CENTER" wrapText="true" />
+-</AnchorPane>
+Index: src/MysqlData/trungdic_dictionary.sql
+===================================================================
+diff --git a/src/MysqlData/trungdic_dictionary.sql b/src/MysqlData/trungdic_dictionary.sql
+deleted file mode 100644
+--- a/src/MysqlData/trungdic_dictionary.sql	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
++++ /dev/null	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
+@@ -1,54 +0,0 @@
+--- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
+---
+--- Host: 127.0.0.1    Database: trungdic
+--- ------------------------------------------------------
+--- Server version	8.0.36
+-
+-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+-/*!50503 SET NAMES utf8 */;
+-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+-/*!40103 SET TIME_ZONE='+00:00' */;
+-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+-
+---
+--- Table structure for table `dictionary`
+---
+-
+-DROP TABLE IF EXISTS `dictionary`;
+-/*!40101 SET @saved_cs_client     = @@character_set_client */;
+-/*!50503 SET character_set_client = utf8mb4 */;
+-CREATE TABLE `dictionary` (
+-  `wordID` int NOT NULL AUTO_INCREMENT,
+-  `EnglishWord` varchar(45) NOT NULL,
+-  `VietnameseWord` varchar(45) NOT NULL,
+-  PRIMARY KEY (`wordID`),
+-  UNIQUE KEY `wordID_UNIQUE` (`wordID`),
+-  UNIQUE KEY `EnglishWord_UNIQUE` (`EnglishWord`)
+-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+-/*!40101 SET character_set_client = @saved_cs_client */;
+-
+---
+--- Dumping data for table `dictionary`
+---
+-
+-LOCK TABLES `dictionary` WRITE;
+-/*!40000 ALTER TABLE `dictionary` DISABLE KEYS */;
+-INSERT INTO `dictionary` VALUES (1,'dog','con chó'),(2,'cat','con mèo'),(3,'mouse','con chuột');
+-/*!40000 ALTER TABLE `dictionary` ENABLE KEYS */;
+-UNLOCK TABLES;
+-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+-
+-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+-
+--- Dump completed on 2024-03-20 19:52:43
+Index: src/MysqlData/trungdic_user_account.sql
+===================================================================
+diff --git a/src/MysqlData/trungdic_user_account.sql b/src/MysqlData/trungdic_user_account.sql
+deleted file mode 100644
+--- a/src/MysqlData/trungdic_user_account.sql	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
++++ /dev/null	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
+@@ -1,56 +0,0 @@
+--- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
+---
+--- Host: 127.0.0.1    Database: trungdic
+--- ------------------------------------------------------
+--- Server version	8.0.36
+-
+-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+-/*!50503 SET NAMES utf8 */;
+-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+-/*!40103 SET TIME_ZONE='+00:00' */;
+-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+-
+---
+--- Table structure for table `user_account`
+---
+-
+-DROP TABLE IF EXISTS `user_account`;
+-/*!40101 SET @saved_cs_client     = @@character_set_client */;
+-/*!50503 SET character_set_client = utf8mb4 */;
+-CREATE TABLE `user_account` (
+-  `accountID` int NOT NULL AUTO_INCREMENT,
+-  `firstname` varchar(45) NOT NULL,
+-  `lastname` varchar(45) NOT NULL,
+-  `username` varchar(45) NOT NULL,
+-  `password` varchar(45) CHARACTER SET armscii8 COLLATE armscii8_general_ci NOT NULL,
+-  PRIMARY KEY (`accountID`),
+-  UNIQUE KEY `username_UNIQUE` (`username`),
+-  UNIQUE KEY `accountID_UNIQUE` (`accountID`)
+-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+-/*!40101 SET character_set_client = @saved_cs_client */;
+-
+---
+--- Dumping data for table `user_account`
+---
+-
+-LOCK TABLES `user_account` WRITE;
+-/*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
+-INSERT INTO `user_account` VALUES (1,'Kien','Trung','trung29','29042004'),(2,'kin','trungg','trung2904','29042004'),(3,'mạnh','dũng','dungsadboyz','09102004'),(4,'louis','Trung','louisTrung','29042004'),(5,'trung','kien','trunglungtung','12345678');
+-/*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
+-UNLOCK TABLES;
+-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+-
+-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+-
+--- Dump completed on 2024-03-20 19:52:43
+Index: src/main/java/com/example/bestdictionaryever/Dashboard.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/bestdictionaryever/Dashboard.java b/src/main/java/com/example/bestdictionaryever/Dashboard.java
+new file mode 100644
+--- /dev/null	(date 1711379123123)
++++ b/src/main/java/com/example/bestdictionaryever/Dashboard.java	(date 1711379123123)
+@@ -0,0 +1,5 @@
++package com.example.bestdictionaryever;
++
++public class Dashboard {
++
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f1a62af0-7fc9-44f6-98a9-a3793cdaeab6\" name=\"Changes\" comment=\"add commandline&#10;test login, register, connect database and scene\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/cssdialects.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pom.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Application.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Application.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/HelloApplication.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/HelloApplication.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/LoginController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/LoginController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/login.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/login.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/login.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/login.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/signIn.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/signIn.fxml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"CSS File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 2\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2drh8mHoejODXhLvI6npCjLELOA\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,\r\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;E:/BestDictionaryEver&quot;,\r\n    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"jdk-20.0.2-corretto-20.0.2.1-4caba194b151-5bc9ecd2\" />\r\n        <option value=\"jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f1a62af0-7fc9-44f6-98a9-a3793cdaeab6\" name=\"Changes\" comment=\"\" />\r\n      <created>1710771949561</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1710771949561</updated>\r\n      <workItem from=\"1711292383210\" duration=\"25000\" />\r\n      <workItem from=\"1711292418303\" duration=\"9617000\" />\r\n      <workItem from=\"1711331020160\" duration=\"8541000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"add commandline&#10;test login, register, connect database and scene\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1710936455516</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1710936455516</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"add commandline&#10;test login, register, connect database and scene\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"add commandline&#10;test login, register, connect database and scene\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/BestDictionaryEver$HelloApplication.ic\" NAME=\"HelloApplication Coverage Results\" MODIFIED=\"1711293499974\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\r\n      <FILTER>com.example.bestdictionaryever.*</FILTER>\r\n    </SUITE>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 9ef6a50c4f769f03b39aecb50b4fff4a1dfa4d43)
++++ b/.idea/workspace.xml	(date 1711698169454)
+@@ -5,32 +5,51 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="f1a62af0-7fc9-44f6-98a9-a3793cdaeab6" name="Changes" comment="add commandline&#10;test login, register, connect database and scene">
+-      <change afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Dashboard.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/home.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/password_icon.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/sign_in_cat.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/dashboard.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/dashboard.fxml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/sign-in.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/sign-in.fxml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/sign-up.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/sign-up.fxml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/MysqlData/trungdic_dictionary.sql" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/MysqlData/trungdic_user_account.sql" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Application.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/HelloApplication.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/DatabaseConnection.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/HelloApplication.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/HelloController.java" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/LoginController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/login.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/login.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/signIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/signIn.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/RegisterController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/avt.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/cat.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Login/Image/logo.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Register/Image/background_sky.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Register/background.img" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Register/background_sky.img" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/connectDatabase.fxml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/hello-view.fxml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/login.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/login.fxml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/register.fxml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/signIn.css" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/signIn.fxml" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+-  <component name="FileTemplateManagerImpl">
+-    <option name="RECENT_TEMPLATES">
+-      <list>
+-        <option value="FxmlFile" />
+-        <option value="CSS File" />
+-      </list>
++  <component name="Git.Settings">
++    <option name="PUSH_TAGS">
++      <GitPushTagMode>
++        <option name="argument" value="--tags" />
++        <option name="title" value="All" />
++      </GitPushTagMode>
+     </option>
+-  </component>
+-  <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="ProjectColorInfo">{
+@@ -44,38 +63,20 @@
+   </component>
+   <component name="PropertiesComponent">{
+   &quot;keyToString&quot;: {
+-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
++    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;E:/BestDictionaryEver&quot;,
+-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
++    &quot;last_opened_file_path&quot;: &quot;D:/OOP/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+   }
+ }</component>
+-  <component name="RecentsManager">
+-    <key name="MoveFile.RECENT_KEYS">
+-      <recent name="E:\BestDictionaryEver\src\main\resources\com\example\bestdictionaryever" />
+-    </key>
+-  </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="jdk-20.0.2-corretto-20.0.2.1-4caba194b151-5bc9ecd2" />
+         <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+       </set>
+     </attachedChunks>
+@@ -88,9 +89,6 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1710771949561</updated>
+-      <workItem from="1711292383210" duration="25000" />
+-      <workItem from="1711292418303" duration="9617000" />
+-      <workItem from="1711331020160" duration="8541000" />
+     </task>
+     <task id="LOCAL-00001" summary="add commandline&#10;test login, register, connect database and scene">
+       <option name="closed" value="true" />
+@@ -102,11 +100,23 @@
+     </task>
+     <option name="localTasksCounter" value="2" />
+     <servers />
+-  </component>
+-  <component name="TypeScriptGeneratedFilesManager">
+-    <option name="version" value="3" />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
++    <option name="RECENT_FILTERS">
++      <map>
++        <entry key="User">
++          <value>
++            <list>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="*" />
++                </option>
++              </RecentGroup>
++            </list>
++          </value>
++        </entry>
++      </map>
++    </option>
+     <option name="TAB_STATES">
+       <map>
+         <entry key="MAIN">
+@@ -121,9 +131,4 @@
+     <MESSAGE value="add commandline&#10;test login, register, connect database and scene" />
+     <option name="LAST_COMMIT_MESSAGE" value="add commandline&#10;test login, register, connect database and scene" />
+   </component>
+-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+-    <SUITE FILE_PATH="coverage/BestDictionaryEver$HelloApplication.ic" NAME="HelloApplication Coverage Results" MODIFIED="1711293499974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+-      <FILTER>com.example.bestdictionaryever.*</FILTER>
+-    </SUITE>
+-  </component>
+ </project>
+\ No newline at end of file
+Index: src/main/resources/com/example/bestdictionaryever/sign-in.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/bestdictionaryever/sign-in.css b/src/main/resources/com/example/bestdictionaryever/sign-in.css
+new file mode 100644
+--- /dev/null	(date 1711379118721)
++++ b/src/main/resources/com/example/bestdictionaryever/sign-in.css	(date 1711379118721)
+@@ -0,0 +1,67 @@
++.window {
++    -fx-background-width: 1024;
++    -fx-height: 640;
++    -fx-background-color: linear-gradient(rgba(245, 192, 184, 0.59), rgba(243, 125, 108, 0.9));
++}
++
++.transparent {
++    -fx-background-color: rgba(0,0,0,0);
++}
++
++.innerBackground {
++    -fx-width: 643;
++    -fx-height: 420;
++    -fx-background-color: rgba(255,255,255,0.8);
++    -fx-border-radius: 22;
++    -fx-background-radius: 22;
++}
++
++.signInButton {
++    -fx-text-fill: rgba(255, 77, 86, 1);
++    -fx-font-family: "Semi Bold";
++    -fx-font-size: 20;
++    -fx-font-weight: 800;
++}
++
++.enterField {
++    -fx-width: 334.22;
++    -fx-height: 49.78;
++    -fx-background-color: rgba(255,255,255,1);
++    -fx-border-radius: 10.67;
++    -fx-background-radius: 10.67;
++    -fx-border-width: 3;
++    -fx-border-color: rgb(231, 231, 231);
++}
++
++.button {
++    -fx-text-fill: rgba(255, 255, 255, 1);
++    -fx-background-color: linear-gradient(to right, rgba(240, 13, 54, 0.88), rgba(217, 120, 31, 0.86));
++    -fx-width: 133;
++    -fx-height: 44;
++    -fx-border-radius: 10.67;
++    -fx-background-radius: 10.67;
++}
++
++.textField {
++    -fx-text-fill: rgba(154, 154, 154, 1);
++    -fx-font-family: "Montserrat";
++    -fx-font-size: 11.60;
++    -fx-font-weight: 580;
++}
++
++.signInlabel {
++    -fx-text-fill: rgba(255, 77, 86, 1);
++    -fx-font-family: "Semi Bold";
++    -fx-font-size: 20;
++    -fx-font-weight: 800;
++}
++.hyperlink {
++    -fx-text-fill: rgba(0, 0, 0, 1);
++}
++
++.labelMessage {
++    -fx-text-fill: rgba(255, 150, 140, 1);
++    -fx-font-family: "Montserrat";
++    -fx-font-size: 15;
++    -fx-alignment: center;
++}
+\ No newline at end of file
+Index: src/main/resources/com/example/bestdictionaryever/dashboard.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/bestdictionaryever/dashboard.fxml b/src/main/resources/com/example/bestdictionaryever/dashboard.fxml
+new file mode 100644
+--- /dev/null	(date 1711523038287)
++++ b/src/main/resources/com/example/bestdictionaryever/dashboard.fxml	(date 1711523038287)
+@@ -0,0 +1,98 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<?import javafx.geometry.Insets?>
++<?import javafx.scene.control.Button?>
++<?import javafx.scene.control.Label?>
++<?import javafx.scene.image.Image?>
++<?import javafx.scene.image.ImageView?>
++<?import javafx.scene.layout.AnchorPane?>
++<?import javafx.scene.text.Text?>
++
++<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
++   <children>
++      <AnchorPane prefHeight="640.0" prefWidth="213.0" styleClass="leftPanel" stylesheets="@dashboard.css">
++         <children>
++            <Text layoutX="70.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="dictionaryLabel" text="DICTIONARY" />
++            <Button layoutX="46.2" layoutY="108.86" mnemonicParsing="false" prefHeight="41.0" prefWidth="143.85" styleClass="dashBoardButton" stylesheets="@dashboard.css" text="Dashboard">
++               <graphic>
++                  <ImageView fitHeight="17.07" fitWidth="18.74" pickOnBounds="true" preserveRatio="true">
++                     <image>
++                        <Image url="@Login/Image/home.png" />
++                     </image>
++                  </ImageView>
++               </graphic>
++            </Button>
++            <Button layoutX="46.2" layoutY="201.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="143.85" styleClass="leftPanelButton" stylesheets="@dashboard.css" text="Translation">
++               <graphic>
++                  <AnchorPane prefHeight="20.0" prefWidth="43.0">
++                     <children>
++                        <ImageView fitHeight="17.0" fitWidth="29.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true">
++                           <image>
++                              <Image url="@Login/Image/light.png" />
++                           </image>
++                        </ImageView>
++                     </children>
++                  </AnchorPane>
++               </graphic>
++            </Button>
++            <Button layoutX="46.2" layoutY="242.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="143.85" styleClass="leftPanelButton" stylesheets="@dashboard.css" text="      Game" />
++            <Button layoutX="46.2" layoutY="283.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="143.85" styleClass="leftPanelButton" stylesheets="@dashboard.css" text="          Settings" />
++            <ImageView fitHeight="18.0" fitWidth="19.0" layoutX="71.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
++               <image>
++                  <Image url="@Login/Image/setting1.png" />
++               </image>
++            </ImageView>
++            <ImageView fitHeight="6.3" fitWidth="6.3" layoutX="77.3" layoutY="300.3" pickOnBounds="true" preserveRatio="true">
++               <image>
++                  <Image url="@Login/Image/setting2.png" />
++               </image>
++            </ImageView>
++            <ImageView fitHeight="18.0" fitWidth="19.0" layoutX="70.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
++               <image>
++                  <Image url="@Login/Image/puzzle.png" />
++               </image>
++            </ImageView>
++            <Button layoutX="37.0" layoutY="561.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="143.85" styleClass="leftPanelButton" stylesheets="@dashboard.css" text="       Log out" />
++            <ImageView fitHeight="18.0" fitWidth="19.0" layoutX="71.0" layoutY="574.0" pickOnBounds="true" preserveRatio="true">
++               <image>
++                  <Image url="@Login/Image/logout.png" />
++               </image>
++            </ImageView>
++         </children>
++      </AnchorPane>
++      <Button layoutX="46.2" layoutY="160.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="143.85" styleClass="leftPanelButton" stylesheets="@dashboard.css" text="My library">
++         <opaqueInsets>
++            <Insets left="30.0" />
++         </opaqueInsets>
++         <graphic>
++            <AnchorPane prefHeight="18.0" prefWidth="39.0">
++               <children>
++                  <ImageView fitHeight="18.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
++                     <image>
++                        <Image url="@Login/Image/star%20icon.png" />
++                     </image>
++                  </ImageView>
++               </children>
++            </AnchorPane>
++         </graphic>
++      </Button>
++      <AnchorPane layoutX="251.13" layoutY="104.06" prefHeight="492.83" prefWidth="428.8" styleClass="centerBoard" stylesheets="@dashboard.css">
++         <children>
++            <AnchorPane layoutX="26.71" layoutY="285.89" prefHeight="180.62" prefWidth="362.67" styleClass="animalBoard" stylesheets="@dashboard.css">
++               <children>
++                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="109.16" layoutY="20.05" prefHeight="11.0" prefWidth="136.0" styleClass="animalLabel" stylesheets="@dashboard.css" text="Animal" />
++                  <Label layoutX="62.0" layoutY="70.0" prefHeight="30.0" prefWidth="280.0" styleClass="textLabel" stylesheets="@dashboard.css" text="Explore English while discovering fascinating" />
++                  <Label layoutX="92.0" layoutY="85.0" prefHeight="30.0" prefWidth="171.0" styleClass="textLabel" stylesheets="@dashboard.css" text="animals from around the world." />
++                  <Button layoutX="132.16" layoutY="135.36" mnemonicParsing="false" prefHeight="27.0" prefWidth="99.0" styleClass="practiceButton" stylesheets="@dashboard.css" text="Practice" />
++               </children>
++            </AnchorPane>
++            <ImageView fitHeight="215.0" fitWidth="308.0" layoutX="58.87" layoutY="42.94" pickOnBounds="true" preserveRatio="true">
++               <image>
++                  <Image url="@Login/Image/rabbit.png" />
++               </image>
++            </ImageView>
++         </children>
++      </AnchorPane>
++      <AnchorPane layoutX="715.0" layoutY="104.0" prefHeight="492.89" prefWidth="294.18" styleClass="leaderBoard" stylesheets="@dashboard.css" />
++   </children>
++</AnchorPane>
+Index: src/main/resources/com/example/bestdictionaryever/sign-up.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/bestdictionaryever/sign-up.fxml b/src/main/resources/com/example/bestdictionaryever/sign-up.fxml
+new file mode 100644
+--- /dev/null	(date 1711380462738)
++++ b/src/main/resources/com/example/bestdictionaryever/sign-up.fxml	(date 1711380462738)
+@@ -0,0 +1,111 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<?import java.lang.String?>
++<?import javafx.scene.control.Button?>
++<?import javafx.scene.control.Hyperlink?>
++<?import javafx.scene.control.Label?>
++<?import javafx.scene.control.PasswordField?>
++<?import javafx.scene.control.TextField?>
++<?import javafx.scene.image.Image?>
++<?import javafx.scene.image.ImageView?>
++<?import javafx.scene.layout.AnchorPane?>
++<?import javafx.scene.layout.HBox?>
++
++<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.79" prefHeight="640.0" prefWidth="1024.0" styleClass="window" stylesheets="@sign-up.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bestdictionaryever.RegisterController">
++    <children>
++        <AnchorPane focusTraversable="true" layoutX="247.0" layoutY="113.0" prefHeight="471.0" prefWidth="564.0" styleClass="innerBackground" stylesheets="@sign-in.css">
++            <children>
++                <Button fx:id="registerButton" layoutX="217.0" layoutY="402.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="44.0" prefWidth="133.0" stylesheets="@sign-in.css" text="Sign up">
++                    <styleClass>
++                        <String fx:value="button" />
++                        <String fx:value="signInButton" />
++                    </styleClass>
++                </Button>
++                <Hyperlink fx:id="signIn" layoutX="145.0" layoutY="47.0" onAction="#signInChangeScene" styleClass="signInButton" stylesheets="@sign-in.css" text="Sign in" />
++                <HBox layoutX="117.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="49.78" prefWidth="334.22" styleClass="enterField" stylesheets="@sign-in.css">
++                    <children>
++                        <AnchorPane prefHeight="49.78" prefWidth="25.0">
++                            <children>
++                                <ImageView fitHeight="17.07" fitWidth="17.07" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
++                                    <image>
++                                        <Image url="@Login/Image/user_icon.png" />
++                                    </image>
++                                </ImageView>
++                            </children>
++                        </AnchorPane>
++                        <TextField fx:id="fullnameTextField" prefHeight="43.0" prefWidth="279.0" promptText="Full name" stylesheets="@sign-in.css">
++                            <styleClass>
++                                <String fx:value="transparent" />
++                                <String fx:value="textField" />
++                            </styleClass>
++                        </TextField>
++                    </children>
++                </HBox>
++            <HBox layoutX="117.0" layoutY="171.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="49.78" prefWidth="334.22" styleClass="enterField" stylesheets="@sign-in.css">
++               <children>
++                  <AnchorPane prefHeight="49.78" prefWidth="25.0">
++                     <children>
++                        <ImageView fitHeight="17.07" fitWidth="17.07" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
++                           <image>
++                              <Image url="@Login/Image/user_icon.png" />
++                           </image>
++                        </ImageView>
++                     </children>
++                  </AnchorPane>
++                  <TextField fx:id="usernameTextField" prefHeight="43.0" prefWidth="279.0" promptText="Username" stylesheets="@sign-in.css">
++                     <styleClass>
++                        <String fx:value="transparent" />
++                        <String fx:value="textField" />
++                     </styleClass>
++                  </TextField>
++               </children>
++            </HBox>
++            <Label layoutX="331.0" layoutY="51.0" styleClass="signInButton" stylesheets="@sign-in.css" text="Sign up" />
++            <Label fx:id="registerMessageLabel" layoutX="-3.0" layoutY="368.0" prefHeight="17.0" prefWidth="564.0" styleClass="labelMessage" stylesheets="@sign-up.css" />
++            </children>
++        </AnchorPane>
++        <HBox layoutX="364.0" layoutY="346.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="49.78" prefWidth="334.22" styleClass="enterField" stylesheets="@sign-in.css">
++            <children>
++                <AnchorPane prefHeight="49.78" prefWidth="25.0">
++                    <children>
++                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="9.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
++                            <image>
++                                <Image url="@Login/Image/password_icon.png" />
++                            </image>
++                        </ImageView>
++                    </children>
++                </AnchorPane>
++                <PasswordField fx:id="setPasswordField" prefHeight="43.0" prefWidth="279.0" promptText="Password" stylesheets="@sign-in.css">
++                    <styleClass>
++                        <String fx:value="textField" />
++                        <String fx:value="transparent" />
++                    </styleClass>
++                </PasswordField>
++            </children>
++        </HBox>
++        <ImageView fitHeight="211.0" fitWidth="784.0" layoutX="144.0" layoutY="-49.0" pickOnBounds="true" preserveRatio="true">
++            <image>
++                <Image url="@Login/Image/sign_in_cat.png" />
++            </image>
++        </ImageView>
++      <HBox layoutX="364.0" layoutY="408.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="49.78" prefWidth="334.22" styleClass="enterField" stylesheets="@sign-in.css">
++         <children>
++            <AnchorPane prefHeight="49.78" prefWidth="25.0">
++               <children>
++                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="9.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
++                     <image>
++                        <Image url="@Login/Image/password_icon.png" />
++                     </image>
++                  </ImageView>
++               </children>
++            </AnchorPane>
++            <PasswordField fx:id="confirmPasswordField" prefHeight="46.0" prefWidth="279.0" promptText="Confirm password" stylesheets="@sign-in.css">
++               <styleClass>
++                  <String fx:value="textField" />
++                  <String fx:value="transparent" />
++               </styleClass>
++            </PasswordField>
++         </children>
++      </HBox>
++    </children>
++</AnchorPane>
+Index: src/main/resources/com/example/bestdictionaryever/dashboard.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/bestdictionaryever/dashboard.css b/src/main/resources/com/example/bestdictionaryever/dashboard.css
+new file mode 100644
+--- /dev/null	(date 1711954678248)
++++ b/src/main/resources/com/example/bestdictionaryever/dashboard.css	(date 1711954678248)
+@@ -0,0 +1,116 @@
++.dictionaryLabel {
++    -fx-text-fill: rgba(0,0,0, 0.8);
++    -fx-font-family: "Inter";
++    -fx-font-size: 17.07;
++    -fx-font-weight: semi-bold;
++
++}
++
++.leftPanel {
++    -fx-background-color: "white";
++    -fx-background-radius: 21.33;
++    -fx-border-radius: 21.33;
++    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.25), 1.42, 0, 0, 1.42);
++}
++
++.dashBoardButton {
++    -fx-background-color: linear-gradient(to left, rgba(255, 150, 140, 1), rgba(203, 40, 108, 0.64), rgba(194, 149, 63, 0.90));
++    -fx-background-radius: 13;
++    -fx-border-radius: 13;
++    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.25), 1, 0, 0, 2.5);
++    -fx-font-family: "Montserrat";
++    -fx-font-weight: semi-bold;
++    -fx-font-size: 12;
++    -fx-text-fill: "white";
++}
++
++.leftPanelButton {
++    -fx-background-color: rgba(0,0,0,0);
++    -fx-font-family: "Montserrat";
++    -fx-font-weight: semi-bold;
++    -fx-text-fill: rgb(0,0,0,0.8)
++    -fx-font-size: 12;
++    -fx-line-padding-left: 18;
++}
++
++.leftPanelButton: hover {
++    -fx-background-color: rgba(240, 240, 240, 1);
++    -fx-background-radius: 13;
++    -fx-border-radius: 13;
++}
++
++.background {
++    -fx-background-color: rgba(245,245,245,255);
++}
++
++.practiceBoard {
++    -fx-background-radius: 21.33;
++    -fx-border-radius: 21.33;
++    -fx-background-color: rgba(255, 255, 255, 0.55);
++    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.25), 1.42, 0, 0, 1.42);
++}
++
++.centerBoard {
++    -fx-background-radius: 21.33;
++    -fx-border-radius: 21.33;
++    -fx-background-color: rgba(255, 255, 255, 1);
++    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.25), 1.42, 0, 0, 1.42);
++}
++
++.animalBoard {
++    -fx-background-radius: 20.33;
++    -fx-border-radius: 20.33;
++    -fx-background-color: rgba(240, 240, 240, 1);
++}
++
++.practiceButton {
++    -fx-background-color: linear-gradient(to right, rgba(203, 40,108 , 0.64), rgba(194, 149, 63, 0.80));
++    -fx-background-radius: 12;
++    -fx-border-radius: 12;
++    -fx-font-family: "Montserrat";
++    -fx-font-weight: bold;
++    -fx-font-size: 12;
++}
++
++.animalLabel {
++    -fx-font-family: "Montserrat";
++    -fx-font-weight: bold;
++    -fx-font-size: 15.64;
++    -fx-text-align: center;
++    -fx-text-fill: rgb(0,0,0,0.8)
++}
++
++.textLabel {
++    -fx-font-family: "Montserrat";
++    -fx-font-weight: semi-bold;
++    -fx-font-size: 12.09;
++    -fx-text-align: center;
++    -fx-text-fill: rgb(0,0,0,0.8)
++}
++
++.leaderBoard {
++    -fx-background-color: "white";
++    -fx-background-radius: 21.33;
++    -fx-effect: dropShadow(two-pass-box, rgba(0,0,0,0.25), 1.42, 0, 0, 1.42);
++    -fx-border-top-left-radius: 21.33;
++    -fx-border-top-right-radius: 21.33;
++    -fx-border-top-width: 43;
++    -fx-border-top-color: linear-gradient(to right, rgba(203, 40,108 , 0.64), rgba(194, 149, 63, 0.80));
++}
++
++.ranklabel {
++    -fx-background-color: "white";
++    -fx-background-radius: 7.11;
++    -fx-border-radius: 7.11;
++    -fx-border-color: rgba(0,0,0,0.07);
++    -fx-border-width: 0.71;
++    -fx-effect: dropShadow(two-pass-box, rgba(0,0,0,0.25), 2.84, 0, 0, 0);
++}
++
++.iconInButton {
++    -fx-padding-left: 19;
++}
++
++.leaderLabel {
++    -fx-text-fill: "white";
++}
+Index: src/main/resources/com/example/bestdictionaryever/sign-up.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/bestdictionaryever/sign-up.css b/src/main/resources/com/example/bestdictionaryever/sign-up.css
+new file mode 100644
+--- /dev/null	(date 1711379123114)
++++ b/src/main/resources/com/example/bestdictionaryever/sign-up.css	(date 1711379123114)
+@@ -0,0 +1,6 @@
++.window {
++    -fx-background-width: 1024;
++    -fx-height: 640;
++    -fx-background-color: linear-gradient(rgba(245, 184, 213, 0.59), rgba(243, 125, 108, 0.9));
++}
++
+Index: src/main/resources/com/example/bestdictionaryever/sign-in.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/bestdictionaryever/sign-in.fxml b/src/main/resources/com/example/bestdictionaryever/sign-in.fxml
+new file mode 100644
+--- /dev/null	(date 1711379118714)
++++ b/src/main/resources/com/example/bestdictionaryever/sign-in.fxml	(date 1711379118714)
+@@ -0,0 +1,78 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<?import java.lang.String?>
++<?import javafx.scene.control.Button?>
++<?import javafx.scene.control.Hyperlink?>
++<?import javafx.scene.control.Label?>
++<?import javafx.scene.control.PasswordField?>
++<?import javafx.scene.control.TextField?>
++<?import javafx.scene.image.Image?>
++<?import javafx.scene.image.ImageView?>
++<?import javafx.scene.layout.AnchorPane?>
++<?import javafx.scene.layout.HBox?>
++
++<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.79" prefHeight="640.0" prefWidth="1024.0" styleClass="window" stylesheets="@sign-in.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bestdictionaryever.LoginController">
++   <children>
++      <AnchorPane focusTraversable="true" layoutX="201.0" layoutY="129.0" prefHeight="420.0" prefWidth="643.0" styleClass="innerBackground" stylesheets="@sign-in.css">
++         <children>
++            <Button fx:id="loginButton" layoutX="254.0" layoutY="345.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="44.0" prefWidth="133.0" stylesheets="@sign-in.css" text="Sign in">
++               <styleClass>
++                  <String fx:value="button" />
++                  <String fx:value="signInButton" />
++               </styleClass>
++            </Button>
++            <Hyperlink fx:id="signUp" layoutX="363.0" layoutY="93.0" onAction="#signUpChangeScene" styleClass="signInButton" stylesheets="@sign-in.css" text="Sign up" />
++            <HBox layoutX="144.78" layoutY="172.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="49.78" prefWidth="334.22" styleClass="enterField" stylesheets="@sign-in.css">
++               <children>
++                  <AnchorPane prefHeight="49.78" prefWidth="25.0">
++                     <children>
++                        <ImageView fitHeight="17.07" fitWidth="17.07" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
++                           <image>
++                              <Image url="@Login/Image/user_icon.png" />
++                           </image>
++                        </ImageView>
++                     </children>
++                  </AnchorPane>
++                  <TextField fx:id="usernameTextField" prefHeight="36.0" prefWidth="279.0" promptText="Username" stylesheets="@sign-in.css">
++                     <styleClass>
++                        <String fx:value="transparent" />
++                        <String fx:value="textField" />
++                     </styleClass>
++                  </TextField>
++               </children>
++            </HBox>
++            <Label layoutX="189.0" layoutY="97.0" stylesheets="@sign-in.css" text="Sign in">
++               <styleClass>
++                  <String fx:value="signInlabel" />
++                  <String fx:value="transparent" />
++               </styleClass>
++            </Label>
++            <Label fx:id="loginMessageLabel" layoutY="315.0" prefHeight="18.0" prefWidth="643.0" styleClass="labelMessage" stylesheets="@sign-in.css" />
++         </children>
++      </AnchorPane>
++      <ImageView fitHeight="211.0" fitWidth="784.0" layoutX="137.0" layoutY="-21.0" pickOnBounds="true" preserveRatio="true">
++         <image>
++            <Image url="@Login/Image/sign_in_cat.png" />
++         </image>
++      </ImageView>
++      <HBox layoutX="345.0" layoutY="376.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="49.78" prefWidth="334.22" styleClass="enterField" stylesheets="@sign-in.css">
++         <children>
++            <AnchorPane prefHeight="49.78" prefWidth="25.0">
++               <children>
++                  <ImageView fitHeight="17.07" fitWidth="27.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
++                     <image>
++                        <Image url="@Login/Image/password_icon.png" />
++                     </image>
++                  </ImageView>
++               </children>
++            </AnchorPane>
++            <PasswordField fx:id="enterPasswordField" prefHeight="36.0" prefWidth="279.0" promptText="Password" stylesheets="@sign-in.css">
++               <styleClass>
++                  <String fx:value="textField" />
++                  <String fx:value="transparent" />
++               </styleClass>
++            </PasswordField>
++         </children>
++      </HBox>
++   </children>
++</AnchorPane>

@@ -1,0 +1,41 @@
+.backGround {
+    -fx-background-color: rgba(240, 240, 240, 1);
+}
+
+.inputTextArea {
+    -fx-background-color: "white";
+    -fx-background-radius: 21.33;
+    -fx-border-radius: 21.33;
+}
+
+.textArea {
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-border-color: rgba(0,0,0,0);
+}
+
+.translationLabel {
+    -fx-font-family: "Semi Bold";
+    -fx-font-size: 20;
+    -fx-font-weight: 800;
+}
+
+.backButton {
+    -fx-background-color: "white";
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+
+}
+
+.helpButton {
+
+}
+
+.listenButton {
+
+}
+
+.switchButton {
+    -fx-background-color: rgba(0,0,0,0);
+
+}
+
