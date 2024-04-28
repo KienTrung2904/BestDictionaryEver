@@ -5,7 +5,7 @@ module com.example.bestdictionaryever {
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
     requires java.sql;
-    requires javafx.media;
+   // requires javafx.media;
     requires freetts;
 
     opens com.example.bestdictionaryever to javafx.fxml;
