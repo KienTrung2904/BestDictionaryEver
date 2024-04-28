@@ -4,3 +4,6 @@
     -fx-background-color: linear-gradient(rgba(245, 184, 213, 0.59), rgba(243, 125, 108, 0.9));
 }
 
+.transparent {
+    -fx-background-color: rgba(0,0,0,0);
+}

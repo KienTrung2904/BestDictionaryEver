@@ -18,12 +18,13 @@
 --
 -- Table structure for table `dictionary`
 --
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-
+USE trungdic;
 /*DROP TABLE IF EXISTS `dictionary`;*/
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
