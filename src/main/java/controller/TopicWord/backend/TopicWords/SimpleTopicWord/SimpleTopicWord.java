@@ -46,9 +46,6 @@ public class SimpleTopicWord {
 
     @Override
     public String toString() {
-        return "SimpleTopicWord{" +
-                "topic='" + topic + '\'' +
-                ", word='" + word + '\'' +
-                '}';
+        return "Topic: " + topic + "\nWord: " + word;
     }
 }

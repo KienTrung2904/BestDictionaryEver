@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f1a62af0-7fc9-44f6-98a9-a3793cdaeab6" name="Changes" comment="add commandline&#10;test login, register, connect database and scene">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/SimpleTopicWord/SimpleTopicWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/SimpleTopicWord/SimpleTopicWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/temp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/ExerciseBank/MultipleChoice/MultipleChoice-Blank.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/ExerciseBank/MultipleChoice/MultipleChoice-Blank.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/MultipleChoice/Option.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/MultipleChoice/Options.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +71,7 @@
     "Application.Application.executor": "Run",
     "Application.GoogleTranslation.executor": "Run",
     "Application.HelloApplication.executor": "Run",
+    "Application.MultipleChoice.executor": "Run",
     "Application.SimpleTopicWordLoad.executor": "Run",
     "Application.TextToSpeech.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
@@ -103,7 +106,7 @@
       <recent name="com.example.bestdictionaryever" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SimpleTopicWordLoad">
+  <component name="RunManager" selected="Application.MultipleChoice">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.bestdictionaryever.Application" />
       <module name="BestDictionaryEver" />
@@ -123,6 +126,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.bestdictionaryever.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MultipleChoice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controller.game.backend.Exercises.MultipleChoice.MultipleChoice" />
+      <module name="BestDictionaryEver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.game.backend.Exercises.MultipleChoice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -156,18 +172,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="trungdic.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/database/trungdic.sql" />
-      <script-mode>FILE</script-mode>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MultipleChoice" />
         <item itemvalue="Application.SimpleTopicWordLoad" />
         <item itemvalue="Application.Application" />
         <item itemvalue="Application.TextToSpeech" />
         <item itemvalue="Application.GoogleTranslation" />
-        <item itemvalue="Database Script.trungdic.sql" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +224,8 @@
       <workItem from="1714184687544" duration="6511000" />
       <workItem from="1714193635459" duration="16452000" />
       <workItem from="1714311552569" duration="7577000" />
-      <workItem from="1714370851214" duration="4485000" />
+      <workItem from="1714370851214" duration="8665000" />
+      <workItem from="1714385703120" duration="3516000" />
     </task>
     <task id="LOCAL-00001" summary="add commandline&#10;test login, register, connect database and scene">
       <option name="closed" value="true" />

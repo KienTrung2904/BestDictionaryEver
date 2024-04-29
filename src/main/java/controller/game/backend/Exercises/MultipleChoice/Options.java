@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Objects;
 
-public class Option {
+public class Options {
     @JsonProperty("A")
     private String optionA;
 
@@ -17,11 +17,11 @@ public class Option {
     @JsonProperty("D")
     private String optionD;
 
-    public Option() {
+    public Options() {
 
     }
 
-    public Option(String optionA, String optionB, String optionC, String optionD) {
+    public Options(String optionA, String optionB, String optionC, String optionD) {
         this.optionA = optionA;
         this.optionB = optionB;
         this.optionC = optionC;
@@ -73,7 +73,7 @@ public class Option {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Option options)) return false;
+        if (!(o instanceof Options options)) return false;
         return Objects.equals(optionA, options.optionA) && Objects.equals(optionB, options.optionB) && Objects.equals(optionC, options.optionC) && Objects.equals(optionD, options.optionD);
     }
 
