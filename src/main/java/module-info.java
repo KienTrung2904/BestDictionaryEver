@@ -7,6 +7,7 @@ module com.example.bestdictionaryever {
     requires java.sql;
    // requires javafx.media;
     requires freetts;
+    requires com.fasterxml.jackson.annotation;
 
     opens com.example.bestdictionaryever to javafx.fxml;
     opens controller.game to javafx.fxml;
