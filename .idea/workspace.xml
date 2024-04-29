@@ -64,35 +64,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GoogleTranslation.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TextToSpeech.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;genghisTrung&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/2ndSemester_2ndYear/OOP/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Application.executor": "Run",
+    "Application.GoogleTranslation.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "Application.SimpleTopicWordLoad.executor": "Run",
+    "Application.TextToSpeech.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "genghisTrung",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/2ndSemester_2ndYear/OOP/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\BestDictionaryEver\src\main\resources\com\example\bestdictionaryever\font" />
@@ -102,7 +103,7 @@
       <recent name="com.example.bestdictionaryever" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TextToSpeech">
+  <component name="RunManager" selected="Application.SimpleTopicWordLoad">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.bestdictionaryever.Application" />
       <module name="BestDictionaryEver" />
@@ -122,6 +123,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.bestdictionaryever.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleTopicWordLoad" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controller.TopicWord.backend.TopicWords.SimpleTopicWord.SimpleTopicWordLoad" />
+      <module name="BestDictionaryEver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.TopicWord.backend.TopicWords.SimpleTopicWord.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,9 +163,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SimpleTopicWordLoad" />
+        <item itemvalue="Application.Application" />
         <item itemvalue="Application.TextToSpeech" />
         <item itemvalue="Application.GoogleTranslation" />
-        <item itemvalue="Application.Application" />
         <item itemvalue="Database Script.trungdic.sql" />
       </list>
     </recent_temporary>
@@ -198,7 +213,7 @@
       <workItem from="1714184687544" duration="6511000" />
       <workItem from="1714193635459" duration="16452000" />
       <workItem from="1714311552569" duration="7577000" />
-      <workItem from="1714370851214" duration="315000" />
+      <workItem from="1714370851214" duration="4485000" />
     </task>
     <task id="LOCAL-00001" summary="add commandline&#10;test login, register, connect database and scene">
       <option name="closed" value="true" />
