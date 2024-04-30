@@ -4,17 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SimpleTopicWordContainer {
-    private List<SimpleTopicWord> simpleTopicWords = new ArrayList<>();
+    private List<SimpleTopicWord> words = new ArrayList<>();
 
     public SimpleTopicWordContainer() {
 
     }
 
-    public List<SimpleTopicWord> getSimpleTopicWords() {
-        return simpleTopicWords;
+    public List<SimpleTopicWord> getWords() {
+        return words;
     }
 
-    public void setSimpleTopicWords(List<SimpleTopicWord> simpleTopicWords) {
-        this.simpleTopicWords = simpleTopicWords;
+    public void setWords(List<SimpleTopicWord> words) {
+        this.words = words;
     }
 }

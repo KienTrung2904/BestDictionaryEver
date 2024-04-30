@@ -1,5 +1,5 @@
 {
-"simpleTopicWords": [
+"words": [
 {"topic": "Animal", "word": "Migrate"},
 {"topic": "Animal", "word": "Altruism"},
 {"topic": "Animal", "word": "Gestation"},

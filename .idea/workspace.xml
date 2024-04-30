@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1a62af0-7fc9-44f6-98a9-a3793cdaeab6" name="Changes" comment="add commandline&#10;test login, register, connect database and scene">
-      <change beforePath="$PROJECT_DIR$/.idea/cssdialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ScreenControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ScreenControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailedTopicWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailedTopicWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailTopicWordLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailTopicWordLoad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailedTopicWordContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailedTopicWordContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/SimpleTopicWord/SimpleTopicWordContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/SimpleTopicWord/SimpleTopicWordContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/SimpleTopicWord/SimpleTopicWordLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/SimpleTopicWord/SimpleTopicWordLoad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Utils/Description.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Utils/Description.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Words/SimpleTopicWords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Words/SimpleTopicWords.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/ChooseGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/ChooseGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/GameUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/ExerciseBank/MultipleChoice/MultipleChoice-Blank.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/ExerciseBank/MultipleChoice/MultipleChoice-Blank.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/MultipleChoice/MultipleChoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/MultipleChoice/MultipleChoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/MultipleChoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/MultipleChoiceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,37 +72,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GoogleTranslation.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MultipleChoice.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SimpleTopicWordLoad.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TextToSpeech.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;genghisTrung&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/2ndSemester_2ndYear/OOP/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Application.executor": "Run",
+    "Application.DetailTopicWordLoad.executor": "Run",
+    "Application.Dictation.executor": "Run",
+    "Application.GoogleTranslation.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "Application.MultipleChoice.executor": "Run",
+    "Application.SimpleTopicWordLoad.executor": "Run",
+    "Application.TextToSpeech.executor": "Run",
+    "Application.TopicScanner.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "genghisTrung",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/2ndSemester_2ndYear/OOP/UseInteliJUltimate/TrungDic01",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\BestDictionaryEver\src\main\resources\com\example\bestdictionaryever\font" />
@@ -125,12 +129,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GoogleTranslation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.bestdictionaryever.GoogleTranslation" />
+    <configuration name="DetailTopicWordLoad" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controller.TopicWord.backend.TopicWords.DetailedTopicWord.DetailTopicWordLoad" />
       <module name="BestDictionaryEver" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.bestdictionaryever.*" />
+          <option name="PATTERN" value="controller.TopicWord.backend.TopicWords.DetailedTopicWord.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,12 +142,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MultipleChoice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="controller.game.backend.Exercises.MultipleChoice.MultipleChoice" />
+    <configuration name="Dictation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controller.game.backend.Exercises.Dictation.Dictation" />
       <module name="BestDictionaryEver" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="controller.game.backend.Exercises.MultipleChoice.*" />
+          <option name="PATTERN" value="controller.game.backend.Exercises.Dictation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -164,12 +168,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TextToSpeech" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.bestdictionaryever.TextToSpeech" />
+    <configuration name="TopicScanner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controller.TopicWord.backend.Utils.TopicScanner" />
       <module name="BestDictionaryEver" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.bestdictionaryever.*" />
+          <option name="PATTERN" value="controller.TopicWord.backend.Utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -180,10 +184,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
-        <item itemvalue="Application.MultipleChoice" />
+        <item itemvalue="Application.DetailTopicWordLoad" />
         <item itemvalue="Application.SimpleTopicWordLoad" />
-        <item itemvalue="Application.TextToSpeech" />
-        <item itemvalue="Application.GoogleTranslation" />
+        <item itemvalue="Application.Dictation" />
+        <item itemvalue="Application.TopicScanner" />
       </list>
     </recent_temporary>
   </component>
@@ -232,6 +236,9 @@
       <workItem from="1714370851214" duration="8665000" />
       <workItem from="1714385703120" duration="4210000" />
       <workItem from="1714450689878" duration="8562000" />
+      <workItem from="1714462185092" duration="186000" />
+      <workItem from="1714467727191" duration="2508000" />
+      <workItem from="1714472738622" duration="5709000" />
     </task>
     <task id="LOCAL-00001" summary="add commandline&#10;test login, register, connect database and scene">
       <option name="closed" value="true" />
@@ -269,6 +276,11 @@
           <properties class="java.lang.ClassNotFoundException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailTopicWordLoad.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

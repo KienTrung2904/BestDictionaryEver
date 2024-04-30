@@ -10,5 +10,11 @@ import java.util.ResourceBundle;
 
 public class MultipleChoiceController extends ExerciseController<MultipleChoice> {
 
+    public void back() {
+        super.chooseGame();
+    }
+    public void backToChooseTopic() {
+        super.chooseTopicAndPractice();
+    }
 
 }

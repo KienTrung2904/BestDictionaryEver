@@ -22,7 +22,7 @@ public class ChooseGameController extends ScreenControl implements Initializable
             super.dashboard();
         });
         vocabularyButton.setOnMouseClicked(event -> {
-            super.vocabulary();
+            super.chooseTopicAndPractice();
         });
         listeningButton.setOnMouseClicked(event -> {
             super.listening();

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class DetailedTopicWordContainer {
     private String topic;
-    private ArrayList<DetailedTopicWord> detailedTopicWords;
+    private ArrayList<DetailedTopicWord> words;
 
     public DetailedTopicWordContainer() {
 
@@ -18,11 +18,11 @@ public class DetailedTopicWordContainer {
         this.topic = topic;
     }
 
-    public ArrayList<DetailedTopicWord> getDetailedTopicWords() {
-        return detailedTopicWords;
+    public ArrayList<DetailedTopicWord> getWords() {
+        return words;
     }
 
-    public void setDetailedTopicWords(ArrayList<DetailedTopicWord> detailedTopicWords) {
-        this.detailedTopicWords = detailedTopicWords;
+    public void setWords(ArrayList<DetailedTopicWord> words) {
+        this.words = words;
     }
 }

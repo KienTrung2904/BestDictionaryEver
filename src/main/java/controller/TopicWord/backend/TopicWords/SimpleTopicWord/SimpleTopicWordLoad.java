@@ -16,7 +16,7 @@ public class SimpleTopicWordLoad {
         try {
             SimpleTopicWordContainer container = objectMapper.readValue(file, SimpleTopicWordContainer.class);
 
-            HashSet<SimpleTopicWord> simpleTopicWordSet = new HashSet<>(container.getSimpleTopicWords());
+            HashSet<SimpleTopicWord> simpleTopicWordSet = new HashSet<>(container.getWords());
             ArrayList<SimpleTopicWord> simpleTopicWordList = new ArrayList<>(simpleTopicWordSet);
 
             return simpleTopicWordList;
