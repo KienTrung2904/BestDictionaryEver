@@ -1,19 +1,12 @@
 .background {
     -fx-background-color: #E0F4FF;
 }
-.smallLabel {
-    -fx-wrap-text: true;
-    -fx-background-color: linear-gradient(to bottom right, #eeaeca , #94bbe9);
-    -fx-background-radius: 10px;
-    -fx-text-fill: #ffffff;
-    -fx-font-family: Helvetica;
-    -fx-font-size: 20px;
-}
 .label {
-    -fx-background-color: linear-gradient(to bottom right, #eeaeca , #94bbe9);
+    -fx-background-color: transparent;
+    // color of text is turtle green
+    -fx-text-fill: #8B4726;
     -fx-wrap-text: true;
     -fx-background-radius: 10px;
-    -fx-text-fill: #ffffff;
     -fx-font-family: Helvetica;
     -fx-font-size: 30px;
 }

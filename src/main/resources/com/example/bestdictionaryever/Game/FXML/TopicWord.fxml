@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -60,13 +59,13 @@
                      </rowConstraints>
                      <children>
                         <Button fx:id="AnimalButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Animal" />
-                        <Button fx:id="BodyButton" mnemonicParsing="false" onMouseClicked="#chooseBody" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Body" GridPane.columnIndex="1" />
-                        <Button fx:id="FoodButton" mnemonicParsing="false" onMouseClicked="#chooseFood" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Food" GridPane.columnIndex="2" />
-                        <Button fx:id="SportsButton" mnemonicParsing="false" onMouseClicked="#chooseSports" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Sports" GridPane.columnIndex="3" />
-                        <Button fx:id="FashionButton" mnemonicParsing="false" onMouseClicked="#chooseFashion" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Fashion" GridPane.rowIndex="1" />
-                        <Button fx:id="WeatherButton" mnemonicParsing="false" onMouseClicked="#chooseWeather" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Weather" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="BusinessButton" mnemonicParsing="false" onMouseClicked="#chooseBusiness" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Business" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Button fx:id="PlantsButton" mnemonicParsing="false" onMouseClicked="#choosePlants" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Plants" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Button fx:id="BodyButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Body" GridPane.columnIndex="1" />
+                        <Button fx:id="FoodButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Food" GridPane.columnIndex="2" />
+                        <Button fx:id="SportsButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Sports" GridPane.columnIndex="3" />
+                        <Button fx:id="FashionButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Fashion" GridPane.rowIndex="1" />
+                        <Button fx:id="WeatherButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Weather" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="BusinessButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Business" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="PlantsButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Plants" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                      </children>
                      <HBox.margin>
                         <Insets left="42.0" top="20.0" />
@@ -90,7 +89,7 @@
       </VBox>
       <VBox fx:id="exerciseVbox" alignment="CENTER" prefHeight="640.0" prefWidth="1024.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox prefHeight="57.0" prefWidth="1024.0">
+            <HBox prefHeight="87.0" prefWidth="877.0" spacing="60.0">
                <children>
                   <VBox prefHeight="98.0" prefWidth="108.0" HBox.hgrow="NEVER">
                      <HBox.margin>
@@ -107,16 +106,56 @@
                         </ImageView>
                      </children>
                   </VBox>
-                  <Label fx:id="percentage" prefHeight="58.0" prefWidth="68.0" wrapText="true">
-                     <HBox.margin>
-                        <Insets top="8.0" />
-                     </HBox.margin>
-                  </Label>
-                  <ProgressBar fx:id="progressBar" prefHeight="40.0" prefWidth="615.0" progress="0.0">
-                     <HBox.margin>
-                        <Insets left="50.0" top="14.0" />
-                     </HBox.margin>
-                  </ProgressBar>
+                  <VBox alignment="CENTER" prefHeight="87.0" prefWidth="206.0">
+                     <children>
+                        <Label fx:id="scoreLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="181.0" styleClass="smallLabel" text="Score: 0" wrapText="true" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="87.0" prefWidth="263.0">
+                     <children>
+                        <Label fx:id="questionIndexLabel" styleClass="smallLabel" text="Question 1 of 10" wrapText="true" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" prefHeight="87.0" prefWidth="337.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="88.0" prefWidth="146.0">
+                                 <children>
+                                    <Label fx:id="timeLabel" alignment="CENTER" contentDisplay="RIGHT" prefHeight="46.0" prefWidth="138.0" styleClass="smallLabel" text="Your turn:" wrapText="true" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="88.0" prefWidth="36.0">
+                                 <children>
+                                    <ImageView fx:id="blood1" fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/blood.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="88.0" prefWidth="42.0">
+                                 <children>
+                                    <ImageView fx:id="blood2" fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/blood.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="88.0" prefWidth="39.0">
+                                 <children>
+                                    <ImageView fx:id="blood3" fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/blood.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
                </children>
                <VBox.margin>
                   <Insets top="7.0" />
@@ -124,7 +163,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="132.0" prefWidth="1024.0">
                <children>
-                  <Label fx:id="question" alignment="CENTER" prefHeight="74.0" prefWidth="880.0" />
+                  <Label fx:id="question" alignment="CENTER" prefHeight="104.0" prefWidth="880.0" text="______________________________________________________________________________________________" underline="true" wrapText="true" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="313.0" prefWidth="1024.0">
