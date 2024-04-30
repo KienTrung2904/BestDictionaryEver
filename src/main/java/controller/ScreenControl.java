@@ -26,7 +26,7 @@ public abstract class ScreenControl extends FXMLControl{
         super.loadScreenFXML("library");
     }
     public void translationPage() {
-        super.loadScreenFXML("translation-page");
+        super.loadScreenFXML("translation");
     }
 
 }

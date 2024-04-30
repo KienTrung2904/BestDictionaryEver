@@ -43,11 +43,21 @@ public class DashboardControl extends ScreenControl {
     private Label topicName;
     @FXML
     private TextFlow topicDescription;
+
+    @FXML
+    private Button translationButton;
     @FXML
     private Button toLeft;
     @FXML
     private Button toRight;
+
     private static topicIntroduction topic;
+
+
+    private Button logOutButton;
+//    private topicIntroduction topic;
+
+
 
     public void decor() {
         String _greeting = "Good day, " + user.getUserName();
@@ -77,5 +87,13 @@ public class DashboardControl extends ScreenControl {
         indexTopic = topic.getIndex() + 1;
         System.out.println((indexTopic));
         return indexTopic;
+    }
+
+    public void translationButtonOnAction(ActionEvent actionEvent) {
+        super.translationPage();
+    }
+
+    public void logOutButtonOnAction(ActionEvent actionEvent) {
+        super.started();
     }
 }

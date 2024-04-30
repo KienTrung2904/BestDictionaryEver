@@ -11,8 +11,8 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
-<?import javafx.scene.text.TextFlow?>
 
+<?import javafx.scene.text.TextFlow?>
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" style="-fx-background-color: rgba(240, 240, 240, 1);" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboard.DashboardControl">
    <children>
       <AnchorPane prefHeight="640.0" prefWidth="213.0" styleClass="leftPanel" stylesheets="@dashboard.css">
@@ -27,7 +27,8 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="46.2" layoutY="201.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="143.85" styleClass="leftPanelButton" stylesheets="@dashboard.css" text="Translation">
+
+            <Button fx:id="translationButton" layoutX="46.2" layoutY="201.0" mnemonicParsing="false" onAction="#translationButtonOnAction" prefHeight="41.0" prefWidth="143.85" styleClass="leftPanelButton" stylesheets="@dashboard.css" text="Translation">
                <graphic>
                   <AnchorPane prefHeight="20.0" prefWidth="43.0">
                      <children>
@@ -62,7 +63,7 @@
                </image>
             </ImageView>
 
-            <Button layoutX="37.0" layoutY="561.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="143.85" styleClass="leftPanelButton" stylesheets="@dashboard.css" text="       Log out" />
+            <Button layoutX="37.0" layoutY="561.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="143.85" styleClass="leftPanelButton" stylesheets="@dashboard.css" text="       Log out" onAction="#logOutButtonOnAction"/>
 
             <ImageView fitHeight="18.0" fitWidth="19.0" layoutX="71.0" layoutY="574.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -95,15 +96,29 @@
 
       <AnchorPane layoutX="251.13" layoutY="104.06" prefHeight="492.83" prefWidth="428.8" styleClass="centerBoard" stylesheets="@dashboard.css">
          <children>
-            <AnchorPane layoutX="32.0" layoutY="290.0" prefHeight="180.62" prefWidth="362.67" styleClass="animalBoard" stylesheets="@dashboard.css">
+            <AnchorPane layoutX="26.71" layoutY="285.89" prefHeight="180.62" prefWidth="362.67" styleClass="animalBoard" stylesheets="@dashboard.css">
                <children>
                   <Label fx:id="topicName" alignment="CENTER" contentDisplay="CENTER" layoutX="109.16" layoutY="20.05" prefHeight="11.0" prefWidth="136.0" styleClass="animalLabel" stylesheets="@dashboard.css" />
-                  <TextFlow fx:id="topicDescription" layoutX="45.0" layoutY="70.0" prefHeight="30.0" prefWidth="280.0" styleClass="textLabel" stylesheets="@dashboard.css" textAlignment="CENTER" />
-                  <Button layoutX="132.16" layoutY="135.36" mnemonicParsing="false" onAction="#practice" prefHeight="27.0" prefWidth="99.0" styleClass="practiceButton" stylesheets="@dashboard.css" text="Practice" />
+                  <TextFlow
+                          fx:id="topicDescription"
+                          layoutX="45" layoutY="70.0"
+                          prefHeight="30.0" prefWidth="280.0"
+                          textAlignment="CENTER"
+                          styleClass="textLabel"
+                          stylesheets="@dashboard.css" />
+                  <Button onAction="#practice"
+                          layoutX="132.16" layoutY="135.36"
+                          mnemonicParsing="false"
+                          prefHeight="27.0" prefWidth="99.0"
+                          styleClass="practiceButton"
+                          stylesheets="@dashboard.css"
+                          text="Practice" />
                </children>
             </AnchorPane>
 
-            <ImageView fx:id="topicAvatar" layoutX="68" layoutY="10" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="topicAvatar"
+                       layoutX="64" layoutY="10"
+                       pickOnBounds="true" preserveRatio="true">
             </ImageView>
          </children>
       </AnchorPane>
@@ -114,7 +129,7 @@
       </ImageView>
 
 
-      <HBox fx:id="hbox" layoutX="522.78" layoutY="19" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.56" prefWidth="341.33" styleClass="searchField" stylesheets="@dashboard.css" style="-fx-background-radius:15px ">
+      <HBox fx:id="hbox" layoutX="522.78" layoutY="19" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.56" prefWidth="341.33" styleClass="searchField" stylesheets="@dashboard.css">
          <children>
             <AnchorPane prefHeight="49.78" prefWidth="25.0">
                <children>
@@ -128,7 +143,7 @@
             <TextField fx:id="searchField" prefHeight="36.0" prefWidth="279.0" promptText="Search Something" stylesheets="@sign-in.css">
                <styleClass>
                   -fx-font-family: "Montserrat Light";
-                  -fx-translate-x: 100,91px;
+                  -fx-translate-x: 10,91px;
                   <String fx:value="textField" />
                   <String fx:value="transparent" />
                </styleClass>
@@ -136,21 +151,28 @@
          </children>
       </HBox>
 
-      <ImageView fitHeight="30" fitWidth="30" layoutX="277.0" layoutY="243.0">
-         <Image url="@Login/Image/left1.png" />
-      </ImageView>
-      <ImageView fitHeight="30" fitWidth="30" layoutX="626.0" layoutY="243.0">
-         <Image url="@Login/Image/right1.png" />
-      </ImageView>
-
 
       <ImageView fitHeight="27.02" fitWidth="27.02" layoutX="247.58" layoutY="24.4">
          <Image url="@Login/Image/user-circle.png" />
       </ImageView>
 
-      <Button layoutX="283.84" layoutY="245.6" onAction="#toLeft" style="-fx-background-color: transparent;" styleClass="leftButton" />
+      <Button onAction="#toLeft" layoutX="270" layoutY="245.6" style="-fx-background-color: transparent;" styleClass="leftButton">
+         <graphic>
+            <ImageView fitHeight="30" fitWidth="30">
+               <Image url="@Login/Image/left1.png" />
+            </ImageView>
+         </graphic>
+      </Button>
 
-      <Button layoutX="625.18" layoutY="245.6" onAction="#toRight" style="-fx-background-color: transparent;" styleClass="rightButton" />
+      <Button
+              onAction="#toRight"
+              layoutX="618" layoutY="245.6" style="-fx-background-color: transparent;" styleClass="rightButton">
+         <graphic>
+            <ImageView fitHeight="30" fitWidth="30">
+               <Image url="@Login/Image/right1.png" />
+            </ImageView>
+         </graphic>
+      </Button>
 
 
       <VBox fx:id="tableUserName" layoutX="795.0" layoutY="170" prefHeight="0.0" prefWidth="100" />
@@ -163,6 +185,5 @@
       <Text fx:id="userID" layoutX="282.42" layoutY="54.31" />
 
 
-
-         </children>
-      </AnchorPane>
+   </children>
+</AnchorPane>
