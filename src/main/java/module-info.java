@@ -22,5 +22,9 @@ module com.example.bestdictionaryever {
 
     opens controller.TopicWord.backend.TopicWords.SimpleTopicWord to com.fasterxml.jackson.databind;
     exports controller.TopicWord.backend.TopicWords.SimpleTopicWord to com.fasterxml.jackson.databind;
+    opens controller.game.Exercise.Exercise to javafx.graphics, javafx.fxml;
+    exports controller.game.Exercise.Exercise to javafx.graphics, javafx.fxml;
+    opens controller.game.Exercise.Utils to javafx.graphics, javafx.fxml;
+    exports controller.game.Exercise.Utils to javafx.graphics, javafx.fxml;
 }
 

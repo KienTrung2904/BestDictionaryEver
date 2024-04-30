@@ -9,7 +9,8 @@ import java.util.Objects;
 
 public class DetailedTopicWord {
 
-
+    @JsonProperty("type")
+    private String type;
     @JsonProperty("definition")
     private Definition definition;
 

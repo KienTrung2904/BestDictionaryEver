@@ -24,13 +24,33 @@ public class MultipleChoice extends Exercise {
     private String explanation;
 
     private static final String path = "src/main/java/controller/game/backend/ExerciseBank/MultipleChoice/MultipleChoice-Blank.txt";
+//    private static String[] type = {"Blank", "Antonym", "Synonym"};
 
     public MultipleChoice(String question, Options options, String correctAnswer, String explanation) {
         this.question = question;
         this.options = options;
         this.correctAnswer = correctAnswer;
-        this.explanation = explanation;
+        this.explanation = explanationFormat(explanation);
     }
+
+    private String explanationFormat(String explanation) {
+        String[] parts = explanation.split("(A:|B:|C:|D:)");
+
+        StringBuilder result = new StringBuilder();
+
+        char option = 'A';
+
+        for (String part : parts) {
+            if (!part.trim().isEmpty()) {
+                result.append(option).append(". ").append(part.trim()).append("\n");
+
+                option++;
+            }
+        }
+
+        return result.toString();
+    }
+
     private static MultipleChoice loadFromJson(String jsonString) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
@@ -137,8 +157,6 @@ public class MultipleChoice extends Exercise {
 
     public static void main(String[] args) {
         List<MultipleChoice> multipleChoiceList = MultipleChoice.loadFromBank();
-        for (MultipleChoice multipleChoice : multipleChoiceList) {
-            System.out.println(multipleChoice);
-        }
+        System.out.println("size of multiple choice is: " + multipleChoiceList.size());
     }
 }
