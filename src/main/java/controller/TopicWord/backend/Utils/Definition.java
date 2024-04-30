@@ -70,4 +70,8 @@ public class Definition {
     public void setTranslatedExample(String translatedExample) {
         this.translatedExample = translatedExample;
     }
+    public String toString() {
+        return "Topic: " + topic + "\nWord: " + word + "\nType: " + type + "\nPhonetic: " + phonetic + "\nExample: "
+                + example + "\nExplain: " + explain + "\nTranslated Example: " + translatedExample;
+    }
 }

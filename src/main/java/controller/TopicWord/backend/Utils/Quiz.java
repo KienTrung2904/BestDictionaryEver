@@ -43,4 +43,8 @@ public class Quiz {
         this.exercise = exercise;
     }
 
+    @Override
+    public String toString() {
+        return "exerciseType: " + exerciseType + "\n" + description;
+    }
 }

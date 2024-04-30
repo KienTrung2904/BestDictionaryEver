@@ -11,10 +11,11 @@
 }
 .label {
     -fx-background-color: linear-gradient(to bottom right, #eeaeca , #94bbe9);
+    -fx-wrap-text: true;
     -fx-background-radius: 10px;
     -fx-text-fill: #ffffff;
     -fx-font-family: Helvetica;
-    -fx-font-size: 40px;
+    -fx-font-size: 30px;
 }
 .button {
     -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );

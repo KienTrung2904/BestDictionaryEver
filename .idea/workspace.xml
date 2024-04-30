@@ -6,16 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="f1a62af0-7fc9-44f6-98a9-a3793cdaeab6" name="Changes" comment="add commandline&#10;test login, register, connect database and scene">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ScreenControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ScreenControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailTopicWordLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailTopicWordLoad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailedTopicWordContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailedTopicWordContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/SimpleTopicWord/SimpleTopicWordContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/SimpleTopicWord/SimpleTopicWordContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/SimpleTopicWord/SimpleTopicWordLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/SimpleTopicWord/SimpleTopicWordLoad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Utils/Description.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Utils/Description.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Words/SimpleTopicWords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Words/SimpleTopicWords.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/ChooseGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/ChooseGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailedTopicWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailedTopicWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Utils/Definition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Utils/Definition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Utils/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Utils/Quiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/DictationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/DictationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/MultipleChoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/MultipleChoiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Utils/ExerciseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Utils/ExerciseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/Dictation/Dictation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/Dictation/Dictation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/MultipleChoice/MultipleChoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/MultipleChoice/MultipleChoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Utils/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Utils/Exercise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Utils/ExerciseLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Utils/ExerciseLoad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/CSS/MultipleChoice.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/CSS/MultipleChoice.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/Listening.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/Listening.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/TopicWord.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/TopicWord.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +81,7 @@
     "Application.Application.executor": "Run",
     "Application.DetailTopicWordLoad.executor": "Run",
     "Application.Dictation.executor": "Run",
+    "Application.ExerciseLoad.executor": "Run",
     "Application.GoogleTranslation.executor": "Run",
     "Application.HelloApplication.executor": "Run",
     "Application.MultipleChoice.executor": "Run",
@@ -155,6 +160,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ExerciseLoad" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controller.game.backend.Utils.ExerciseLoad" />
+      <module name="BestDictionaryEver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.game.backend.Utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SimpleTopicWordLoad" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="controller.TopicWord.backend.TopicWords.SimpleTopicWord.SimpleTopicWordLoad" />
       <module name="BestDictionaryEver" />
@@ -168,26 +186,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TopicScanner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="controller.TopicWord.backend.Utils.TopicScanner" />
-      <module name="BestDictionaryEver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controller.TopicWord.backend.Utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
+        <item itemvalue="Application.ExerciseLoad" />
         <item itemvalue="Application.DetailTopicWordLoad" />
         <item itemvalue="Application.SimpleTopicWordLoad" />
         <item itemvalue="Application.Dictation" />
-        <item itemvalue="Application.TopicScanner" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +243,8 @@
       <workItem from="1714450689878" duration="8562000" />
       <workItem from="1714462185092" duration="186000" />
       <workItem from="1714467727191" duration="2508000" />
-      <workItem from="1714472738622" duration="5709000" />
+      <workItem from="1714472738622" duration="6109000" />
+      <workItem from="1714490385189" duration="10832000" />
     </task>
     <task id="LOCAL-00001" summary="add commandline&#10;test login, register, connect database and scene">
       <option name="closed" value="true" />
@@ -276,11 +282,6 @@
           <properties class="java.lang.ClassNotFoundException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailTopicWordLoad.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

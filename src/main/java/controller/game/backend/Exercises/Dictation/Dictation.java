@@ -157,4 +157,9 @@ public class Dictation extends Exercise {
         }
         System.out.println("size of dictation is: " + dictationList.size());
     }
+
+    @Override
+    public void setCorrectAnswer(String correctAnswer) {
+        this.wordBlank = correctAnswer;
+    }
 }

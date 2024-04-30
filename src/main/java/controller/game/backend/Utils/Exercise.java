@@ -63,5 +63,7 @@ public abstract class Exercise {
     public static void main(String[] args) {
 
     }
+
+    public abstract void setCorrectAnswer(String correctAnswer);
 }
 

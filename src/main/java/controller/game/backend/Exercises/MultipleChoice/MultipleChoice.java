@@ -118,6 +118,10 @@ public class MultipleChoice extends Exercise {
         return correctAnswer;
     }
 
+    public void setCorrectAnswer(String correctAnswer) {
+        this.correctAnswer = correctAnswer;
+    }
+
     public Options getOptions() {
         return options;
     }

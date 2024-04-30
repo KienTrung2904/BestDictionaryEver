@@ -37,6 +37,14 @@ public class DetailedTopicWord {
         this.quiz = quiz;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

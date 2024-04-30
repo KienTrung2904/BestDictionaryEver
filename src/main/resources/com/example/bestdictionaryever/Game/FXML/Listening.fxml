@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="640.0" prefWidth="1024.0" stylesheets="@../CSS/listeningStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trungdic01.GameController.DController">
+<AnchorPane prefHeight="640.0" prefWidth="1024.0" stylesheets="@../CSS/listeningStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.game.Exercise.Exercise.DictationController">
    <children>
       <VBox layoutX="2.4000000953674316" prefHeight="228.0" prefWidth="1022.0" AnchorPane.bottomAnchor="412.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -22,7 +22,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                      <children>
-                        <ImageView fx:id="back" fitHeight="87.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true" styleClass="ImageView">
+                        <ImageView fitHeight="87.0" fitWidth="122.0" onMouseClicked="#backToChooseGame" pickOnBounds="true" preserveRatio="true" styleClass="ImageView">
                            <image>
                               <Image url="@../Image/back2.png" />
                            </image>

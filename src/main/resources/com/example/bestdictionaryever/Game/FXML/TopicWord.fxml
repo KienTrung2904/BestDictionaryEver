@@ -16,7 +16,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" stylesheets="@../CSS/MultipleChoice.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.game.Exercise.Exercise.MultipleChoiceController">
    <children>
-      <VBox fx:id="TopicVbox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox fx:id="topicVbox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox prefHeight="57.0" prefWidth="1024.0">
                <children>
@@ -25,7 +25,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                      <children>
-                        <ImageView fitHeight="87.0" fitWidth="122.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true" styleClass="imageView">
+                        <ImageView fitHeight="87.0" fitWidth="122.0" onMouseClicked="#backToChooseGame" pickOnBounds="true" preserveRatio="true" styleClass="imageView">
                            <image>
                               <Image url="@../Image/back2.png" />
                            </image>
@@ -53,26 +53,23 @@
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                      </columnConstraints>
                      <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Button fx:id="familyButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Family" />
-                        <Button fx:id="sportButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Sport" GridPane.columnIndex="1" />
-                        <Button fx:id="environmentButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Environment" GridPane.columnIndex="2" />
-                        <Button fx:id="cultureButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Culture" GridPane.columnIndex="3" />
-                        <Button fx:id="technologyButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Technology" GridPane.columnIndex="4" />
-                        <Button fx:id="bodyPartButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="BodyPart" GridPane.rowIndex="1" />
-                        <Button fx:id="travelButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Travel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="schoolButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="School" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Button fx:id="foodButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Food" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <Button fx:id="careerButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Career" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <Button fx:id="AnimalButton" mnemonicParsing="false" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Animal" />
+                        <Button fx:id="BodyButton" mnemonicParsing="false" onMouseClicked="#chooseBody" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Body" GridPane.columnIndex="1" />
+                        <Button fx:id="FoodButton" mnemonicParsing="false" onMouseClicked="#chooseFood" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Food" GridPane.columnIndex="2" />
+                        <Button fx:id="SportsButton" mnemonicParsing="false" onMouseClicked="#chooseSports" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Sports" GridPane.columnIndex="3" />
+                        <Button fx:id="FashionButton" mnemonicParsing="false" onMouseClicked="#chooseFashion" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Fashion" GridPane.rowIndex="1" />
+                        <Button fx:id="WeatherButton" mnemonicParsing="false" onMouseClicked="#chooseWeather" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Weather" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="BusinessButton" mnemonicParsing="false" onMouseClicked="#chooseBusiness" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Business" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="PlantsButton" mnemonicParsing="false" onMouseClicked="#choosePlants" prefHeight="150.0" prefWidth="170.0" styleClass="bigButton" text="Plants" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                      </children>
                      <HBox.margin>
-                        <Insets top="20.0" />
+                        <Insets left="42.0" top="20.0" />
                      </HBox.margin>
                      <opaqueInsets>
                         <Insets />
@@ -91,7 +88,7 @@
             </HBox>
          </children>
       </VBox>
-      <VBox fx:id="ExerciseVbox" alignment="CENTER" prefHeight="640.0" prefWidth="1024.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox fx:id="exerciseVbox" alignment="CENTER" prefHeight="640.0" prefWidth="1024.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox prefHeight="57.0" prefWidth="1024.0">
                <children>
@@ -100,7 +97,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                      <children>
-                        <ImageView fx:id="backToChooseTopic" fitHeight="87.0" fitWidth="122.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true" styleClass="imageView">
+                        <ImageView fitHeight="87.0" fitWidth="122.0" onMouseClicked="#backToChooseTopic" pickOnBounds="true" preserveRatio="true" styleClass="imageView">
                            <image>
                               <Image url="@../Image/back2.png" />
                            </image>
@@ -127,7 +124,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="132.0" prefWidth="1024.0">
                <children>
-                  <Label fx:id="Question" alignment="CENTER" prefHeight="74.0" prefWidth="880.0" />
+                  <Label fx:id="question" alignment="CENTER" prefHeight="74.0" prefWidth="880.0" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="313.0" prefWidth="1024.0">
@@ -145,19 +142,19 @@
                         <Insets bottom="20.0" top="20.0" />
                      </HBox.margin>
                      <children>
-                        <Button fx:id="button0" mnemonicParsing="false" prefHeight="122.0" prefWidth="363.0" styleClass="bigButton" text="Button" />
-                        <Button fx:id="button1" mnemonicParsing="false" prefHeight="122.0" prefWidth="363.0" styleClass="bigButton" text="Button" GridPane.columnIndex="1" />
-                        <Button fx:id="button2" mnemonicParsing="false" prefHeight="122.0" prefWidth="363.0" styleClass="bigButton" text="Button" GridPane.rowIndex="1" />
-                        <Button fx:id="button3" mnemonicParsing="false" prefHeight="122.0" prefWidth="363.0" styleClass="bigButton" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="optionA" mnemonicParsing="false" prefHeight="122.0" prefWidth="363.0" styleClass="bigButton" text="Button" />
+                        <Button fx:id="optionB" mnemonicParsing="false" prefHeight="122.0" prefWidth="363.0" styleClass="bigButton" text="Button" GridPane.columnIndex="1" />
+                        <Button fx:id="optionC" mnemonicParsing="false" prefHeight="122.0" prefWidth="363.0" styleClass="bigButton" text="Button" GridPane.rowIndex="1" />
+                        <Button fx:id="optionD" mnemonicParsing="false" prefHeight="122.0" prefWidth="363.0" styleClass="bigButton" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="800.0">
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="1024.0">
                <children>
-                  <Button fx:id="checkButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="46.0" prefWidth="80.0" text="Button" HBox.hgrow="ALWAYS">
+                  <Button fx:id="checkButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onMouseClicked="#clickCheck" prefHeight="51.0" prefWidth="47.0" text="Button" HBox.hgrow="ALWAYS">
                      <graphic>
-                        <ImageView fitHeight="66.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="49.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Image/check.png" />
                            </image>

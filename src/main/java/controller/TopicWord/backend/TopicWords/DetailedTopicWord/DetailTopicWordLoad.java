@@ -135,10 +135,9 @@ public class DetailTopicWordLoad {
     }
 
     public static void main(String[] args) {
-        System.out.println("Trung");
-        System.out.println(globalFullSimpleTopicWordList.size());
-        for (SimpleTopicWord simpleTopicWord : globalFullSimpleTopicWordList) {
-            System.out.println(simpleTopicWord);
+        ArrayList<DetailedTopicWord> AnimalTopicWordList = globalFullDetailedTopicWordMap.get("Animal");
+        for (DetailedTopicWord detailedTopicWord : AnimalTopicWordList) {
+            System.out.println(detailedTopicWord.getDefinition().getWord());
         }
 
 
