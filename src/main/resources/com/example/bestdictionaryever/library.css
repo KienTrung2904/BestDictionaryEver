@@ -79,9 +79,8 @@
     -fx-text-fill: rgba(0, 0, 0, 0.8);
     -fx-font-size: 12px;
     -fx-font-family: "Montserrat SemiBold";
-}noheader
-
- . .column-header-background {
+}
+.noheader.column-header-background {
      -fx-max-height: 0;
      -fx-pref-height: 0;
      -fx-min-height: 0;
@@ -116,13 +115,16 @@
 }
 
 .select-box {
-    -fx-background-radius: 22px;
-    -fx-background-color: #fff;
-    -fx-fill: #fff;
+    -fx-background-radius: 15px;
+    -fx-background-color: rgba(255, 255, 255, 1);
+    -fx-fill: rgba(255, 255, 255, 1);
     -fx-font-size: 14px;
+    -fx-text-fill: rgba(0,0,0,0.8);
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-weight: 600;
     -fx-arc-height: 22px;
     -fx-arc-width: 22px;
-    -fx-border-color: #fff;
+    -fx-border-color: rgba(255, 255, 255, 1);
     -fx-border-width: 2px;
     -fx-border-radius: 22px;
 }
@@ -140,27 +142,42 @@
 }
 
 .text-box {
-    -fx-background-radius: 22px;
-    -fx-background-color: #fff;
-    -fx-fill: #fff;
-    -fx-font-size: 18px;
-    -fx-arc-height: 22px;
-    -fx-arc-width: 22px;
-    -fx-border-color: #fff;
+    -fx-background-radius: 15px;
+    -fx-background-color: rgba(255, 255, 255, 1);
+    -fx-fill: rgba(255, 255, 255, 1);
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-arc-height: 15px;
+    -fx-arc-width: 15px;
+    -fx-border-color: rgba(255, 255, 255, 1);
     -fx-border-width: 2px;
-    -fx-border-radius: 22px;
+    -fx-border-radius: 15px;
     -fx-font-family: "Montserrat SemiBold";
+    -fx-text-fill: rgba(0,0,0,0.6);
 }
 
 .text-box:hover {
-    -fx-background-radius: 22px;
+    -fx-background-radius: 15px;
     -fx-border-color: #FF7568;
-    -fx-border-width: 4px;
-    -fx-border-radius: 22px;
-    -fx-background-color: #fff;
-    -fx-fill: #fff;
-    -fx-font-size: 18px;
-    -fx-arc-height: 22px;
-    -fx-arc-width: 22px;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+    -fx-background-color: rgba(255, 255, 255, 1);
+    -fx-fill: rgba(255, 255, 255, 1);
+    -fx-font-size: 14px;
+    -fx-arc-height: 15px;
+    -fx-arc-width: 15px;
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-text-fill: rgba(0,0,0,0.6);
+}
+
+.suggestedList {
+    -fx-background-color:rgba(240, 240, 240, 1);
+    -fx-background-radius: 20px;
+    -fx-arc-height: 450px;
+    -fx-arc-width: 360px;
     -fx-font-family: "Montserrat SemiBold";
 }
+
+
+
+

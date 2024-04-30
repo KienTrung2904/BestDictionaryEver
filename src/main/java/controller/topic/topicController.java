@@ -21,6 +21,7 @@ public class topicController extends ScreenControl {
     private int index = 0;
     private int sizeTopic;
     private Topic topic = new Topic();
+    private boolean check = false;
 
     public void decor() {
         this.setTopic();
@@ -37,7 +38,16 @@ public class topicController extends ScreenControl {
     }
 
     public void moreDetail() {
-        super.library();
+        if (!check) {
+            vocabulary.setText(topic.getExplain(index));
+            vocabulary.getStyleClass().add("text-box");
+            check = true;
+        }
+        else {
+            vocabulary.setText(topic.getWord(index));
+            vocabulary.getStyleClass().add("text-box");
+            check = false;
+        }
     }
 
     public void toLeft() {
@@ -57,8 +67,12 @@ public class topicController extends ScreenControl {
         if (!topic.getTopicList().isEmpty()) {
             String indexVocabulary = String.valueOf(index + 1) + "/" + String.valueOf(sizeTopic);
             page.setText(indexVocabulary);
+
+
             vocabulary.setText(topic.getWord(index));
             vocabulary.getStyleClass().add("text-box");
+
+
             imageVocabulary.setImage(new Image(topic.getWordImage(index)));
         }
     }

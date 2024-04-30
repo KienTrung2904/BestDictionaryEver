@@ -79,7 +79,7 @@ public class SearchBar implements ComponentManager {
 //        if (screen instanceof DashboardControl) {
 //            libraryController.setTopicFrom(false);
 //        }
-        screen.library();
+        screen.librarySelect(target);
     }
 
     private void handleKeyPressed(KeyEvent event) {
