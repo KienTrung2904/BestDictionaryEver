@@ -11,6 +11,7 @@ module com.example.bestdictionaryever {
     opens com.example.bestdictionaryever to javafx.fxml;
     exports com.example.bestdictionaryever;
     exports controller.translation;
+    opens controller.translation;
     exports controller.login;
     opens controller.login ;
     exports controller.dashboard;
