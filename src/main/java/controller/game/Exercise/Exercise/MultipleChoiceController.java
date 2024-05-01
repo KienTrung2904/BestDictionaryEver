@@ -69,19 +69,21 @@ public class MultipleChoiceController extends ExerciseController<MultipleChoice>
 
 
     public void setNextQuestion() {
-        if (health == -1) {
+        if (health == -1 || questionIndex == totalQuestions) {
             backToChooseTopic();
-            return;
         }
+        showScore_Ques();
         if (questionIndex == 0)  {
             randomizeExerciseList();
         }
         resetButtonStyle();
+        highestScoreLabel.setText("Your highest Score: " + getHighestScore(currentTopic));
         scoreLabel.setText("Score: " + score);
         questionIndexLabel.setText("Question: " + (questionIndex + 1) + "/" + totalQuestions);
         MultipleChoice multipleChoice = exerciseList.get(questionIndex);
         question.setText(multipleChoice.getQuestion());
         question.setWrapText(true);
+        correctAnswer = multipleChoice.getCorrectAnswer();
         optionA.setText(multipleChoice.getOptionA());
         optionA.setWrapText(true);
         optionB.setText(multipleChoice.getOptionB());
@@ -92,6 +94,9 @@ public class MultipleChoiceController extends ExerciseController<MultipleChoice>
         optionD.setWrapText(true);
         currentExercise = multipleChoice;
         System.out.println(currentExercise);
+    }
+    public void showHighestScore() {
+        highestScoreLabel.setText("Your highest Score: " + getHighestScore(currentTopic));
     }
 
     public void clickCheck(MouseEvent mouseEvent) throws InterruptedException {
@@ -132,7 +137,6 @@ public class MultipleChoiceController extends ExerciseController<MultipleChoice>
         } else {
             topicVbox.setVisible(false);
             exerciseVbox.setVisible(true);
-            highestScoreLabel.setText("Your highest Score: " + getHighestScore(currentTopic));
         }
     }
     public static ArrayList<MultipleChoice> getMultipleChoiceExerciseListWithTopic(String topicName) {

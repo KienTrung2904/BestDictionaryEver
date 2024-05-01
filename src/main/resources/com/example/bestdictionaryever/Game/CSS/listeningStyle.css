@@ -1,12 +1,22 @@
 .background {
     -fx-background-color: #E0F4FF;
 }
-.label {
-    -fx-background-color: #9dc6fb;
-        -fx-background-radius: 5px;
-        -fx-text-fill: #ffffff;
-        -fx-font-family: Helvetica;
-        -fx-font-size: 30px;
+.smallLabel {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8B4726;
+    -fx-wrap-text: true;
+    -fx-background-radius: 10px;
+    -fx-font-family: Helvetica;
+    -fx-font-size: 25px;
+}
+.bigLabel {
+    -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );
+// color of text is turtle green
+-fx-text-fill: #8B4726;
+    -fx-wrap-text: true;
+    -fx-background-radius: 10px;
+    -fx-font-family: Helvetica;
+    -fx-font-size: 30px;
 }
 .button {
     -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );
@@ -28,30 +38,7 @@
     -fx-border-radius: 15px;
     -fx-alignment: center;
 }
-.bigButton:hover{
-    -fx-background-color: #bad7f2;
-}
-.progressBar .bar {
-    -fx-background-color: #61B8FF
-}
-.percentage {
--fx-background-color: #9dc6fb;
-        -fx-background-radius: 5px;
-        -fx-text-fill: #ffffff;
-        -fx-font-family: Helvetica;
-        -fx-font-size: 14px;
-}
-.choosingButton {
-    -fx-background-color: #4297FF;
-        -fx-text-fill: #ffffff;
-        -fx-font-size: 18px;
-        -fx-font-family: Arial;
-        -fx-border-color: #65aeea;
-        -fx-border-width: 3px;
-        -fx-background-radius: 15px;
-        -fx-border-radius: 15px;
-        -fx-alignment: center;
-}
+
 .ImageView:hover {
     -fx-cursor: hand;
     -fx-scale-x: 1.1;

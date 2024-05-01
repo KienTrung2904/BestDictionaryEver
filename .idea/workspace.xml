@@ -6,11 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="f1a62af0-7fc9-44f6-98a9-a3793cdaeab6" name="Changes" comment="add commandline&#10;test login, register, connect database and scene">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/UserManager/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/UserManager/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/DictationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/DictationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/MultipleChoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/MultipleChoiceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Utils/ExerciseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Utils/ExerciseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/CSS/MultipleChoice.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/CSS/MultipleChoice.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/Dictation/Dictation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/Dictation/Dictation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Utils/ExerciseLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Utils/ExerciseLoad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/CSS/listeningStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/CSS/listeningStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/Listening.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/Listening.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/MultipleChoice.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/TopicWord.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/TopicWord.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,8 +185,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
-        <item itemvalue="Application.MultipleChoiceApp" />
         <item itemvalue="Application.ExerciseLoad" />
+        <item itemvalue="Application.MultipleChoiceApp" />
         <item itemvalue="Application.DetailTopicWordLoad" />
         <item itemvalue="Application.SimpleTopicWordLoad" />
       </list>
@@ -238,7 +241,8 @@
       <workItem from="1714467727191" duration="2508000" />
       <workItem from="1714472738622" duration="6109000" />
       <workItem from="1714490385189" duration="20106000" />
-      <workItem from="1714541260014" duration="16113000" />
+      <workItem from="1714541260014" duration="16403000" />
+      <workItem from="1714561681610" duration="5376000" />
     </task>
     <task id="LOCAL-00001" summary="add commandline&#10;test login, register, connect database and scene">
       <option name="closed" value="true" />

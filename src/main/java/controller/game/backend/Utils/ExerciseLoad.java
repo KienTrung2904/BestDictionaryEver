@@ -2,6 +2,7 @@ package controller.game.backend.Utils;
 
 import controller.TopicWord.backend.TopicWords.DetailedTopicWord.DetailedTopicWord;
 import controller.TopicWord.backend.TopicWords.SimpleTopicWord.SimpleTopicWord;
+import controller.game.backend.Exercises.Dictation.Dictation;
 import controller.game.backend.Exercises.MultipleChoice.MultipleChoice;
 
 import java.util.ArrayList;
@@ -34,10 +35,28 @@ public class ExerciseLoad {
         }
         return multipleChoiceList;
     }
+    public static ArrayList<Dictation> getDictationExerciseList() {
+        ArrayList<Dictation> dicList = new ArrayList<>();
+
+        ArrayList<DetailedTopicWord> detailedTopicWords = new ArrayList<>();
+        for (String topicName : globalFullDetailedTopicWordMap.keySet()) {
+            detailedTopicWords = globalFullDetailedTopicWordMap.get(topicName);
+            for (DetailedTopicWord detailedTopicWord : detailedTopicWords) {
+                if (detailedTopicWord.getQuiz().getExerciseType().contains("Dictation")) {
+                    Dictation exercise = (Dictation) detailedTopicWord.getQuiz().getExercise();
+                    dicList.add(exercise);
+                }
+            }
+        }
+        return dicList;
+    }
 
     public static void main(String[] args) {
-        ArrayList<MultipleChoice> multipleChoiceList = getMultipleChoiceExerciseListWithTopic("Animal");
-        System.out.println("size of multiple choice is: " + multipleChoiceList.size());
+        ArrayList<Dictation> dicList = getDictationExerciseList();
+        for (Dictation dic : dicList) {
+            System.out.println(dic);
+        }
+        System.out.println(dicList.size());
     }
 
 }

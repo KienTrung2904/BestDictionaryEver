@@ -11,49 +11,90 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="640.0" prefWidth="1024.0" stylesheets="@../CSS/listeningStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.game.Exercise.Exercise.DictationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" stylesheets="@../CSS/listeningStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.game.Exercise.Exercise.DictationController">
    <children>
-      <VBox layoutX="2.4000000953674316" prefHeight="228.0" prefWidth="1022.0" AnchorPane.bottomAnchor="412.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox layoutX="10.0" layoutY="10.0" prefHeight="94.0" prefWidth="1014.0" spacing="40.0" AnchorPane.bottomAnchor="535.6" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-0.7999999999999545" AnchorPane.topAnchor="9.599999999999994">
          <children>
-            <HBox prefHeight="110.0" prefWidth="1024.0">
+            <VBox prefHeight="98.0" prefWidth="108.0" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
                <children>
-                  <VBox prefHeight="110.0" prefWidth="90.0" HBox.hgrow="NEVER">
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
+                  <ImageView fitHeight="87.0" fitWidth="122.0" onMouseClicked="#backToChooseGame" pickOnBounds="true" preserveRatio="true" styleClass="ImageView">
+                     <image>
+                        <Image url="@../Image/back2.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="87.0" prefWidth="321.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <ImageView fitHeight="87.0" fitWidth="122.0" onMouseClicked="#backToChooseGame" pickOnBounds="true" preserveRatio="true" styleClass="ImageView">
-                           <image>
-                              <Image url="@../Image/back2.png" />
-                           </image>
-                           <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                        </ImageView>
+                        <Label fx:id="highestScoreLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="266.0" styleClass="smallLabel" text="Your highest score:" wrapText="true" />
                      </children>
-                  </VBox>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="scoreLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="225.0" styleClass="smallLabel" text="Score: 0" wrapText="true" />
+                     </children>
+                  </HBox>
                </children>
-            </HBox>
-            <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="98.0" prefWidth="918.0" spacing="200.0">
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="87.0" prefWidth="263.0">
                <children>
-                  <Label fx:id="questionIndexLabel" alignment="CENTER" contentDisplay="CENTER" styleClass="questionIndexLabel" text="Question: " wrapText="true">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="scoreLabel" alignment="CENTER" contentDisplay="CENTER" styleClass="scoreLabel" text="Score: " wrapText="true">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Label>
+                  <Label fx:id="questionIndexLabel" styleClass="smallLabel" text="Question 1 of 10" wrapText="true" />
                </children>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </HBox>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="87.0" prefWidth="337.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="88.0" prefWidth="146.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="46.0" prefWidth="138.0" styleClass="smallLabel" text="Your turn:" wrapText="true" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="88.0" prefWidth="36.0">
+                           <children>
+                              <ImageView fx:id="blood1" fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/blood.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="88.0" prefWidth="42.0">
+                           <children>
+                              <ImageView fx:id="blood2" fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/blood.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="88.0" prefWidth="39.0">
+                           <children>
+                              <ImageView fx:id="blood3" fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/blood.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
          </children>
-      </VBox>
-      <VBox layoutY="220.0" prefHeight="420.0" prefWidth="1023.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="220.0">
+         <padding>
+            <Insets top="7.0" />
+         </padding>
+      </HBox>
+      <VBox layoutX="-2.0" layoutY="170.0" prefHeight="480.0" prefWidth="1035.0" AnchorPane.bottomAnchor="-10.399999999999977" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-9.600000000000136" AnchorPane.topAnchor="170.0">
          <children>
             <HBox alignment="CENTER" prefHeight="149.0" prefWidth="1024.0">
                <children>
@@ -68,7 +109,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="126.0" prefWidth="773.0">
                      <children>
-                        <Label fx:id="Question" alignment="CENTER" prefHeight="98.0" prefWidth="811.0" text="Question here" />
+                        <Label fx:id="sentenceWithBlank" alignment="CENTER" prefHeight="98.0" prefWidth="811.0" styleClass="bigLabel" text="-----------------------------------------------------------------------------------" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0" />

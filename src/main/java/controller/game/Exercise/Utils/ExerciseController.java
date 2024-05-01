@@ -1,6 +1,7 @@
 package controller.game.Exercise.Utils;
 
 import controller.ScreenControl;
+import controller.game.Exercise.Exercise.MultipleChoiceController;
 import controller.game.backend.Utils.Exercise;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
@@ -17,11 +18,6 @@ import java.util.Collections;
 
 public abstract class ExerciseController<T extends Exercise> extends ScreenControl {
 
-    private int[] topicScore = new int[8];
-    public void backToChooseGame() {
-        super.chooseGame();
-    }
-
     public static final int COEFFICIENT = 100;
 
     public static final int QUESTIONNUMBER = 20;
@@ -36,10 +32,11 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
     @FXML
     protected ImageView blood1, blood2, blood3;
 
-    protected String userAnswer;
+    protected String userAnswer, correctAnswer;
     @FXML
     protected Label question, scoreLabel, highestScoreLabel, questionIndexLabel;
     protected ArrayList<T> exerciseList;
+
     public void randomizeExerciseList() {
         ArrayList<T> temp = new ArrayList<>(exerciseList);
         Collections.shuffle(temp);
@@ -48,7 +45,6 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
         } else {
             exerciseList = temp;
         }
-
     }
 
     public void getExerciseList() {
@@ -68,25 +64,32 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
 
     public void checkAnswer(Button option, String explaination) throws InterruptedException {
         System.out.println("UserAnswer: " + userAnswer + " -- CorrectAnswer: " + currentExercise.getCorrectAnswer());
-        if (userAnswer.equals(currentExercise.getCorrectAnswer())) {
+        if (userAnswer.equals(correctAnswer)) {
             playEffect(correctMediaPlayer);
-            score++;scoreLabel.setText("Score: " + score);
-            option.getStyleClass().add("correctOption");
+            score++;
+            scoreLabel.setText("Score: " + score);
+            if (option != null) option.getStyleClass().add("correctOption");
             alertInformation("Correct", explaination).showAndWait();
         } else {
             playEffect(incorrectMediaPlayer);
-            option.getStyleClass().add("incorrectOption");
+            if (option != null) option.getStyleClass().add("incorrectOption");
             showHealth(health--);
             alertInformation("Incorrect", explaination).showAndWait();
+            if (health == -1) {
+                alertInformation("Game Over", "\"Game Over\",You have lost all your turn").showAndWait();
+            }
 
         }
         userAnswer = null;
         questionIndex++;
+        if (questionIndex == QUESTIONNUMBER) {
+            alertInformation("Congratulations", "Congratulations! You're actually excellent!").showAndWait();
+        }
         setNextQuestion();
     }
 
     private void showHealth(int healt) {
-        if (health ==  2) {
+        if (health == 2) {
             blood3.setVisible(false);
         } else if (health == 1) {
             blood2.setVisible(false);
@@ -94,6 +97,15 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
             blood1.setVisible(false);
         }
     }
+
+    public void showScore_Ques() {
+        scoreLabel.setText("Score: " + score);
+        questionIndexLabel.setText("Question: " + (questionIndex + 1) + "/" + totalQuestions);
+        showHighestScore();
+
+    }
+
+    public abstract void showHighestScore();
 
 
     public Alert alertInformation(String title, String content) {
@@ -105,6 +117,13 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
 
         DialogPane dialogPane = alert.getDialogPane();
         dialogPane.setHeaderText(null);
+        if (title.equals("Congratulations")) {
+            content = "Congratulations! You're actually excellent!";
+            //dialogPane.getStyleClass().add("congratulationsBackground");
+        }
+        if (title.equals("Game Over")) {
+            content = "Game Over! You have lost all your turn!";
+        } else
         if (title.equals("Correct")) {
             content = "Your answer is correct! You got a new point!\n Explanation:\n" + content;
             //dialogPane.getStyleClass().add("correctBackground");
@@ -157,6 +176,9 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
 
     public int getHighestScore(String column) {
         return user.getHighestScore(column);
+    }
+    public void backToChooseGame() {
+        super.chooseGame();
     }
 
 }
