@@ -1,14 +1,31 @@
 .background {
     -fx-background-color: #E0F4FF;
 }
-.label {
-    -fx-background-color: transparent;
+.bigLabel {
+    -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );
     // color of text is turtle green
     -fx-text-fill: #8B4726;
     -fx-wrap-text: true;
     -fx-background-radius: 10px;
     -fx-font-family: Helvetica;
     -fx-font-size: 30px;
+}
+.topicLabel {
+    -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );
+    -fx-text-fill: #8B4726;
+    -fx-wrap-text: true;
+    -fx-background-radius: 10px;
+    -fx-font-family: Helvetica;
+    -fx-font-size: 60px;
+
+}
+.smallLabel {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8B4726;
+    -fx-wrap-text: true;
+    -fx-background-radius: 10px;
+    -fx-font-family: Helvetica;
+    -fx-font-size: 25px;
 }
 .button {
     -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );
@@ -58,4 +75,10 @@
     -fx-cursor: hand;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
+}
+.correctOption {
+    -fx-background-color: LightGreen;
+}
+.incorrectOption {
+    -fx-background-color: LightCoral;
 }

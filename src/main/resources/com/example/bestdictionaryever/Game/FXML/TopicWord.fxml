@@ -15,7 +15,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" stylesheets="@../CSS/MultipleChoice.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.game.Exercise.Exercise.MultipleChoiceController">
    <children>
-      <VBox fx:id="topicVbox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox fx:id="topicVbox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox prefHeight="57.0" prefWidth="1024.0">
                <children>
@@ -41,7 +41,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1049.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="99.0" prefWidth="891.0" text="CHOOSE THE WANTED TOPIC" />
+                  <Label alignment="CENTER" prefHeight="99.0" prefWidth="891.0" styleClass="topicLabel" text="CHOOSE THE WANTED TOPIC" />
                </children>
             </HBox>
             <HBox prefHeight="431.0" prefWidth="1024.0">
@@ -87,7 +87,7 @@
             </HBox>
          </children>
       </VBox>
-      <VBox fx:id="exerciseVbox" alignment="CENTER" prefHeight="640.0" prefWidth="1024.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox fx:id="exerciseVbox" alignment="CENTER" prefHeight="640.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox prefHeight="87.0" prefWidth="877.0" spacing="60.0">
                <children>
@@ -106,9 +106,18 @@
                         </ImageView>
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="87.0" prefWidth="206.0">
+                  <VBox alignment="CENTER" prefHeight="87.0" prefWidth="321.0">
                      <children>
-                        <Label fx:id="scoreLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="181.0" styleClass="smallLabel" text="Score: 0" wrapText="true" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="highestScoreLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="266.0" styleClass="smallLabel" text="Your highest score:" wrapText="true" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="scoreLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="225.0" styleClass="smallLabel" text="Score: 0" wrapText="true" />
+                           </children>
+                        </HBox>
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="87.0" prefWidth="263.0">
@@ -163,7 +172,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="132.0" prefWidth="1024.0">
                <children>
-                  <Label fx:id="question" alignment="CENTER" prefHeight="104.0" prefWidth="880.0" text="______________________________________________________________________________________________" underline="true" wrapText="true" />
+                  <Label fx:id="question" alignment="CENTER" prefHeight="104.0" prefWidth="880.0" styleClass="bigLabel" text="______________________________________________________________________________________________" wrapText="true" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="313.0" prefWidth="1024.0">

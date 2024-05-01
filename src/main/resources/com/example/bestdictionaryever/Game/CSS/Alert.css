@@ -1,0 +1,13 @@
+.dialog-pane .content-label {
+    -fx-text-alignment: center;  /* Căn giữa nội dung text */
+}
+.content-label {
+    -fx-font-size: 15px;  /* Kích thước font */
+    -fx-text-fill: Black;  /* Màu chữ */
+}
+.correctBackground {
+    -fx-background-color: #00FF00;  /* Màu nền */
+}
+.incorrectBackground {
+    -fx-background-color: #FF0000;  /* Màu nền */
+}

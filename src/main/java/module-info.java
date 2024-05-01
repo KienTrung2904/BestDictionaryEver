@@ -9,6 +9,7 @@ module com.example.bestdictionaryever {
     requires freetts;
     requires com.fasterxml.jackson.annotation;
     requires com.fasterxml.jackson.databind;
+    requires javafx.media;
 
     opens com.example.bestdictionaryever to javafx.fxml;
     opens controller.game to javafx.fxml;
