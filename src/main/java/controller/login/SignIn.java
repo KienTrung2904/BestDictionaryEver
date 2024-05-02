@@ -47,6 +47,8 @@ public class SignIn extends ScreenControl {
         User user = new User();
         String result = user.signIn(userName, password);
 
+        loginMessageLabel.setText(result);
+
         if (result.equals("Signed in successfully!")) {
             FXMLControl.setUser(user);
             DatabaseConnection.setUser(user);

@@ -50,6 +50,8 @@ public class SignUp extends SignIn {
         User user = new User();
         String result = user.signUp(fullName, userName, password);
 
+        registerMessageLabel.setText(result);
+
         if (result.equals("Signed up successffully!")) {
             super.started();
         }
