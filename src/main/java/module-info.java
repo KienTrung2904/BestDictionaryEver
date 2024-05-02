@@ -7,6 +7,8 @@ module com.example.bestdictionaryever {
     requires java.sql;
 //    requires javafx.media;
     requires freetts;
+    requires jlayer;
+    requires org.json;
 
     opens com.example.bestdictionaryever to javafx.fxml;
     exports com.example.bestdictionaryever;

@@ -1,5 +1,7 @@
 package com.example.bestdictionaryever;
 
+import com.example.bestdictionaryever.dictionary.API_Dictionary.API;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,11 +11,12 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
-public class GoogleTranslation {
+public class GoogleTranslation extends API {
 
     private static final String scriptURL = "https://script.google.com/macros/s/AKfycbyVpfwhmbUSeWveS4uNynNJjvwZTAh356HljddZArlE8MKRlqdMUSWR-0EpP65Kno1rbQ/exec";
 
     private static final String translateURL = "https://translate.google.com/translate_tts?ie=UTF-8&q=";
+
     public static String getTranslation(String inputText, String inputLang, String outputLang) {
         try {
             String urlStr = scriptURL +
@@ -21,36 +24,15 @@ public class GoogleTranslation {
                     "&target=" + outputLang +
                     "&source=" + inputLang;
 
-            URL obj = URI.create(urlStr).toURL();
-            StringBuilder response = new StringBuilder();
-            HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-            con.setRequestProperty("User-Agent", "Mozilla/5.0");
-            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-            String inputLine;
-            while ((inputLine = in.readLine()) != null) {
-                response.append(inputLine);
-            }
-            in.close();
-            return response.toString();
+            API.setUrl(urlStr);
+            return API.getData();
         } catch (IOException e) {
             e.printStackTrace();
             return "Error: Unable to perform translation";
         }
     }
-
-//    public static String getAudioLink(String text, String languageCode) {
-//        String encodedText = URLEncoder.encode(text, StandardCharsets.UTF_8);
-//        String url = translateURL
-//                + encodedText
-//                + "&tl="
-//                + languageCode
-//                + "&client=tw-ob";
-//
-//        return url;
-//    }
-
-    public static void main(String[] args) {
-        System.out.println(GoogleTranslation.getTranslation("This is a book", "en", "vi"));
-    }
-
 }
+
+
+
+

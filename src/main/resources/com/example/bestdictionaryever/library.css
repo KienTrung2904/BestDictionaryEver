@@ -28,17 +28,20 @@
 }
 
 
-
 #scrollPane {
     -fx-background-color: transparent;
     -fx-border-color: transparent;
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
+    -fx-background-radius: 20px;
 }
 
 .scroll-pane:vertical {
-    -fx-opacity: 4.0;
+    -fx-opacity: 10;
+    
 }
+
+
 
 .fixed-box {
     -fx-background-radius: 30px;
@@ -176,6 +179,31 @@
     -fx-arc-height: 450px;
     -fx-arc-width: 360px;
     -fx-font-family: "Montserrat SemiBold";
+}
+
+.noun {
+    -fx-font-family: 'Montserrat Italic';
+    -fx-font-size: 18;
+    -fx-font-weight: 400;
+    -fx-text-fill: rgba(49,47,47,0.3);
+}
+
+.definition {
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-size: 19px;
+    -fx-text-fill: rgba(0,0,0,0.8);
+
+}
+
+.example {
+    -fx-font-family: 'Montserrat Medium';
+    -fx-text-fill: rgba(0,0,0,0.8);
+    -fx-font-size: 19px;
+}
+
+#explainBox {
+    -fx-spacing: 20;
+    -fx-padding: 15px 0 0 30px;
 }
 
 

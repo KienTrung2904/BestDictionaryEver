@@ -21,9 +21,6 @@ public class leaderBoard implements ComponentManager {
         this.tableUserName = tableUserName;
         this.tableScore = tableScore;
         this.initialize();
-        for (int i = 0; i < leaderBoard.size(); i++) {
-            System.out.println(leaderBoard.get(i).getUserName());
-        }
     }
 
     @Override
