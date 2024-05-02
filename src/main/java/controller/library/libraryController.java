@@ -65,6 +65,7 @@ public class libraryController extends ScreenControl {
     public void decor() {
         searchBar = new SearchBar(anchorPane, hbox, searchField, suggestedList);
         searchBar.getClass();
+        searchField.setText(target);
         this.getWordDefinition();
     }
 
@@ -90,7 +91,6 @@ public class libraryController extends ScreenControl {
     }
 
     private void getWordDefinition() {
-        searchField.setText(target);
         wordData.setWordTarget(target);
 
         word.setText(target);

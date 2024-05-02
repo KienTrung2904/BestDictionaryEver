@@ -6,24 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f1a62af0-7fc9-44f6-98a9-a3793cdaeab6" name="Changes" comment="add commandline&#10;test login, register, connect database and scene">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Audio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/DatabaseController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Dictionary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/DictionaryCommandLine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/DictionaryManagement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/GoogleTranslation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/GoogleTranslation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Word.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dashboard/leaderBoard/leaderBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dashboard/leaderBoard/leaderBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dashboard/search/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dashboard/search/Dictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dashboard/search/SearchBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dashboard/search/SearchBar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/dictionaries.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/library/libraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/library/libraryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/library.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/library.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/library.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/library.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/sign-in.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/sign-in.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +167,7 @@
       <workItem from="1714537909789" duration="5709000" />
       <workItem from="1714571017377" duration="4091000" />
       <workItem from="1714619823782" duration="8926000" />
-      <workItem from="1714630519814" duration="995000" />
+      <workItem from="1714630519814" duration="2664000" />
     </task>
     <task id="LOCAL-00001" summary="add commandline&#10;test login, register, connect database and scene">
       <option name="closed" value="true" />
