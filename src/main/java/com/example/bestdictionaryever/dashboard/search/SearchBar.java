@@ -76,9 +76,6 @@ public class SearchBar implements ComponentManager {
         Button selectedButton = (Button) event.getSource();
         String target = selectedButton.getText();
         WordHistory.addToHistory(target);
-//        if (screen instanceof DashboardControl) {
-//            libraryController.setTopicFrom(false);
-//        }
         screen.librarySelect(target);
     }
 

@@ -19,8 +19,13 @@ public class Dictionary extends DatabaseConnection {
 
     public static void lookUpWord(String targetPrefix, int searchLimit) {
         prefixList.clear();
-        ArrayList<String> word = Trie.searchWords(targetPrefix, searchLimit);
-        prefixList.addAll(word);
+            ArrayList<String> word = Trie.searchWords(targetPrefix, searchLimit);
+                if (word != null) {
+                    prefixList.addAll(word);
+                }
+
+
+
     }
 
     public static void trieStruct() {
