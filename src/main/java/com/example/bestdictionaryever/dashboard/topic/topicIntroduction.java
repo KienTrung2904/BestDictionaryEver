@@ -1,6 +1,7 @@
 package com.example.bestdictionaryever.dashboard.topic;
 
 import com.example.bestdictionaryever.ComponentManager;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -10,10 +11,13 @@ import javafx.scene.text.TextFlow;
 import java.util.ArrayList;
 
 public class topicIntroduction implements ComponentManager {
+    @FXML
     private ImageView topicAvatar;
+    @FXML
     private Label topicName;
+    @FXML
     private TextFlow topicDescription;
-    private int index = 1;
+    private int index = 0;
     private int size = 0;
     private Topic topic = new Topic();
     private ArrayList<String> topicList = new ArrayList<>();
@@ -31,15 +35,6 @@ public class topicIntroduction implements ComponentManager {
         size = topicList.size();
 
     }
-
-    public void show() {
-        topic.setTopic(topicList.get(this.index));
-        topicName.setText(topic.getTopicName());
-        topicDescription.getChildren().clear();
-        topicDescription.getChildren().add(new Text(topic.getTopicDescription()));
-        topicAvatar.setImage(new Image(topic.getTopicAvatar()));
-    }
-
     public void toLeft() {
         index --;
         index = (index + size) % 10;
@@ -50,5 +45,16 @@ public class topicIntroduction implements ComponentManager {
         index ++;
         index = index  % 10;
         show();
+    }
+    public void show() {
+        topic.setTopic(topicList.get(this.index));
+        topicName.setText(topic.getTopicName());
+        topicDescription.getChildren().clear();
+        topicDescription.getChildren().add(new Text(topic.getTopicDescription()));
+        topicAvatar.setImage(new Image(topic.getTopicAvatar()));
+    }
+
+    public int getIndex() {
+        return index;
     }
 }

@@ -108,9 +108,7 @@
 
 .textLabel {
     -fx-font-family: "Montserrat Light";
-    /*-fx-font-weight: semi-bold;*/
     -fx-font-size: 12.09px;
-    /*-fx-text-align: center;*/
     -fx-text-fill: rgb(0,0,0,0.8);
 }
 
@@ -187,6 +185,8 @@
     -fx-alignment: baseline-left;
     -fx-text-fill: rgba(28, 27, 27, 0.6);
 }
+
+.
 
 
 

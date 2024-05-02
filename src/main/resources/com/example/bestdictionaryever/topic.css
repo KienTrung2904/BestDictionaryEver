@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "Montserrat SemiBold";
+    src: url("font/Montserrat-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat Italic";
+    src: url("font/Montserrat-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat Light";
+    src: url("font/Montserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat Medium";
+    src: url("font/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url("font/Montserrat-Regular.ttf") format("truetype");
+}
+
+#anchorPane {
+    -fx-background-color: rgba(240, 240, 240, 1);
+}
+
+.vocabulary-box {
+    -fx-background-color: rgba(255, 255, 255, 1);
+    -fx-background-radius: 22px;
+
+}
+
+.word {
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-size: 27px;
+    -fx-arc-height:600;
+    -fx-line-height:32.91px;
+    -fx-text-fill: rgba(0, 0, 0, 0.8);
+}
+
+.page {
+    font-family: "Montserrat SemiBold";
+    -fx-font-size: 22px;
+    -fx-text-fill: rgba(0, 0, 0, 0.8);
+    -fx-line-height: 26.82px;
+}
+
+.text-box {
+    -fx-text-fill: rgba(0,0,0,0.8);
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-arc-height: 600;
+    -fx-line-height: 33px;
+    -fx-font-size: 27px;
+}
+.text-box:hover {
+    -fx-border-color: #FF7568;
+    -fx-border-width: 4px;
+    -fx-border-radius: 20px;
+    -fx-background-color: #fff;
+    -fx-fill: #fff;
+    -fx-font-size: 27px;
+    -fx-arc-height: 600px;
+    -fx-font-family: "Montserrat SemiBold";
+}

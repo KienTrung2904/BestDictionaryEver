@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="640" prefWidth="1024" stylesheets="@library.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.library.libraryController">
+    <Rectangle height="458" layoutX="61" layoutY="132" styleClass="fixed-box" width="757" />
+
+    <Text fx:id="word" layoutX="115" layoutY="193.48" style="-fx-font-family: 'Montserrat SemiBold';                 -fx-font-size: 26px;"  />
+
+    <Button fx:id="speaker" layoutX="588" layoutY="174.38" onAction="#playSound" style="-fx-background-color: transparent;">
+        <graphic>
+                        <ImageView fitHeight="19.78" fitWidth="20">
+                            <Image url="@Login/Image/volume.png" />
+                        </ImageView>
+        </graphic>
+    </Button>
+
+    <Text fx:id="phonetic" layoutX="630" layoutY="193.38" style="-fx-font-family: 'Montserrat Regular';             -fx-font-size: 18px;             -fx-font-weight: 400;             -fx-text-fill: rgba(0,0,0,0.2)" text="/ˈæp.əl ˌbʌt̬.ɚ/" />
+
+    <Line endX="762" endY="225.89" startX="113" startY="225.89" stroke="#FF7568" strokeWidth="3" />
+
+    <Text fx:id="noun" layoutX="114" layoutY="275" style="-fx-font-family: 'Montserrat Italic';                     -fx-font-size: 20;                     -fx-font-weight: 400;                     -fx-text-fill: rgba(49,47,47,0.3)" text="noun" />
+
+    <TextFlow fx:id="definition" layoutX="113.0" layoutY="312.0" prefHeight="68.0" prefWidth="652.0" textAlignment="LEFT" />
+
+    <TextFlow fx:id="example" layoutX="134.0" layoutY="350" prefHeight="54.0" prefWidth="546.0" textAlignment="LEFT" />
+
+    <VBox layoutX="858" layoutY="145" spacing="17">
+        <Button fx:id="addButton" alignment="CENTER" layoutX="0" onAction="#addWord" prefHeight="47" prefWidth="122.93" styleClass="select-box">
+            <graphic>
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <Label prefWidth="8" />
+                    <ImageView fitHeight="22" fitWidth="23.52">
+                        <image>
+                            <Image url="@Login/Image/plus-circle.png" />
+                        </image>
+                    </ImageView>
+
+                    <Label alignment="CENTER" prefHeight="25.38" text="Add" />
+
+                </HBox>
+            </graphic>
+        </Button>
+
+
+        <Button fx:id="editButton" alignment="CENTER" layoutX="0" onAction="#editWord" prefHeight="47" prefWidth="122.93" styleClass="select-box">
+            <graphic>
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <Label prefWidth="8" />
+                    <ImageView fitHeight="22" fitWidth="23.52">
+                        <image>
+                            <Image url="@Login/Image/pencil-alt.png" />
+                        </image>
+                    </ImageView>
+                    <Label alignment="CENTER" prefHeight="25.38" text="Edit" />
+                </HBox>
+            </graphic>
+        </Button>
+
+
+        <Button alignment="CENTER" layoutX="0" onAction="#deleteAlert" prefHeight="47" prefWidth="122.93" styleClass="select-box">
+            <graphic>
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <Label prefWidth="8" />
+                    <ImageView fitHeight="22" fitWidth="23.52">
+                        <image>
+                            <Image url="@Login/Image/trash.png" />
+                        </image>
+                    </ImageView>
+                    <Label alignment="CENTER" prefHeight="25.38" text="Delete" />
+                </HBox>
+            </graphic>
+        </Button>
+        <Button alignment="CENTER" layoutX="0" onAction="#back" prefHeight="47" prefWidth="122.93" styleClass="select-box">
+            <graphic>
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <Label prefWidth="8" />
+                    <ImageView fitHeight="22" fitWidth="23.52">
+                        <image>
+                            <Image url="@Login/Image/arrow-narrow-left.png" />
+                        </image>
+                    </ImageView>
+                    <Label alignment="CENTER" prefHeight="25.38" text="Back" />
+                </HBox>
+            </graphic>
+        </Button>
+    </VBox>
+
+    <ImageView fitHeight="232.0" fitWidth="225.0" layoutX="812.0" layoutY="408.0">
+        <Image url="@Login/Image/36.png" />
+    </ImageView>
+
+    <HBox fx:id="hbox" layoutX="111" layoutY="40" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="45" prefWidth="801.89" styleClass="searchField" stylesheets="@dashboard.css">
+        <children>
+            <AnchorPane prefHeight="49.78" prefWidth="25.0">
+                <children>
+                    <ImageView fitHeight="20" fitWidth="27.0" layoutX="25" layoutY="13" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@Login/Image/search.png" />
+                        </image>
+                    </ImageView>
+                </children>
+            </AnchorPane>
+
+            <TextField fx:id="searchField" layoutX="170" layoutY="45" prefHeight="46.0" prefWidth="440.0" promptText="Search Something" stylesheets="@sign-in.css">
+                <styleClass>
+                    -fx-font-family: "Montserrat Light";
+                    -fx-translate-x: 20px;
+                    <String fx:value="textField" />
+                    <String fx:value="transparent" />
+                </styleClass>
+            </TextField>
+            
+        </children>
+    </HBox>
+
+    <VBox fx:id="suggestedList" layoutX="111" layoutY="92" prefWidth="801.89" />
+</AnchorPane>

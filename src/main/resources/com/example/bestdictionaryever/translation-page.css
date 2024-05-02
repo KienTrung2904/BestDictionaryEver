@@ -1,33 +1,80 @@
+@font-face {
+    font-family: "Montserrat SemiBold";
+    src: url("font/Montserrat-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat Italic";
+    src: url("font/Montserrat-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat Light";
+    src: url("font/Montserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat Medium";
+    src: url("font/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url("font/Montserrat-Regular.ttf") format("truetype");
+}
+
+
 .backGround {
     -fx-background-color: rgba(240, 240, 240, 1);
 }
 
 .inputTextArea {
-    -fx-background-color: "white";
-    -fx-background-radius: 21.33;
-    -fx-border-radius: 21.33;
+    -fx-fill:#fff;
+    -fx-background-radius: 30px;
+    -fx-border-color: #fff;
+
+    -fx-background-color: #FFF;
+    -fx-arc-height: 30px;
+    -fx-arc-width: 30px;
+    -fx-border-radius: 30px;
+
+
+    -fx-font-size: 16px;
+    -fx-font-family: "Montserrat Regular";
+
 }
 
-.textArea {
+.text-area {
+    -fx-background-color: #fff;
+    -fx-border-width: 1.5 10 20 10;
+}
+
+.transparent {
     -fx-background-color: rgba(0,0,0,0);
-    -fx-border-color: rgba(0,0,0,0);
+    -fx-background-radius: 21.33;
+    -fx-border-radius: 21.33;
+
 }
 
 .translationLabel {
-    -fx-font-family: "Semi Bold";
-    -fx-font-size: 20;
-    -fx-font-weight: 800;
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-size: 18;
+    -fx-font-weight: 600;
+    fx-line-height:21.94px;
+    -fx-text-fill: rgba(0,0,0,0.8);
 }
 
 .backButton {
     -fx-background-color: "white";
     -fx-background-radius: 15;
     -fx-border-radius: 15;
+    -fx-text-fill: rgba(0, 0, 0, 0.8);
+    -fx-font-family: "Montserrat SemiBold";
+    -fx-font-size: 14px;
+    -fx-line-height:17.07px;
+;
+}
 
-}
-.transparent {
-    -fx-background-color: rgba(0,0,0,0);
-}
 
 
 .helpButton {

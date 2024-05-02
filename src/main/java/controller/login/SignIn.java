@@ -39,6 +39,7 @@ public class SignIn extends ScreenControl {
         }
     }
 
+    @FXML
     private void signIn() {
         String userName = usernameTextField.getText();
         String password = enterPasswordField.getText();

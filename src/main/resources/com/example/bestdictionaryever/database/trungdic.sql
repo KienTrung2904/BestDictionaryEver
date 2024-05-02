@@ -98,17 +98,43 @@ CREATE TABLE `topic` (
     `topicDescrition` varchar(500) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+CREATE TABLE `moreDetailTopic` (
+    `topicIndex` int(11) UNSIGNED NOT NULL,
+    `target` varchar(30) NOT NULL,
+    `explain` varchar(30) NOT NULL,
+    `word_image` varchar(200) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+INSERT INTO `moreDetailTopic` (`topicIndex`, `target`, `explain`, `word_image`) VALUES
+(2,'head', 'đầu', 'D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\head.png'),
+(2,'buttocks', 'mông', 'D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\buttocks.png'),
+(2,'instep', 'đầu gối', 'D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\instep.png'),
+(2,'shoulder', 'vai', 'D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\shoulder.png'),
+(2,'tooth', 'răng', 'D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\tooth.png'),
+
+(3,'jam', 'mứt', 'D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\jam.png');
+
+INSERT INTO `moreDetailTopic` (`topicIndex`, `target`, `explain`, `word_image`) VALUES
+(4,'head','đầu','D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\head.png'),
+(5,'buttocks','đầu','D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\buttocks.png'),
+(6,'instep','đầu','D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\instep.png'),
+(7,'shoulder','đầu','D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\shoulder.png'),
+(8,'tooth','đầu','D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\tooth.png'),
+(9,'head','đầu','D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\head.png'),
+(10,'buttocks','đầu','D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\buttocks.png'),
+(1,'instep','đầu','D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\topic1\\instep.png');
+
 INSERT INTO `topic` (`topicIndex`, `topicName`, `topicAvatar`, `topicDescrition`) VALUES
-(1, 'BodyPart', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\1.png', 'Explore English while discovering fascinating body part from around the world.'),
-(2, 'Career', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\2.png', 'Explore English while discovering fascinating careers from around the world.'),
-(3, 'Culture', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\3.png', 'Explore English while discovering fascinating cultures from around the world.'),
-(4, 'Environment', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\4.png', 'Explore English while discovering fascinating environment from around the world.'),
-(5, 'Family', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\5.png', 'Explore English while discovering fascinating family from around the world.'),
-(6, 'Food', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\6.png', 'Explore English while discovering fascinating food from around the world.'),
-(7, 'School', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\7.png', 'Explore English while discovering fascinating school from around the world.'),
-(8, 'Sport', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\8.png', 'Explore English while discovering fascinating sport from around the world.'),
-(9, 'Technology', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\9.png', 'Explore English while discovering fascinating technology from around the world.'),
-(10, 'Travel', 'E:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\10.png', 'Explore English while discovering fascinating travel from around the world.');
+(1, 'BodyPart', 'D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\1.png', 'Explore English while discovering fascinating body part from around the world.'),
+(2, 'Career', 'D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\2.png', 'Explore English while discovering fascinating careers from around the world.'),
+(3, 'Culture', 'D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\3.png', 'Explore English while discovering fascinating cultures from around the world.'),
+(4, 'Environment', 'D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\4.png', 'Explore English while discovering fascinating environment from around the world.'),
+(5, 'Family', 'D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\5.png', 'Explore English while discovering fascinating family from around the world.'),
+(6, 'Food', 'D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\6.png', 'Explore English while discovering fascinating food from around the world.'),
+(7, 'School', 'D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\7.png', 'Explore English while discovering fascinating school from around the world.'),
+(8, 'Sport', 'D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\8.png', 'Explore English while discovering fascinating sport from around the world.'),
+(9, 'Technology', 'D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\9.png', 'Explore English while discovering fascinating technology from around the world.'),
+(10, 'Travel', 'D:\\BestDictionaryEver\\src\\main\\resources\\com\\example\\bestdictionaryever\\Login\\Image\\topic\\Avatar\\10.png', 'Explore English while discovering fascinating travel from around the world.');
 
 INSERT INTO `trieDictionary` (`id`, `word`) VALUES
                                               (1, '\'em'),

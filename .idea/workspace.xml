@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1a62af0-7fc9-44f6-98a9-a3793cdaeab6" name="Changes" comment="update translation page, text to speech, google translate">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/add-word.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/addWord.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/alert.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/alert.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/choose-game.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/choose-topic.fxml" afterDir="false" />
+    <list default="true" id="f1a62af0-7fc9-44f6-98a9-a3793cdaeab6" name="Changes" comment="add commandline&#10;test login, register, connect database and scene">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/dashboard/DashboardControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/dashboard/DashboardControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/database/trungdic.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/database/trungdic.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +23,8 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="chauanh" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;history&quot;: [
@@ -70,42 +59,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Audio.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GoogleTranslation.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TextToSpeech.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TranslationPage.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/OOP/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Application.executor": "Run",
+    "Application.Audio.executor": "Run",
+    "Application.GoogleTranslation.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "Application.TextToSpeech.executor": "Run",
+    "Application.TranslationPage.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="Push.Settings">
     <option name="SHOW_DETAILS_PANEL" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\BestDictionaryEver\src\main\resources\com\example\bestdictionaryever\Login\Image\topic\Avatar" />
+      <recent name="E:\BestDictionaryEver\src\main\resources\com\example\bestdictionaryever\Login\Image" />
+      <recent name="E:\BestDictionaryEver\src\main\resources\com\example\bestdictionaryever\font" />
       <recent name="E:\BestDictionaryEver\src\main\resources\com\example\bestdictionaryever" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -142,7 +134,34 @@
       <workItem from="1713014754311" duration="12982000" />
       <workItem from="1713262378820" duration="12426000" />
       <workItem from="1713366788011" duration="14659000" />
+      <workItem from="1713406979164" duration="3152000" />
+      <workItem from="1713425095969" duration="12820000" />
+      <workItem from="1713460810357" duration="4329000" />
+      <workItem from="1713520017038" duration="7613000" />
+      <workItem from="1713550807113" duration="4988000" />
+      <workItem from="1713847861755" duration="2190000" />
+      <workItem from="1713877501430" duration="13622000" />
+      <workItem from="1713893366017" duration="335000" />
+      <workItem from="1713943074202" duration="1814000" />
+      <workItem from="1713971615276" duration="2863000" />
+      <workItem from="1714183316707" duration="21000" />
+      <workItem from="1714183359164" duration="9000" />
+      <workItem from="1714183380803" duration="62000" />
+      <workItem from="1714183463198" duration="32000" />
+      <workItem from="1714183754049" duration="134000" />
+      <workItem from="1714183902812" duration="759000" />
+      <workItem from="1714184687544" duration="6511000" />
+      <workItem from="1714193635459" duration="18022000" />
+      <workItem from="1714229136013" duration="13975000" />
+      <workItem from="1714278150728" duration="14069000" />
+      <workItem from="1714312034815" duration="5227000" />
       <workItem from="1713406979164" duration="1653000" />
+      <workItem from="1714326593121" duration="9240000" />
+      <workItem from="1714337820602" duration="464000" />
+      <workItem from="1714373554893" duration="11605000" />
+      <workItem from="1714416940462" duration="5580000" />
+      <workItem from="1714466115778" duration="7587000" />
+      <workItem from="1714481750206" duration="374000" />
     </task>
     <task id="LOCAL-00001" summary="add commandline&#10;test login, register, connect database and scene">
       <option name="closed" value="true" />
@@ -168,15 +187,7 @@
       <option name="project" value="LOCAL" />
       <updated>1714313209261</updated>
     </task>
-    <task id="LOCAL-00004" summary="update translation page, text to speech, google translate">
-      <option name="closed" value="true" />
-      <created>1714323476222</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1714323476222</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,8 +214,7 @@
     <MESSAGE value="add commandline&#10;test login, register, connect database and scene" />
     <MESSAGE value="google translate, text to speech, translation page" />
     <MESSAGE value="translation page" />
-    <MESSAGE value="update translation page, text to speech, google translate" />
-    <option name="LAST_COMMIT_MESSAGE" value="update translation page, text to speech, google translate" />
+    <option name="LAST_COMMIT_MESSAGE" value="translation page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

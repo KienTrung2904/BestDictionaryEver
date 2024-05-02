@@ -1,6 +1,7 @@
 package com.example.bestdictionaryever.dashboard.topic;
 
 import com.example.bestdictionaryever.DatabaseConnection;
+import javafx.util.Pair;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,6 +14,7 @@ public class Topic extends DatabaseConnection {
     private String topicDescription;
     private int topicIndex;
     private static ArrayList<String> topicList = new ArrayList<>();
+    private ArrayList<Pair<Pair<String, String>, String>> wordList = new ArrayList<>();
 
     public String getTopicName() {
         return topicName;
@@ -53,6 +55,22 @@ public class Topic extends DatabaseConnection {
         setTopicIntroduction(topic);
     }
 
+    public ArrayList<Pair<Pair<String, String>, String>> getWordList() {
+        return wordList;
+    }
+
+    public String getWord(int index) {
+        return wordList.get(index).getKey().getKey();
+    }
+
+    public String getExplain(int index) {
+        return wordList.get(index).getKey().getValue();
+    }
+
+
+    public String getWordImage(int index) {
+        return wordList.get(index).getValue();
+    }
 
     public ArrayList<String> getTopicList() {
         final String sql_query = "SELECT topicName from topic";
@@ -80,7 +98,7 @@ public class Topic extends DatabaseConnection {
     }
 
     private void setTopicIntroduction(String topic) {
-        final String sql_query = "SELECT t.topicIndex, t.topicName, t.topicAvatar, t.topicDescrition FROM topic t WHERE t.topicName = ?";
+        final String sql_query = "SELECT t.topicIndex, t.topicName, t.topicAvatar, t.topicDescrition, trie.word, t.word_image, t.explain FROM triedictionary trie INNER JOIN (SELECT * FROM topic NATURAL JOIN moredetailtopic WHERE topic.topicName = ?) t ON trie.word = t.target;";
 
         try {
             PreparedStatement p = databaseLink.prepareStatement(sql_query);
@@ -94,6 +112,13 @@ public class Topic extends DatabaseConnection {
                         setTopicName(r.getString("topicName"));
                         setTopicAvatar( r.getString("topicAvatar"));
                         setTopicDescription(r.getString("topicDescrition"));
+                        String word = r.getString("word");
+                        String explain = r.getString("explain");
+                        String image = r.getString("word_image");
+
+                        Pair<String, String> wordAndExplain = new Pair<>(word, explain);
+                        this.wordList.add(new Pair<>(wordAndExplain, image));
+
                     }
                 } finally {
                     close(r);

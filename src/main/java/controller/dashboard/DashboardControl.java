@@ -16,6 +16,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
 public class DashboardControl extends ScreenControl {
+    public static int indexTopic;
     @FXML
     protected AnchorPane anchorPane;
     @FXML
@@ -40,14 +41,19 @@ public class DashboardControl extends ScreenControl {
     @FXML
     private TextFlow topicDescription;
 
+    @FXML
     private Button translationButton;
     @FXML
     private Button toLeft;
     @FXML
     private Button toRight;
 
+    private static topicIntroduction topic;
+
+
     private Button logOutButton;
-    private topicIntroduction topic;
+//    private topicIntroduction topic;
+
 
 
     public void decor() {
@@ -72,7 +78,12 @@ public class DashboardControl extends ScreenControl {
     }
 
     public void practice() {
-
+        super.topic();
+    }
+    public static int getIndexTopic() {
+        indexTopic = topic.getIndex() + 1;
+        System.out.println((indexTopic));
+        return indexTopic;
     }
 
     public void translationButtonOnAction(ActionEvent actionEvent) {

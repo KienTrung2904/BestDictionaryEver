@@ -2,6 +2,7 @@ package com.example.bestdictionaryever.dashboard.search;
 
 import com.example.bestdictionaryever.ComponentManager;
 import controller.ScreenControl;
+import controller.dashboard.DashboardControl;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -76,9 +77,9 @@ public class SearchBar implements ComponentManager {
         String target = selectedButton.getText();
         WordHistory.addToHistory(target);
 //        if (screen instanceof DashboardControl) {
-//            DictionaryControl.setTopicFrom(false);
+//            libraryController.setTopicFrom(false);
 //        }
-//        screen.dictionaryStarted(target);
+        screen.librarySelect(target);
     }
 
     private void handleKeyPressed(KeyEvent event) {
