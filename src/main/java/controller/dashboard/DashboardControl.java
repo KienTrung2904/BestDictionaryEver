@@ -51,10 +51,6 @@ public class DashboardControl extends ScreenControl {
     private static topicIntroduction topic;
 
 
-    private Button logOutButton;
-//    private topicIntroduction topic;
-
-
 
     public void decor() {
         String _greeting = "Good day, " + user.getUserName();
@@ -88,6 +84,10 @@ public class DashboardControl extends ScreenControl {
 
     public void translationButtonOnAction(ActionEvent actionEvent) {
         super.translationPage();
+    }
+
+    public void game () {
+        super.game();
     }
 
     public void logOutButtonOnAction(ActionEvent actionEvent) {

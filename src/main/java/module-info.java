@@ -28,5 +28,8 @@ module com.example.bestdictionaryever {
     exports controller.library;
     opens controller.library;
 
+    exports controller.game;
+    opens controller.game;
+
 }
 
