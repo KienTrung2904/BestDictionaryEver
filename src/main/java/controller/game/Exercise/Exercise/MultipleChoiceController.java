@@ -8,8 +8,10 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -28,6 +30,9 @@ public class MultipleChoiceController extends ExerciseController<MultipleChoice>
     private Button[] topicButton;
     @FXML
     private Button[] options;
+    @FXML
+    private Label chooseYour = new Label();
+    Font font = Font.loadFont(getClass().getResource("/com/example/bestdictionaryever/font/Montserrat-Medium.ttf").toExternalForm(), 10);
 
 
     @Override

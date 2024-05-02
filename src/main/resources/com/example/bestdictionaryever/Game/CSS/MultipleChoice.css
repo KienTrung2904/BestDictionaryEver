@@ -1,5 +1,27 @@
 .background {
-    -fx-background-color: #E0F4FF;
+    -fx-background-color: #F0F0F0;
+}
+.choose-your_label{
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: rgba(0, 0, 0, 0.8);
+    -fx-font-size: 24.89px;
+}
+.topic-Label {
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 100%, #FF968C 0%, #FF968C 8.01%, #FF4D56 56.95%);
+    -fx-font-size: 54.76;
+}
+.optionButton {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 16.36;
+    -fx-background-radius: 10.67px;
+    -fx-background-color: white;
+}
+.optionButton:hover {
+    -fx-cursor: hand;
+    -fx-border-radius: 15px;
+    -fx-border-color: rgba(255, 104, 104, 1);
+    -fx-border-width: 3px;
 }
 .bigLabel {
     -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );
@@ -20,46 +42,44 @@
 
 }
 .smallLabel {
+    -fx-font-family: "Times New Roman";
     -fx-background-color: transparent;
-    -fx-text-fill: #8B4726;
+    -fx-text-fill: rgba(255, 77, 86, 1);
     -fx-wrap-text: true;
     -fx-background-radius: 10px;
     -fx-font-family: Helvetica;
-    -fx-font-size: 25px;
+    -fx-font-size: 17.78px;
 }
-.button {
+.questionIndexLabel {
+    -fx-font-family: "Times New Roman";
+    -fx-background-color: transparent;
+    -fx-text-fill: rgba(0, 0, 0, 0.8);
+    -fx-font-size: 25;
+}
+.smallButton {
     -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );
     -fx-cursor: hand;
     -fx-background-radius: 7px;
 }
-.button:hover {
+.smallButton:hover {
     -fx-background-color: #bad7f2;
 }
 .bigButton{
-    -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );
+    -fx-background-color: white;
     -fx-cursor: hand;
-    -fx-text-fill: #ffffff;
+    -fx-text-fill: rgba(0, 0, 0, 0.8);
     -fx-font-size: 30px;
     -fx-font-family: Arial;
-    -fx-border-color: #65aeea;
-    -fx-border-width: 3px;
     -fx-background-radius: 15px;
-    -fx-border-radius: 15px;
+    /*-fx-border-radius: 15px;*/
     -fx-alignment: center;
 }
 .bigButton:hover{
-    -fx-background-color: #bad7f2;
+    -fx-border-radius: 15px;
+    -fx-border-color: rgba(255, 104, 104, 1);
+    -fx-border-width: 3px;
 }
-.progressBar .bar {
-    -fx-background-color: #61B8FF
-}
-.percentage {
-    -fx-background-color: #9dc6fb;
-    -fx-background-radius: 5px;
-    -fx-text-fill: #ffffff;
-    -fx-font-family: Helvetica;
-    -fx-font-size: 14px;
-}
+
 .choosingButton {
     -fx-background-color: #4297FF;
     -fx-text-fill: #ffffff;
@@ -81,4 +101,10 @@
 }
 .incorrectOption {
     -fx-background-color: LightCoral;
+}
+.questionLabel {
+    -fx-background-color: rgba(255, 255, 255, 1);
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: rgba(0, 0, 0, 0.8);
+    -fx-font-size: 16.36px;
 }

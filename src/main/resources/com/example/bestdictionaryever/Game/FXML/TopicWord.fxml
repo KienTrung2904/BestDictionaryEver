@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,38 +12,63 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" stylesheets="@../CSS/MultipleChoice.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.game.Exercise.Exercise.MultipleChoiceController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" styleClass="background" stylesheets="@../CSS/MultipleChoice.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.game.Exercise.Exercise.MultipleChoiceController">
    <children>
       <VBox fx:id="topicVbox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox prefHeight="57.0" prefWidth="1024.0">
+            <HBox prefHeight="198.0" prefWidth="1024.0">
                <children>
-                  <VBox prefHeight="98.0" prefWidth="108.0" HBox.hgrow="NEVER">
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
+                  <HBox prefHeight="198.0" prefWidth="141.0">
                      <children>
-                        <ImageView fitHeight="87.0" fitWidth="122.0" onMouseClicked="#backToChooseGame" pickOnBounds="true" preserveRatio="true" styleClass="imageView">
-                           <image>
-                              <Image url="@../Image/back2.png" />
-                           </image>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </ImageView>
+                        <VBox prefHeight="198.0" prefWidth="110.0" HBox.hgrow="NEVER">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <children>
+                              <ImageView fitHeight="87.0" fitWidth="122.0" onMouseClicked="#backToChooseGame" pickOnBounds="true" preserveRatio="true" styleClass="imageView">
+                                 <image>
+                                    <Image url="@../Image/back2.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ImageView>
+                           </children>
+                        </VBox>
                      </children>
-                  </VBox>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="137.0" prefWidth="1024.0">
+                     <children>
+                        <VBox prefHeight="198.0" prefWidth="183.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="166.0" prefWidth="272.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="53.0" prefWidth="227.0">
+                                       <children>
+                                          <Label fx:id="chooseYour" styleClass="choose-your_label" text="Choose your">
+                                             <padding>
+                                                <Insets top="15.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="91.0" prefWidth="184.0">
+                                       <children>
+                                          <Label fx:id="TOPIC" styleClass="topic-Label" text="Topic" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets right="107.0" />
+                     </padding>
+                  </HBox>
                </children>
-               <VBox.margin>
-                  <Insets top="7.0" />
-               </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1049.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="99.0" prefWidth="891.0" styleClass="topicLabel" text="CHOOSE THE WANTED TOPIC" />
-               </children>
-            </HBox>
-            <HBox prefHeight="431.0" prefWidth="1024.0">
+            <HBox prefHeight="508.0" prefWidth="1024.0">
                <children>
                   <GridPane alignment="CENTER" hgap="10.0" prefHeight="367.0" prefWidth="882.0" HBox.hgrow="ALWAYS">
                      <columnConstraints>
@@ -73,9 +97,6 @@
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
-                     <effect>
-                        <DropShadow />
-                     </effect>
                      <padding>
                         <Insets left="17.0" />
                      </padding>
@@ -84,6 +105,9 @@
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
+               <padding>
+                  <Insets bottom="37.0" />
+               </padding>
             </HBox>
          </children>
       </VBox>
@@ -110,59 +134,50 @@
                      <children>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Label fx:id="highestScoreLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="266.0" styleClass="smallLabel" text="Your highest score:" wrapText="true" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="266.0" styleClass="smallLabel" text="Your turn:" wrapText="true" />
                            </children>
                         </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox prefHeight="45.0" prefWidth="282.0" spacing="30.0">
                            <children>
-                              <Label fx:id="scoreLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="225.0" styleClass="smallLabel" text="Score: 0" wrapText="true" />
+                              <ImageView fx:id="blood1" fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/carrot.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="blood2" fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/carrot.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="blood3" fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/carrot.png" />
+                                 </image>
+                              </ImageView>
                            </children>
+                           <padding>
+                              <Insets bottom="10.0" left="54.0" />
+                           </padding>
                         </HBox>
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="87.0" prefWidth="263.0">
                      <children>
-                        <Label fx:id="questionIndexLabel" styleClass="smallLabel" text="Question 1 of 10" wrapText="true" />
+                        <Label fx:id="questionIndexLabel" prefWidth="158.0" styleClass="questionIndexLabel" text="Question 1/10" wrapText="true" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER_LEFT" prefHeight="87.0" prefWidth="337.0">
                      <children>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <VBox alignment="CENTER" prefHeight="47.0" prefWidth="299.0">
                            <children>
-                              <VBox alignment="CENTER" prefHeight="88.0" prefWidth="146.0">
-                                 <children>
-                                    <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="46.0" prefWidth="138.0" styleClass="smallLabel" text="Your turn:" wrapText="true" />
-                                 </children>
-                              </VBox>
-                              <VBox alignment="CENTER" prefHeight="88.0" prefWidth="36.0">
-                                 <children>
-                                    <ImageView fx:id="blood1" fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../Image/blood.png" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </VBox>
-                              <VBox alignment="CENTER" prefHeight="88.0" prefWidth="42.0">
-                                 <children>
-                                    <ImageView fx:id="blood2" fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../Image/blood.png" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </VBox>
-                              <VBox alignment="CENTER" prefHeight="88.0" prefWidth="39.0">
-                                 <children>
-                                    <ImageView fx:id="blood3" fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../Image/blood.png" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </VBox>
+                              <Label fx:id="highestScoreLabel" styleClass="smallLabel" text="Your highest score: 1" />
                            </children>
-                        </HBox>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="47.0" prefWidth="299.0" styleClass="smallLabel">
+                           <children>
+                              <Label fx:id="scoreLabel" styleClass="smallLabel" text="Score: 0" />
+                           </children>
+                        </VBox>
                      </children>
                   </VBox>
                </children>
@@ -170,14 +185,14 @@
                   <Insets top="7.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="132.0" prefWidth="1024.0">
+            <HBox alignment="CENTER" prefHeight="132.0" prefWidth="1024.0" styleClass="smallLabel">
                <children>
-                  <Label fx:id="question" alignment="CENTER" prefHeight="104.0" prefWidth="880.0" styleClass="bigLabel" text="______________________________________________________________________________________________" wrapText="true" />
+                  <Label fx:id="question" alignment="CENTER" prefHeight="147.0" prefWidth="630.0" styleClass="questionLabel" text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" wrapText="true" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="313.0" prefWidth="1024.0">
                <children>
-                  <GridPane hgap="10.0" prefHeight="182.0" prefWidth="741.0" vgap="10.0">
+                  <GridPane alignment="CENTER" hgap="10.0" prefHeight="182.0" prefWidth="741.0" vgap="10.0">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -190,10 +205,10 @@
                         <Insets bottom="20.0" top="20.0" />
                      </HBox.margin>
                      <children>
-                        <Button fx:id="optionA" mnemonicParsing="false" prefHeight="122.0" prefWidth="363.0" styleClass="bigButton" text="Button" />
-                        <Button fx:id="optionB" mnemonicParsing="false" prefHeight="122.0" prefWidth="363.0" styleClass="bigButton" text="Button" GridPane.columnIndex="1" />
-                        <Button fx:id="optionC" mnemonicParsing="false" prefHeight="122.0" prefWidth="363.0" styleClass="bigButton" text="Button" GridPane.rowIndex="1" />
-                        <Button fx:id="optionD" mnemonicParsing="false" prefHeight="122.0" prefWidth="363.0" styleClass="bigButton" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="optionA" mnemonicParsing="false" prefHeight="96.0" prefWidth="315.0" styleClass="optionButton" text="Button" />
+                        <Button fx:id="optionB" mnemonicParsing="false" prefHeight="96.0" prefWidth="315.0" styleClass="optionButton" text="Button" GridPane.columnIndex="1" />
+                        <Button fx:id="optionC" mnemonicParsing="false" prefHeight="96.0" prefWidth="315.0" styleClass="optionButton" text="Button" GridPane.rowIndex="1" />
+                        <Button fx:id="optionD" mnemonicParsing="false" prefHeight="96.0" prefWidth="315.0" styleClass="optionButton" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
                </children>
