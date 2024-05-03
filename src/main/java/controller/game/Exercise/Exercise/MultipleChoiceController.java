@@ -10,7 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 
 import java.net.URL;
@@ -22,7 +22,7 @@ import static controller.TopicWord.backend.TopicWords.DetailedTopicWord.DetailTo
 public class MultipleChoiceController extends ExerciseController<MultipleChoice> implements Initializable {
     private String currentTopic;
     @FXML
-    private VBox topicVbox, exerciseVbox;
+    private AnchorPane topicPane, exercisePane;
     @FXML
     private Button AnimalButton, BodyButton, FoodButton, SportsButton, FashionButton, WeatherButton,
             BusinessButton, PlantsButton, optionA, optionB, optionC, optionD, optionChosen;
@@ -59,7 +59,7 @@ public class MultipleChoiceController extends ExerciseController<MultipleChoice>
                     userAnswer = optionText[temp];
                     System.out.println("User choose: " + userAnswer);
                     resetButtonStyle();
-                    options[temp].getStyleClass().clear();
+                    //options[temp].getStyleClass().clear();
                     options[temp].getStyleClass().add("choosingButton");
                 }
             });
@@ -75,8 +75,9 @@ public class MultipleChoiceController extends ExerciseController<MultipleChoice>
 
     public void setNextQuestion() {
         if (health == -1 || questionIndex == totalQuestions) {
-            backToChooseTopic();
+            finishGameScreen();
         }
+        gameIcon.setImage(exerciseIcon.getImage());
         showScore_Ques();
         if (questionIndex == 0)  {
             randomizeExerciseList();
@@ -89,13 +90,13 @@ public class MultipleChoiceController extends ExerciseController<MultipleChoice>
         question.setText(multipleChoice.getQuestion());
         question.setWrapText(true);
         correctAnswer = multipleChoice.getCorrectAnswer();
-        optionA.setText(multipleChoice.getOptionA());
+        optionA.setText("A. " + multipleChoice.getOptionA());
         optionA.setWrapText(true);
-        optionB.setText(multipleChoice.getOptionB());
+        optionB.setText("B. " + multipleChoice.getOptionB());
         optionB.setWrapText(true);
-        optionC.setText(multipleChoice.getOptionC());
+        optionC.setText("C. " + multipleChoice.getOptionC());
         optionC.setWrapText(true);
-        optionD.setText(multipleChoice.getOptionD());
+        optionD.setText("D. " + multipleChoice.getOptionD());
         optionD.setWrapText(true);
         currentExercise = multipleChoice;
         System.out.println(currentExercise);
@@ -131,18 +132,20 @@ public class MultipleChoiceController extends ExerciseController<MultipleChoice>
         for (Button optionEx : options) {
             // clear option chosen at previous
             optionEx.getStyleClass().clear();
-            optionEx.getStyleClass().add("bigButton");
+            optionEx.getStyleClass().add("optionButton");
         }
     }
     private void setChooseTopicScreen(Boolean isTrue) {
+        finishPane.setVisible(false);
         if (isTrue) {
-            topicVbox.setVisible(true);
-            exerciseVbox.setVisible(false);
+            topicPane.setVisible(true);
+            exercisePane.setVisible(false);
             //alert.setVisible(false);
         } else {
-            topicVbox.setVisible(false);
-            exerciseVbox.setVisible(true);
+            topicPane.setVisible(false);
+            exercisePane.setVisible(true);
         }
+
     }
     public static ArrayList<MultipleChoice> getMultipleChoiceExerciseListWithTopic(String topicName) {
         ArrayList<MultipleChoice> multipleChoiceList = new ArrayList<>();
@@ -154,5 +157,22 @@ public class MultipleChoiceController extends ExerciseController<MultipleChoice>
             }
         }
         return multipleChoiceList;
+    }
+    @Override
+    public void finishGameScreen() {
+        finishPane.setVisible(true);
+        exercisePane.setVisible(false);
+        topicPane.setVisible(false);
+        finishGameScoreLabel.setText("Score: " + score);
+        finishGameHighestScoreLabel.setText("Your highest score: " + getHighestScore(currentTopic));
+    }
+
+    @Override
+    public void quit() {
+        backToChooseTopic();
+    }
+    @Override
+    public void playAgain() {
+        setCurrentTopic(currentTopic);
     }
 }

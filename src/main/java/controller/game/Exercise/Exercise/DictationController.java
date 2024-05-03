@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -27,10 +28,14 @@ public class DictationController extends ExerciseController<Dictation> implement
     private Button submitButton;
     @FXML
     private ImageView speaker;
+    @FXML
+    private AnchorPane listeningPane;
 
     private TextToSpeech textToSpeech;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        listeningPane.setVisible(true);
+        finishPane.setVisible(false);
         setExerciseList(getDictationExerciseList());
         randomizeExerciseList();
         setNextQuestion();
@@ -52,7 +57,7 @@ public class DictationController extends ExerciseController<Dictation> implement
     @Override
     public void setNextQuestion() {
         if (health == -1 || questionIndex == QUESTIONNUMBER) {
-            backToChooseGame();
+            finishGameScreen();
         }
         showScore_Ques();
         answerTextField.setText("");
@@ -64,7 +69,7 @@ public class DictationController extends ExerciseController<Dictation> implement
     }
 
     public void showHighestScore() {
-        highestScoreLabel.setText("Highest Score: " + getHighestScore("Dictation"));
+        highestScoreLabel.setText("Your highest Score: " + getHighestScore("Dictation"));
     }
     public static ArrayList<Dictation> getDictationExerciseList() {
         ArrayList<Dictation> dicList = new ArrayList<>();
@@ -84,6 +89,21 @@ public class DictationController extends ExerciseController<Dictation> implement
     @Override
     public void backToChooseGame() {
         UpdateScore("Dictation", score);
+        super.backToChooseGame();
+    }
+    @Override
+    public void finishGameScreen() {
+        finishPane.setVisible(true);
+        listeningPane.setVisible(false);
+        finishGameScoreLabel.setText("Score: " + score);
+        finishGameHighestScoreLabel.setText("Your highest score: " + getHighestScore("Dictation"));
+    }
+    @Override
+    public void playAgain() {
+        super.listening();
+    }
+    @Override
+    public void quit() {
         super.backToChooseGame();
     }
 

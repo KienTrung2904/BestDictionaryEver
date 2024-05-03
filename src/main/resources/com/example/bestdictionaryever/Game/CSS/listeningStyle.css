@@ -1,46 +1,54 @@
 .background {
-    -fx-background-color: #E0F4FF;
+    -fx-background-color: #F0F0F0;
 }
-.smallLabel {
-    -fx-background-color: transparent;
-    -fx-text-fill: #8B4726;
-    -fx-wrap-text: true;
-    -fx-background-radius: 10px;
-    -fx-font-family: Helvetica;
-    -fx-font-size: 25px;
-}
-.bigLabel {
-    -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );
-// color of text is turtle green
--fx-text-fill: #8B4726;
-    -fx-wrap-text: true;
-    -fx-background-radius: 10px;
-    -fx-font-family: Helvetica;
-    -fx-font-size: 30px;
-}
-.button {
-    -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );
-    -fx-cursor: hand;
-    -fx-background-radius: 7px;
-}
-.button:hover {
-    -fx-background-color: #bad7f2;
-}
-.bigButton{
-    -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );
-    -fx-cursor: hand;
-    -fx-text-fill: #ffffff;
-    -fx-font-size: 30px;
-    -fx-font-family: Arial;
-    -fx-border-color: #65aeea;
-    -fx-border-width: 3px;
-    -fx-background-radius: 15px;
-    -fx-border-radius: 15px;
-    -fx-alignment: center;
-}
-
-.ImageView:hover {
+.imageView:hover {
     -fx-cursor: hand;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
 }
+.smallLabel {
+    -fx-font-family: "Times New Roman";
+    -fx-background-color: transparent;
+    -fx-text-fill: rgba(255, 77, 86, 1);
+    -fx-font-weight: bold;
+    -fx-wrap-text: true;
+    -fx-background-radius: 10px;
+    -fx-font-size: 17.78px;
+}
+.questionIndexLabel {
+    -fx-font-family: "Times New Roman";
+    -fx-font-weight: bold;
+    -fx-background-color: transparent;
+    -fx-text-fill: rgba(0, 0, 0, 0.8);
+    -fx-font-size: 25;
+}
+.sentenceWithBlankLabel {
+    -fx-background-color: rgba(255, 255, 255, 1);
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: rgba(0, 0, 0, 0.8);
+    -fx-background-radius: 10.67;
+    -fx-font-size: 18.36;
+    -fx-font-weight: 600;
+    -fx-line-height: 19.94;
+    -fx-text-align: center;
+}
+.checkButton {
+    -fx-background-color: transparent;
+}
+.checkButton:hover {
+    -fx-cursor: hand;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+.TextField {
+    -fx-background-color: rgba(255, 255, 255, 1);
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: rgba(0, 0, 0, 0.8);
+    -fx-background-radius: 10.67;
+    -fx-font-size: 18.36;
+    -fx-font-weight: 600;
+    -fx-line-height: 19.94;
+    -fx-text-align: center;
+}
+
+

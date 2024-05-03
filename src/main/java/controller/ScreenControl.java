@@ -23,18 +23,16 @@ public abstract class ScreenControl extends FXMLControl{
     }
 
     public void chooseGame() {
-        super.loadScreenFXML("Game/FXML/ChooseGame");
+        super.loadScreenFXML("Game/FXML/ChooseGame - Copy");
     }
 
-    protected void vocabulary() {
-        super.loadScreenFXML("Game/FXML/MultipleChoice");
-    }
 
     protected void listening() {
-        super.loadScreenFXML("Game/FXML/Listening");
+        super.loadScreenFXML("Game/FXML/Listening - Copy");
     }
 
     protected void chooseTopicAndPractice() {
-        super.loadScreenFXML("Game/FXML/TopicWord");
+        super.loadScreenFXML("Game/FXML/TopicWord - Copy");
     }
+
 }

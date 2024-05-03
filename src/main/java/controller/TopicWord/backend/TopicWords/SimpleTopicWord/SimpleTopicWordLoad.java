@@ -9,7 +9,7 @@ import java.util.HashSet;
 
 public class SimpleTopicWordLoad {
     private static final ObjectMapper objectMapper = new ObjectMapper();
-    private static final String FILE_DIR = "src/main/java/controller/TopicWord/backend/Words/SimpleTopicWords.txt";
+    private static final String FILE_DIR = "src/main/java/controller/TopicWord/backend/TopicBank/SimpleTopicWords.txt";
 
     public static ArrayList<SimpleTopicWord> getSimpleTopicWordList() {
         File file = new File(FILE_DIR);

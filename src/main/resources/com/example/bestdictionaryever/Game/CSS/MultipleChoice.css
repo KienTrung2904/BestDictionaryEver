@@ -23,6 +23,20 @@
     -fx-border-color: rgba(255, 104, 104, 1);
     -fx-border-width: 3px;
 }
+.choosingButton {
+    -fx-border-color: rgba(255, 104, 104, 1);
+    -fx-border-width: 3px;
+    -fx-border-radius: 10.67;
+}
+.correctOption {
+    -fx-border-color: transparent;
+    -fx-background-color: rgba(112, 255, 88, 1);
+;
+}
+.incorrectOption {
+    -fx-border-color: transparent;
+    -fx-background-color: rgba(255, 0, 0, 1);
+}
 .bigLabel {
     -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );
     // color of text is turtle green
@@ -45,13 +59,14 @@
     -fx-font-family: "Times New Roman";
     -fx-background-color: transparent;
     -fx-text-fill: rgba(255, 77, 86, 1);
+    -fx-font-weight: bold;
     -fx-wrap-text: true;
     -fx-background-radius: 10px;
-    -fx-font-family: Helvetica;
     -fx-font-size: 17.78px;
 }
 .questionIndexLabel {
     -fx-font-family: "Times New Roman";
+    -fx-font-weight: bold;
     -fx-background-color: transparent;
     -fx-text-fill: rgba(0, 0, 0, 0.8);
     -fx-font-size: 25;
@@ -64,47 +79,41 @@
 .smallButton:hover {
     -fx-background-color: #bad7f2;
 }
-.bigButton{
+.topicButton{
     -fx-background-color: white;
     -fx-cursor: hand;
     -fx-text-fill: rgba(0, 0, 0, 0.8);
-    -fx-font-size: 30px;
-    -fx-font-family: Arial;
-    -fx-background-radius: 15px;
+    -fx-font-size: 20px;
+    -fx-font-family: "Times New Roman";
+    -fx-background-radius: 21.33;
     /*-fx-border-radius: 15px;*/
     -fx-alignment: center;
 }
-.bigButton:hover{
-    -fx-border-radius: 15px;
+.topicButton:hover{
+    -fx-border-radius: 21.33;
     -fx-border-color: rgba(255, 104, 104, 1);
     -fx-border-width: 3px;
 }
-
-.choosingButton {
-    -fx-background-color: #4297FF;
-    -fx-text-fill: #ffffff;
-    -fx-font-size: 31px;
-    -fx-font-family: Arial;
-    -fx-border-color: #65aeea;
-    -fx-border-width: 3px;
-    -fx-background-radius: 15px;
-    -fx-border-radius: 15px;
-    -fx-alignment: center;
+.checkButton {
+    -fx-background-color: transparent;
+}
+.checkButton:hover {
+    -fx-cursor: hand;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
 }
 .imageView:hover {
     -fx-cursor: hand;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
 }
-.correctOption {
-    -fx-background-color: LightGreen;
-}
-.incorrectOption {
-    -fx-background-color: LightCoral;
-}
-.questionLabel {
+.sentenceWithBlankLabel {
     -fx-background-color: rgba(255, 255, 255, 1);
     -fx-font-family: "Times New Roman";
     -fx-text-fill: rgba(0, 0, 0, 0.8);
-    -fx-font-size: 16.36px;
+    -fx-background-radius: 10.67;
+    -fx-font-size: 18.36;
+    -fx-font-weight: 600;
+    -fx-line-height: 19.94;
+    -fx-text-align: center;
 }

@@ -1,0 +1,58 @@
+.textFieldWord {
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-background-color: rgba(228, 228, 228, 1);
+    -fx-font-family: "Inter";
+    -fx-font-size: 18px;
+    -fx-font-weight: 400;
+    -fx-line-height: 21.78px;
+    -fx-text-align: left;
+    -fx-text-fill: rgba(154, 154, 154, 1);
+}
+
+.textFieldPartOfSpeech {
+    -fx-border-radius: 18;
+    -fx-background-radius: 18;
+    -fx-background-color: rgba(240, 240, 240, 1);
+}
+
+.textFieldDefinition {
+    -fx-border-radius: 18;
+    -fx-background-radius: 18;
+    -fx-background-color: rgba(240, 240, 240, 1);
+}
+
+.textFieldExampleSentence {
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color: rgba(240, 240, 240, 1);
+}
+.backGround {
+    -fx-background-color: rgba(240, 240, 240, 1);
+}
+
+
+.innerBackground {
+    -fx-background-color: rgba(255, 255, 255, 1);
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.25), 1.42, 0, 0, 1.42);
+    -fx-border-radius: 21.33;
+    -fx-background-radius: 21.33;
+}
+
+.button1 {
+    -fx-border-radius: 13.6;
+    -fx-background-radius: 13.6;
+    -fx-background-color: rgba(255, 255, 255, 1);
+    -fx-font-size: 12.69px;
+    -fx-font-weight: 600;
+    -fx-line-height: 15.47px;
+    -fx-text-align: left;
+
+}
+
+.buttonSave {
+    -fx-border-radius: 13.6;
+    -fx-background-radius: 13.6;
+    -fx-background-color: linear-gradient(to right, rgba(255, 150, 140, 1), rgba(255, 150, 140, 1), rgba(255, 77, 86, 1));
+    -fx-text-fill: "white";
+}

@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.media.Media;
@@ -30,13 +31,20 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
     protected T currentExercise;
     protected int questionIndex;
     @FXML
+    protected AnchorPane finishPane;
+    @FXML
     protected ImageView blood1, blood2, blood3;
 
     protected String userAnswer, correctAnswer;
     @FXML
-    protected Label question, scoreLabel, highestScoreLabel, questionIndexLabel;
+    protected Label question, scoreLabel, highestScoreLabel, questionIndexLabel, finishGameScoreLabel, finishGameHighestScoreLabel;
     protected ArrayList<T> exerciseList;
 
+    @FXML
+    protected ImageView gameIcon;
+    public final ImageView correctIcon = new ImageView(getClass().getResource("/com/example/bestdictionaryever/Game/Image/correctIcon.png").toExternalForm());
+    public final ImageView incorrectIcon = new ImageView(getClass().getResource("/com/example/bestdictionaryever/Game/Image/incorrectIcon.png").toExternalForm());
+    public final ImageView exerciseIcon = new ImageView(getClass().getResource("/com/example/bestdictionaryever/Game/Image/gameIcon.png").toExternalForm());
     public void randomizeExerciseList() {
         ArrayList<T> temp = new ArrayList<>(exerciseList);
         Collections.shuffle(temp);
@@ -65,36 +73,34 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
     public void checkAnswer(Button option, String explaination) throws InterruptedException {
         System.out.println("UserAnswer: " + userAnswer + " -- CorrectAnswer: " + currentExercise.getCorrectAnswer());
         if (userAnswer.equals(correctAnswer)) {
-            playEffect(correctMediaPlayer);
+            playCorrectEffect();
+            gameIcon.setImage(correctIcon.getImage());
             score++;
             scoreLabel.setText("Score: " + score);
             if (option != null) option.getStyleClass().add("correctOption");
             alertInformation("Correct", explaination).showAndWait();
         } else {
-            playEffect(incorrectMediaPlayer);
+            playIncorrectEffect();
+            gameIcon.setImage(incorrectIcon.getImage());
             if (option != null) option.getStyleClass().add("incorrectOption");
-            showHealth(health--);
+            showHealth(--health);
             alertInformation("Incorrect", explaination).showAndWait();
-            if (health == -1) {
-                alertInformation("Game Over", "\"Game Over\",You have lost all your turn").showAndWait();
-            }
-
         }
         userAnswer = null;
         questionIndex++;
-        if (questionIndex == QUESTIONNUMBER) {
-            alertInformation("Congratulations", "Congratulations! You're actually excellent!").showAndWait();
-        }
         setNextQuestion();
     }
 
-    private void showHealth(int healt) {
+    private void showHealth(int health) {
         if (health == 2) {
             blood3.setVisible(false);
+            System.out.println("lost one health");
         } else if (health == 1) {
             blood2.setVisible(false);
+            System.out.println("lost two health");
         } else if (health == 0) {
             blood1.setVisible(false);
+            System.out.println("lost three health");
         }
     }
 
@@ -102,7 +108,6 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
         scoreLabel.setText("Score: " + score);
         questionIndexLabel.setText("Question: " + (questionIndex + 1) + "/" + totalQuestions);
         showHighestScore();
-
     }
 
     public abstract void showHighestScore();
@@ -180,5 +185,10 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
     public void backToChooseGame() {
         super.chooseGame();
     }
+    public abstract void finishGameScreen();
+
+    public abstract void playAgain();
+
+    public abstract void quit();
 
 }

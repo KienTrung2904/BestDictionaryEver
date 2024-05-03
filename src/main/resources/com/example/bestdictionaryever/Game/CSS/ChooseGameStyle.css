@@ -1,3 +1,6 @@
+.background {
+    -fx-background-color: rgba(240, 240, 240, 1);
+}
 .smallButton {
     -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );
     -fx-cursor: hand;
@@ -6,29 +9,43 @@
 .smallButton:hover {
     -fx-background-color: #bad7f2;
 }
-.label {
-    -fx-background-color: linear-gradient(to bottom right, #eeaeca , #94bbe9);
+.ChooseYourlabel {
+    -fx-background-color: transparent;
     -fx-background-radius: 10px;
     -fx-text-fill: #ffffff;
-    -fx-font-family: Helvetica;
-    -fx-font-size: 50px;
+    -fx-font-family: "Times New Roman";
+    -fx-font-weight: bold;
+    -fx-font-size: 24.89px;
 }
-.bigButton{
-    -fx-background-color: linear-gradient(to bottom right, #ebbed2 , #94bbe9);
+.gameLabel {
+    -fx-background-color: transparent;
+    -fx-text-fill: linear-gradient(to bottom right, #FF968C 0%, #FF968C 8.01%, #FF4D56 56.95%);
+    -fx-wrap-text: true;
+    -fx-background-radius: 10px;
+    -fx-font-family: "Times New Roman";
+    /* set bold to text*/
+    -fx-font-weight: bold;
+    -fx-font-size: 60px;
+
+}
+.topicButton{
+    -fx-background-color: rgba(255, 255, 255, 1);
     -fx-cursor: hand;
-    -fx-text-fill: #ffffff;
-    -fx-font-size: 45px;
-    -fx-font-family: Arial;
-    -fx-border-color: #65aeea;
-    -fx-border-width: 6px;
-    -fx-background-radius: 20px;
-    -fx-border-radius: 20px;
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: rgba(0, 0, 0, 0.8);
+    -fx-font-size: 21.33;
+    -fx-background-radius: 21.33;
 }
-.bigButton:hover{
-    -fx-background-color: #bad7f2;
+.topicButton:hover{
+    -fx-border-width: 3;
+    -fx-border-radius: 21.33;
+    -fx-border-color: rgba(255, 104, 104, 1);
 }
 .imageView:hover{
     -fx-cursor: hand;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
+}
+.icon {
+    -fx-cursor: hand;
 }
