@@ -84,7 +84,7 @@ public class libraryController extends ScreenControl {
 
 
     public void addWord(ActionEvent actionEvent) {
-
+        super.add();
     }
 
     public void editWord(ActionEvent actionEvent) {

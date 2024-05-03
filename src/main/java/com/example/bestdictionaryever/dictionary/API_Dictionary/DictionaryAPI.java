@@ -58,7 +58,7 @@ public class DictionaryAPI extends API{
 
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("not connection");
         }
     }
 }

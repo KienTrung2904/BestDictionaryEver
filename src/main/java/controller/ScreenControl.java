@@ -28,6 +28,10 @@ public abstract class ScreenControl extends FXMLControl{
         super.loadScreenFXML("library");
     }
 
+    public void add() {
+        super.loadScreenFXML("addWord");
+    }
+
     public void librarySelect(String target) {
         libraryController.setTarget(target);
         super.loadScreenFXML("library");

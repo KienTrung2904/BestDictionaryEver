@@ -1,10 +1,13 @@
 package com.example.bestdictionaryever.dictionary.API_Dictionary;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.UnknownHostException;
+
 import javazoom.jl.player.Player;
 
 public abstract class API {
@@ -29,9 +32,10 @@ public abstract class API {
             }
             in.close();
             return respon.toString();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return("HTTP failed : " + String.valueOf(reponse));
+        } catch (UnknownHostException e) {
+            return("Not connection");
+        } catch (IOException e) {
+            return ("Not connection");
         }
     }
 

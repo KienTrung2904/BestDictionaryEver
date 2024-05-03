@@ -6,6 +6,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="640.0" prefWidth="1024.0" styleClass="backGround" stylesheets="@add-word.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.game.gameControl">
+
+   <Button layoutX="20" layoutY="20" onAction="#back" style="-fx-background-color: transparent">
+      <graphic>
+         <ImageView fitHeight="30" fitWidth="30">
+            <Image url="@Login/Image/chevron.png" />
+         </ImageView>
+      </graphic>
+   </Button>
+
    <children>
       <ImageView fitHeight="85.0" fitWidth="197.0" layoutX="423.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
          <image>
