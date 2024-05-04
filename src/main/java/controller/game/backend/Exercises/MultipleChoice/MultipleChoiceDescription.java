@@ -33,17 +33,6 @@ public class MultipleChoiceDescription extends Description {
         this.explanation = explanation;
     }
 
-//    public MultipleChoiceDescription(Exercise exercise) {
-//        super();
-//        if (exercise instanceof MultipleChoice) {
-//            MultipleChoice multipleChoice = (MultipleChoice) exercise;
-//            this.question = multipleChoice.getQuestion();
-//            this.options = multipleChoice.getOptions();
-//            this.correctAnswer = multipleChoice.getCorrectAnswer();
-//            this.explanation = multipleChoice.getExplanation();
-//        }
-//    }
-
     public MultipleChoice getMultipleChoice(MultipleChoiceDescription multipleChoiceDescription) {
         return new MultipleChoice(question, options, correctAnswer, explanation);
     }

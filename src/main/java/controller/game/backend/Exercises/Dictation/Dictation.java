@@ -94,10 +94,6 @@ public class Dictation extends Exercise {
     }
 
 
-    @Override
-    protected void generateExercise(String query) {
-
-    }
 
     public String getSentence() {
         return sentence;
@@ -154,15 +150,6 @@ public class Dictation extends Exercise {
         result.append("Word blank: ").append(wordBlank).append("\n");
         result.append("Translation: ").append(translation).append("\n");
         return result.toString();
-    }
-
-    public static void main(String[] args) {
-
-        ArrayList<Dictation> dictationList = new ArrayList<>(loadFromBank());
-        for (Dictation dictation : dictationList) {
-            System.out.println(dictation);
-        }
-        System.out.println("size of dictation is: " + dictationList.size());
     }
 
     @Override

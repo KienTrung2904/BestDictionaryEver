@@ -75,21 +75,30 @@ public class MultipleChoiceController extends ExerciseController<MultipleChoice>
 
     public void setNextQuestion() {
         if (health == -1 || questionIndex == totalQuestions) {
+            playCongratulationsEffect();
             finishGameScreen();
+        }
+        if (health == 3) {
+            blood1.setVisible(true);
+            blood2.setVisible(true);
+            blood3.setVisible(true);
         }
         gameIcon.setImage(exerciseIcon.getImage());
         showScore_Ques();
         if (questionIndex == 0)  {
             randomizeExerciseList();
         }
+
         resetButtonStyle();
         highestScoreLabel.setText("Your highest Score: " + getHighestScore(currentTopic));
         scoreLabel.setText("Score: " + score);
         questionIndexLabel.setText("Question: " + (questionIndex + 1) + "/" + totalQuestions);
+
         MultipleChoice multipleChoice = exerciseList.get(questionIndex);
+
         question.setText(multipleChoice.getQuestion());
         question.setWrapText(true);
-        correctAnswer = multipleChoice.getCorrectAnswer();
+
         optionA.setText("A. " + multipleChoice.getOptionA());
         optionA.setWrapText(true);
         optionB.setText("B. " + multipleChoice.getOptionB());
@@ -98,11 +107,17 @@ public class MultipleChoiceController extends ExerciseController<MultipleChoice>
         optionC.setWrapText(true);
         optionD.setText("D. " + multipleChoice.getOptionD());
         optionD.setWrapText(true);
+
         currentExercise = multipleChoice;
         System.out.println(currentExercise);
     }
     public void showHighestScore() {
-        highestScoreLabel.setText("Your highest Score: " + getHighestScore(currentTopic));
+        int currentHighestScore = getHighestScore(currentTopic);
+        if (score > currentHighestScore) {
+            UpdateScore(currentTopic, score);
+            currentHighestScore = score;
+        }
+        highestScoreLabel.setText("Your highest Score: " + currentHighestScore);
     }
 
     public void clickCheck(MouseEvent mouseEvent) throws InterruptedException {
@@ -173,6 +188,7 @@ public class MultipleChoiceController extends ExerciseController<MultipleChoice>
     }
     @Override
     public void playAgain() {
+        UpdateScore(currentTopic, score);
         setCurrentTopic(currentTopic);
     }
 }

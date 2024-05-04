@@ -19,8 +19,6 @@ import java.util.Collections;
 
 public abstract class ExerciseController<T extends Exercise> extends ScreenControl {
 
-    public static final int COEFFICIENT = 100;
-
     public static final int QUESTIONNUMBER = 20;
     protected int score;
 
@@ -35,7 +33,7 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
     @FXML
     protected ImageView blood1, blood2, blood3;
 
-    protected String userAnswer, correctAnswer;
+    protected String userAnswer;
     @FXML
     protected Label question, scoreLabel, highestScoreLabel, questionIndexLabel, finishGameScoreLabel, finishGameHighestScoreLabel;
     protected ArrayList<T> exerciseList;
@@ -72,10 +70,11 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
 
     public void checkAnswer(Button option, String explaination) throws InterruptedException {
         System.out.println("UserAnswer: " + userAnswer + " -- CorrectAnswer: " + currentExercise.getCorrectAnswer());
-        if (userAnswer.equals(correctAnswer)) {
+        if (this.currentExercise.isCorrect(userAnswer)) {
             playCorrectEffect();
             gameIcon.setImage(correctIcon.getImage());
             score++;
+            showHighestScore();
             scoreLabel.setText("Score: " + score);
             if (option != null) option.getStyleClass().add("correctOption");
             alertInformation("Correct", explaination).showAndWait();
@@ -92,7 +91,11 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
     }
 
     private void showHealth(int health) {
-        if (health == 2) {
+        if (health == 3) {
+            blood1.setVisible(true);
+            blood2.setVisible(true);
+            blood3.setVisible(true);
+        } else if (health == 2) {
             blood3.setVisible(false);
             System.out.println("lost one health");
         } else if (health == 1) {
@@ -107,7 +110,6 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
     public void showScore_Ques() {
         scoreLabel.setText("Score: " + score);
         questionIndexLabel.setText("Question: " + (questionIndex + 1) + "/" + totalQuestions);
-        showHighestScore();
     }
 
     public abstract void showHighestScore();
@@ -172,6 +174,9 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
 
     protected void playIncorrectEffect() {
         playEffect(incorrectMediaPlayer);
+    }
+    protected void playCongratulationsEffect() {
+        playEffect(congratulationsMediaPlayer);
     }
 
     public void UpdateScore(String column, int newScore) {

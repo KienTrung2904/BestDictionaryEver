@@ -33,8 +33,6 @@ public class DictationDescription extends Description {
         this.translation = translation;
     }
 
-
-
     public Dictation getDictation(DictationDescription dictationDescription) {
         return new Dictation(sentence, sentenceWithBlank, wordBlank, translation);
     }

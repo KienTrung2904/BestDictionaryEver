@@ -99,11 +99,6 @@ public class MultipleChoice extends Exercise {
     }
 
     @Override
-    protected void generateExercise(String promptName) {
-
-    }
-
-    @Override
     public boolean isCorrect(String userAnswer) {
         return userAnswer.equals(correctAnswer);
     }
@@ -159,8 +154,4 @@ public class MultipleChoice extends Exercise {
                 "Explanation: " + explanation;
     }
 
-    public static void main(String[] args) {
-        List<MultipleChoice> multipleChoiceList = MultipleChoice.loadFromBank();
-        System.out.println("size of multiple choice is: " + multipleChoiceList.size());
-    }
 }

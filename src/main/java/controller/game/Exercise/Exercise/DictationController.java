@@ -41,7 +41,6 @@ public class DictationController extends ExerciseController<Dictation> implement
         setNextQuestion();
         submitButton.setOnAction(actionEvent -> {
             userAnswer = answerTextField.getText().toLowerCase();
-            correctAnswer = currentExercise.getWordBlank().toLowerCase();
             try {
                 checkAnswer(null, currentExercise.getSentence() + "\n" + currentExercise.getTranslation());
             } catch (InterruptedException e) {
@@ -57,8 +56,15 @@ public class DictationController extends ExerciseController<Dictation> implement
     @Override
     public void setNextQuestion() {
         if (health == -1 || questionIndex == QUESTIONNUMBER) {
+            playCongratulationsEffect();
             finishGameScreen();
         }
+        if (health == 3) {
+            blood1.setVisible(true);
+            blood2.setVisible(true);
+            blood3.setVisible(true);
+        }
+        gameIcon.setImage(exerciseIcon.getImage());
         showScore_Ques();
         answerTextField.setText("");
         if (questionIndex < QUESTIONNUMBER) {
@@ -66,10 +72,17 @@ public class DictationController extends ExerciseController<Dictation> implement
             sentenceWithBlank.setText(currentExercise.getQuestion());
             questionIndexLabel.setText("Question " + (questionIndex + 1) +  "/" + QUESTIONNUMBER);
         }
+        System.out.println("Question: " + currentExercise.getQuestion() + " -- Answer: " + currentExercise.getWordBlank());
     }
 
     public void showHighestScore() {
-        highestScoreLabel.setText("Your highest Score: " + getHighestScore("Dictation"));
+        int currentHighestScore = getHighestScore("Dictation");
+        if (score > currentHighestScore) {
+            UpdateScore("Dictation", score);
+            highestScoreLabel.setText("Your highest Score: " + score);
+        } else {
+            highestScoreLabel.setText("Your highest Score: " + currentHighestScore);
+        }
     }
     public static ArrayList<Dictation> getDictationExerciseList() {
         ArrayList<Dictation> dicList = new ArrayList<>();

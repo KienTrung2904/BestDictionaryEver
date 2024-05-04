@@ -7,35 +7,30 @@
     <list default="true" id="f1a62af0-7fc9-44f6-98a9-a3793cdaeab6" name="Changes" comment="add commandline&#10;test login, register, connect database and scene">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ScreenControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ScreenControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailTopicWordLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailTopicWordLoad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailedTopicWordContainer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/SimpleTopicWord/SimpleTopicWordContainer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/SimpleTopicWord/SimpleTopicWordLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/SimpleTopicWord/SimpleTopicWordLoad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Topics/Animal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicBank/Animal.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Topics/Body.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicBank/Body.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Topics/Business.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicBank/Business.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Topics/Character.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicBank/Character.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Topics/Fashion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicBank/Fashion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Topics/Food.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicBank/Food.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Topics/Idiom.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicBank/Idiom.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Topics/PhraseVerbs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicBank/PhraseVerbs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Topics/Plants.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicBank/Plants.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Topics/Sports.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicBank/Sports.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Topics/Tech.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicBank/Tech.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Topics/Weather.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicBank/Weather.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Utils/Description.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Utils/Description.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Words/SimpleTopicWords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicBank/SimpleTopicWords.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/ChooseGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/ChooseGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Utils/TopicScanner.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/DictationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/DictationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/MultipleChoiceApp.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/MultipleChoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/MultipleChoiceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Utils/ExerciseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Utils/ExerciseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Utils/ExerciseLoad.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/CSS/ChooseGameStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/CSS/ChooseGameStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/CSS/MultipleChoice.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/CSS/MultipleChoice.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/CSS/listeningStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/CSS/listeningStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/Dictation/Dictation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/Dictation/Dictation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/Dictation/DictationDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/Dictation/DictationDescription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/MultipleChoice/MultipleChoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/MultipleChoice/MultipleChoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/MultipleChoice/MultipleChoiceDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/MultipleChoice/MultipleChoiceDescription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Utils/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Utils/Exercise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/CSS/add-word.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/ChooseGame - Copy.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/ChooseGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/ChooseGame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/Listening.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/TopicWord.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/Image/Correct.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/Image/Incorrect.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/Image/check.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/Image/check.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/Listening - Copy.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/TopicWord - Copy.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/Image/animal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/Image/blood.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/Image/endGameIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/Image/speaker1.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,43 +87,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Application.executor": "Run",
-    "Application.DetailTopicWordLoad.executor": "Run",
-    "Application.Dictation.executor": "Run",
-    "Application.ExerciseLoad.executor": "Run",
-    "Application.GoogleTranslation.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "Application.MultipleChoice.executor": "Run",
-    "Application.MultipleChoiceApp.executor": "Run",
-    "Application.SimpleTopicWordLoad.executor": "Run",
-    "Application.TextToSpeech.executor": "Run",
-    "Application.TopicScanner.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "genghisTrung",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "F:/2ndSemester_2ndYear/OOP/UseInteliJUltimate/BestDictionaryEver/src/main/java/controller/TopicWord/backend/TopicBank",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DetailTopicWordLoad.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Dictation.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ExerciseLoad.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GoogleTranslation.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MultipleChoice.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MultipleChoiceApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SimpleTopicWordLoad.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TextToSpeech.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TopicScanner.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;genghisTrung&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/2ndSemester_2ndYear/OOP/UseInteliJUltimate/BestDictionaryEver/src/main/java/controller/TopicWord/backend/TopicBank&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\2ndSemester_2ndYear\OOP\UseInteliJUltimate\BestDictionaryEver\src\main\java\controller\TopicWord\backend\TopicBank" />
@@ -139,7 +134,7 @@
       <recent name="com.example.bestdictionaryever" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SimpleTopicWordLoad">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.bestdictionaryever.Application" />
       <module name="BestDictionaryEver" />
@@ -184,7 +179,7 @@
       <module name="BestDictionaryEver" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="controller.TopicWord.backend.TopicWords.SimpleTopicWord.*" />
+          <option name="PATTERN" value="controller.TopicWord.backend.TopicWords.SimpleTopicWord.SimpleTopicWordLoad" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -207,9 +202,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SimpleTopicWordLoad" />
-        <item itemvalue="Application.TopicScanner" />
         <item itemvalue="Application.Application" />
+        <item itemvalue="Application.SimpleTopicWordLoad1" />
+        <item itemvalue="Application.TopicScanner" />
         <item itemvalue="Application.MultipleChoiceApp" />
         <item itemvalue="Application.ExerciseLoad" />
       </list>
@@ -272,7 +267,8 @@
       <workItem from="1714658107260" duration="258000" />
       <workItem from="1714664725540" duration="3919000" />
       <workItem from="1714729069721" duration="4899000" />
-      <workItem from="1714750945189" duration="8596000" />
+      <workItem from="1714750945189" duration="8688000" />
+      <workItem from="1714810314646" duration="5628000" />
     </task>
     <task id="LOCAL-00001" summary="add commandline&#10;test login, register, connect database and scene">
       <option name="closed" value="true" />

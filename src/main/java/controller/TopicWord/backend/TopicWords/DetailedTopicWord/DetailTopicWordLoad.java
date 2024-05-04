@@ -2,6 +2,7 @@ package controller.TopicWord.backend.TopicWords.DetailedTopicWord;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import controller.TopicWord.backend.TopicWords.SimpleTopicWord.SimpleTopicWord;
+import controller.TopicWord.backend.TopicWords.SimpleTopicWord.SimpleTopicWordLoad;
 import controller.TopicWord.backend.Utils.Description;
 import controller.game.backend.Exercises.Dictation.DictationDescription;
 import controller.game.backend.Exercises.MultipleChoice.MultipleChoiceDescription;
@@ -12,23 +13,44 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 
-import static controller.TopicWord.backend.TopicWords.SimpleTopicWord.SimpleTopicWordLoad.getSimpleTopicWordList;
-import static controller.TopicWord.backend.Utils.TopicScanner.scanForTopics;
-
 public class DetailTopicWordLoad {
+    public static class DetailedTopicWordContainer {
+        private String topic;
+        private ArrayList<DetailedTopicWord> words;
+
+        public DetailedTopicWordContainer() {
+
+        }
+
+        public String getTopic() {
+            return topic;
+        }
+
+        public void setTopic(String topic) {
+            this.topic = topic;
+        }
+
+        public ArrayList<DetailedTopicWord> getWords() {
+            return words;
+        }
+
+        public void setWords(ArrayList<DetailedTopicWord> words) {
+            this.words = words;
+        }
+    }
     private static final ObjectMapper objectMapper = new ObjectMapper();
-    private static final String TOPIC_WORD_DIR = "src/main/java/controller/TopicWord/backend/Topics/";
-    private static final String SIMPLE_TOPIC_WORD_DIR = "src/main/java/controller/TopicWord/backend/Words/SimpleTopicWords.txt";
+    private static final String TOPIC_WORD_DIR = "src/main/java/controller/TopicWord/backend/TopicBank/";
+    private static final String SIMPLE_TOPIC_WORD_DIR = "src/main/java/controller/TopicWord/backend/TopicBank/SimpleTopicWords.txt";
 
     private static StringBuilder sb = new StringBuilder();
     private static ArrayList<SimpleTopicWord> simpleTopicWordList = new ArrayList<>();
     private static HashMap<SimpleTopicWord, DetailedTopicWord> simpleTopicWordToDetailedTopicWordMap = new HashMap<>();
 
-    public static final HashMap<String, ArrayList<DetailedTopicWord>>   globalFullDetailedTopicWordMap = getDetailedTopicWordMap();
-    public static final ArrayList<SimpleTopicWord> globalFullSimpleTopicWordList = getSimpleTopicWordList();
+    public static final HashMap<String, ArrayList<DetailedTopicWord>> globalFullDetailedTopicWordMap = getDetailedTopicWordMap();
 
     private static void addMissingFields(DetailedTopicWord detailedTopicWord, String topic) {
         String phonetic = detailedTopicWord.getDefinition().getPhonetic();
@@ -38,8 +60,6 @@ public class DetailTopicWordLoad {
         }
 
         detailedTopicWord.getDefinition().setTopic(topic);
-       // detailedTopicWord.getDefinition().setAudioLink(googleTranslate.getAudioLink(detailedTopicWord.getDefinition().getWord()));
-
         Description description = detailedTopicWord.getQuiz().getDescription();
 
         if ((detailedTopicWord.getQuiz().getExerciseType()).contains("Dictation")) {
@@ -51,9 +71,6 @@ public class DetailTopicWordLoad {
             Exercise exercise = multipleChoiceDescription.getMultipleChoice(multipleChoiceDescription);
             detailedTopicWord.getQuiz().setExercise(exercise);
         }
-//            MultipleChoiceDescription multipleChoiceDescription = (MultipleChoiceDescription) description;
-//            Exercise exercise = multipleChoiceDescription.getMultipleChoice(multipleChoiceDescription);
-//            detailedTopicWord.getQuiz().setExercise(exercise);
 
     }
 
@@ -84,10 +101,9 @@ public class DetailTopicWordLoad {
     }
 
     public static HashMap<String, ArrayList<DetailedTopicWord>> getDetailedTopicWordMap() {
-        ArrayList<String> topics = scanForTopics();
+        String[] topicNames = {"Animal", "Body", "Business", "Character", "Fashion", "Food", "Idiom", "PhraseVerbs", "Plants", "Sports", "Tech", "Weather"};
+        ArrayList<String> topics  = new ArrayList<>(Arrays.asList(topicNames));
         HashMap<String, ArrayList<DetailedTopicWord>> detailedTopicWordMap = new HashMap<>();
-//com.fasterxml.jackson.databind.exc.InvalidTypeIdException: Could not resolve type id 'Dictation' as a subtype of `controller.TopicWord.backend.Utils.Description`: known type ids = [MultipleChoice] (for POJO property 'description')
-// at [Source: (File); line: 91, column: 19] (through reference chain: controller.TopicWord.backend.TopicWords.DetailedTopicWord.DetailedTopicWordContainer["words"]->java.util.ArrayList[3]->controller.TopicWord.backend.TopicWords.DetailedTopicWord.DetailedTopicWord["quiz"]->controller.TopicWord.backend.Utils.Quiz["description"])
         simpleTopicWordList.clear();
         simpleTopicWordToDetailedTopicWordMap.clear();
 
@@ -126,21 +142,4 @@ public class DetailTopicWordLoad {
         }
     }
 
-    public static ArrayList<DetailedTopicWord> getDetailedTopicWordListFromSimpleTopicWordList(ArrayList<SimpleTopicWord> simpleTopicWordList) {
-        ArrayList<DetailedTopicWord> detailedTopicWordList = new ArrayList<>();
-        for (SimpleTopicWord simpleTopicWord : simpleTopicWordList) {
-            detailedTopicWordList.add(simpleTopicWordToDetailedTopicWordMap.get(simpleTopicWord));
-        }
-        return detailedTopicWordList;
-    }
-
-    public static void main(String[] args) {
-        ArrayList<DetailedTopicWord> AnimalTopicWordList = globalFullDetailedTopicWordMap.get("Animal");
-        for (DetailedTopicWord detailedTopicWord : AnimalTopicWordList) {
-            System.out.println(detailedTopicWord.getDefinition().getWord());
-        }
-
-
-
-    }
 }

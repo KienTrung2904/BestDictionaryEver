@@ -20,7 +20,6 @@ public abstract class Exercise {
 
     }
 
-    protected abstract void generateExercise(String promptName);
 
     public abstract boolean isCorrect(String userAnswer);
 
