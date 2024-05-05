@@ -101,8 +101,11 @@ public class DictationController extends ExerciseController<Dictation> implement
     }
     @Override
     public void backToChooseGame() {
-        UpdateScore("Dictation", score);
-        super.backToChooseGame();
+        alertInformation("Back to choose game", "Are you sure you want to back to choose game?\n Your score will be saved!").showAndWait();
+        if (alert.getResult().getText().equals("OK")) {
+            UpdateScore("Dictation", score);
+            chooseGame();
+        }
     }
     @Override
     public void finishGameScreen() {

@@ -40,9 +40,11 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
 
     @FXML
     protected ImageView gameIcon;
+    protected Alert alert = new Alert(Alert.AlertType.INFORMATION);
     public final ImageView correctIcon = new ImageView(getClass().getResource("/com/example/bestdictionaryever/Game/Image/correctIcon.png").toExternalForm());
     public final ImageView incorrectIcon = new ImageView(getClass().getResource("/com/example/bestdictionaryever/Game/Image/incorrectIcon.png").toExternalForm());
     public final ImageView exerciseIcon = new ImageView(getClass().getResource("/com/example/bestdictionaryever/Game/Image/gameIcon.png").toExternalForm());
+
     public void randomizeExerciseList() {
         ArrayList<T> temp = new ArrayList<>(exerciseList);
         Collections.shuffle(temp);
@@ -116,9 +118,20 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
 
 
     public Alert alertInformation(String title, String content) {
-        javafx.scene.control.Alert alert = new javafx.scene.control.Alert(Alert.AlertType.INFORMATION);
-        alert.getDialogPane().setPrefWidth(500);
-        alert.getDialogPane().setPrefHeight(200);
+        if (title.equals("Choose Option")) {
+            alert.setAlertType(Alert.AlertType.WARNING);
+            alert.getDialogPane().setPrefWidth(400);
+            alert.getDialogPane().setPrefHeight(200);
+        } else if (title.equals("Back to choose topic") || title.equals("Back to choose game")) {
+            alert.setAlertType(Alert.AlertType.CONFIRMATION);
+            alert.getDialogPane().setPrefWidth(400);
+            alert.getDialogPane().setPrefHeight(200);
+        } else {
+            alert.setAlertType(Alert.AlertType.INFORMATION);
+            alert.getDialogPane().setPrefWidth(500);
+            alert.getDialogPane().setPrefHeight(200);
+        }
+
         alert.setTitle(null);
         alert.setHeaderText(null);
 
@@ -126,17 +139,13 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
         dialogPane.setHeaderText(null);
         if (title.equals("Congratulations")) {
             content = "Congratulations! You're actually excellent!";
-            //dialogPane.getStyleClass().add("congratulationsBackground");
         }
-        if (title.equals("Game Over")) {
-            content = "Game Over! You have lost all your turn!";
-        } else
-        if (title.equals("Correct")) {
+        if (title.equals("Choose Option")) {
+            content = "You have not selected any option yet!\n" + content;
+        } else if (title.equals("Correct")) {
             content = "Your answer is correct! You got a new point!\n Explanation:\n" + content;
-            //dialogPane.getStyleClass().add("correctBackground");
-        } else {
+        } else if (title.equals("Incorrect")) {
             content = "Your answer is incorrect! The correct answer is: " + currentExercise.getCorrectAnswer() + "\n" + content;
-            //dialogPane.getStyleClass().add("incorrectBackground");
         }
         Label contentLabel = new Label(content);
 
@@ -175,6 +184,7 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
     protected void playIncorrectEffect() {
         playEffect(incorrectMediaPlayer);
     }
+
     protected void playCongratulationsEffect() {
         playEffect(congratulationsMediaPlayer);
     }
@@ -187,9 +197,14 @@ public abstract class ExerciseController<T extends Exercise> extends ScreenContr
     public int getHighestScore(String column) {
         return user.getHighestScore(column);
     }
+
     public void backToChooseGame() {
-        super.chooseGame();
+        alertInformation("Back to choose game", "Are you sure you want to back to choose game?").showAndWait();
+        if (alert.getResult().getText().equals("OK")) {
+            super.chooseGame();
+        }
     }
+
     public abstract void finishGameScreen();
 
     public abstract void playAgain();

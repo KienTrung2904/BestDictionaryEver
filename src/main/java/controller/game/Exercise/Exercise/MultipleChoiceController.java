@@ -122,14 +122,18 @@ public class MultipleChoiceController extends ExerciseController<MultipleChoice>
 
     public void clickCheck(MouseEvent mouseEvent) throws InterruptedException {
         if (userAnswer == null) {
-            System.out.println("Please choose an answer");
+            alertInformation("Choose Option", "Please choose an option!").showAndWait();
         } else {
             checkAnswer(optionChosen, currentExercise.getExplanation());
         }
     }
     public void backToChooseTopic() {
-        UpdateScore(currentTopic, score);
-        setChooseTopicScreen(true);
+        // show alert to confirm back to choose topic, if click OK, back to choose topic, else do nothing
+        alertInformation("Back to choose topic", "Are you sure you want to back to choose topic?\n Your score will be saved!").showAndWait();
+        if (alert.getResult().getText().equals("OK")) {
+            UpdateScore(currentTopic, score);
+            setChooseTopicScreen(true);
+        }
     }
     private void setCurrentTopic(String topic) {
         currentTopic = topic;

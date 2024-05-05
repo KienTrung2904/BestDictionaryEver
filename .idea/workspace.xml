@@ -5,32 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1a62af0-7fc9-44f6-98a9-a3793cdaeab6" name="Changes" comment="add commandline&#10;test login, register, connect database and scene">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_28_2024_4_48_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_28_2024_4_48_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ScreenControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ScreenControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailTopicWordLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailTopicWordLoad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/DetailedTopicWord/DetailedTopicWordContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/SimpleTopicWord/SimpleTopicWordContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/SimpleTopicWord/SimpleTopicWordLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicWords/SimpleTopicWord/SimpleTopicWordLoad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/Utils/TopicScanner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicBank/SimpleTopicWords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TopicWord/backend/TopicBank/SimpleTopicWords.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/DictationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/DictationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/MultipleChoiceApp.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/MultipleChoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Exercise/MultipleChoiceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Utils/ExerciseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/Exercise/Utils/ExerciseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/Dictation/Dictation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/Dictation/Dictation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/Dictation/DictationDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/Dictation/DictationDescription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/MultipleChoice/MultipleChoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/MultipleChoice/MultipleChoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/MultipleChoice/MultipleChoiceDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Exercises/MultipleChoice/MultipleChoiceDescription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/game/backend/Utils/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/game/backend/Utils/Exercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/CSS/add-word.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/ChooseGame - Copy.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/ChooseGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/ChooseGame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/Listening - Copy.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/TopicWord - Copy.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/Image/animal.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/Image/blood.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/Image/endGameIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/Image/speaker1.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,8 +183,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
-        <item itemvalue="Application.SimpleTopicWordLoad1" />
         <item itemvalue="Application.TopicScanner" />
+        <item itemvalue="Application.SimpleTopicWordLoad" />
         <item itemvalue="Application.MultipleChoiceApp" />
         <item itemvalue="Application.ExerciseLoad" />
       </list>
