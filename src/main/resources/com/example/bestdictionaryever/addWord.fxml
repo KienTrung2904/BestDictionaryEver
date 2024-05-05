@@ -7,14 +7,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="640.0" prefWidth="1024.0" styleClass="backGround" stylesheets="@add-word.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.library.addControl">
+<AnchorPane prefHeight="640.0" prefWidth="1024.0" styleClass="backGround" stylesheets="@add-word.css" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.library.addControl">
    <children>
-      <TextField layoutX="52.0" layoutY="39.0" prefHeight="58.0" prefWidth="920.0" promptText="What word do you want to add?" styleClass="textFieldWord" />
+      <TextField fx:id="target" layoutX="52.0" layoutY="39.0" prefHeight="58.0" prefWidth="920.0" promptText="What word do you want to add?" styleClass="textFieldWord" />
 
       <Button layoutX="266" layoutY="120" mnemonicParsing="false" prefHeight="42.61" prefWidth="111.45" styleClass="button1" stylesheets="@add-word.css" text="Add" />
       <Button layoutX="392.87" layoutY="120.0" mnemonicParsing="false" prefHeight="42.61" prefWidth="111.45" styleClass="button1" stylesheets="@add-word.css" text="  Remove" />
       <Button layoutX="519.73" layoutY="120" mnemonicParsing="false" prefHeight="42.61" prefWidth="111.45" styleClass="button1" stylesheets="@add-word.css" text="  Back" />
-      <Button layoutX="646.6" layoutY="120" mnemonicParsing="false" prefHeight="42.61" prefWidth="111.45" styleClass="buttonSave" stylesheets="@add-word.css" text="  Save" />
+      <Button onAction = "#save" layoutX="646.6" layoutY="120" mnemonicParsing="false" prefHeight="42.61" prefWidth="111.45" styleClass="buttonSave" stylesheets="@add-word.css" text="  Save" />
 
       <ImageView fitHeight="19.95" fitWidth="21.32" layoutX="279.57" layoutY="130.88" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -37,7 +37,7 @@
       </ImageView>
 
 
-      <ImageView fitHeight="19.95" fitWidth="21.32" layoutX="660.17" layoutY="130.88" pickOnBounds="true" preserveRatio="true">
+      <ImageView  fitHeight="19.95" fitWidth="21.32" layoutX="660.17" layoutY="130.88" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Login/Image/save.png" />
          </image>
@@ -48,16 +48,16 @@
       <AnchorPane layoutX="54.0" layoutY="195.34" prefHeight="402.37" prefWidth="918.0" styleClass="innerBackground" stylesheets="@add-word.css">
          <children>
 
-            <TextField layoutX="20.65" layoutY="27.79" prefHeight="61.46" prefWidth="877.35" promptText="  Part of speech" styleClass="textFieldPartOfSpeech" stylesheets="@add-word.css" />
+            <TextField fx:id="partOfSpeech" layoutX="20.65" layoutY="27.79" prefHeight="61.46" prefWidth="877.35" promptText="  Part of speech" styleClass="textFieldPartOfSpeech" stylesheets="@add-word.css" />
 
-            <TextField alignment="TOP_LEFT" layoutX="20.65" layoutY="113.37" prefHeight="118.62" prefWidth="877.35" promptText="  Type your definition here..." styleClass="textFieldDefinition" stylesheets="@add-word.css">
+            <TextField fx:id="definition" alignment="TOP_LEFT" layoutX="20.65" layoutY="113.37" prefHeight="118.62" prefWidth="877.35" promptText="  Type your definition here..." styleClass="textFieldDefinition" stylesheets="@add-word.css">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
             </TextField>
 
 
-            <TextField alignment="TOP_LEFT" layoutX="20.65" layoutY="256.76" prefHeight="113.37" prefWidth="877.35" promptText="  Type an example of how it’s used in a sentece..." styleClass="textFieldExampleSentence" stylesheets="@add-word.css" />
+            <TextField fx:id="example" alignment="TOP_LEFT" layoutX="20.0" layoutY="274.0" prefHeight="113.37" prefWidth="877.35" promptText="  Type an example of how it’s used in a sentece..." styleClass="textFieldExampleSentence" stylesheets="@add-word.css" />
 
 
             <ImageView fitHeight="33.35" fitWidth="36.0" layoutX="-17.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">

@@ -1,6 +1,7 @@
 package controller.library;
 
 import com.example.bestdictionaryever.TextToSpeech;
+import com.example.bestdictionaryever.Word.Prepare;
 import com.example.bestdictionaryever.dashboard.search.Dictionary;
 import com.example.bestdictionaryever.dashboard.search.SearchBar;
 import com.example.bestdictionaryever.dictionary.API_Dictionary.DictionaryAPI;
@@ -95,8 +96,10 @@ public class libraryController extends ScreenControl {
 
         word.setText(target);
 
-        DictionaryAPI.fetchDefinition(wordData);
-
+        if (!Prepare.isUserWord(target)) {
+            DictionaryAPI.fetchDefinition(wordData);
+        }
+        else {Prepare.lookUpUserWord(wordData);}
         phonetic.setText(wordData.getWordPhonetic());
 
 
