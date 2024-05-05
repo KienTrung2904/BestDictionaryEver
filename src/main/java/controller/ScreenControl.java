@@ -1,6 +1,6 @@
 package controller;
 
-import controller.library.libraryController;
+import controller.library.searchControl;
 
 // add link page
 public abstract class ScreenControl extends FXMLControl{
@@ -28,13 +28,17 @@ public abstract class ScreenControl extends FXMLControl{
         super.loadScreenFXML("library");
     }
 
+    public void search() {
+        super.loadScreenFXML("search");
+    }
+
     public void add() {
         super.loadScreenFXML("addWord");
     }
 
     public void librarySelect(String target) {
-        libraryController.setTarget(target);
-        super.loadScreenFXML("library");
+        searchControl.setTarget(target);
+        super.loadScreenFXML("search");
     }
 
     public void game() {

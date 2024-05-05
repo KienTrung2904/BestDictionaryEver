@@ -13,7 +13,7 @@
 
       <Button layoutX="266" layoutY="120" mnemonicParsing="false" prefHeight="42.61" prefWidth="111.45" styleClass="button1" stylesheets="@add-word.css" text="Add" />
       <Button layoutX="392.87" layoutY="120.0" mnemonicParsing="false" prefHeight="42.61" prefWidth="111.45" styleClass="button1" stylesheets="@add-word.css" text="  Remove" />
-      <Button layoutX="519.73" layoutY="120" mnemonicParsing="false" prefHeight="42.61" prefWidth="111.45" styleClass="button1" stylesheets="@add-word.css" text="  Back" />
+      <Button onAction = "#back" layoutX="519.73" layoutY="120" mnemonicParsing="false" prefHeight="42.61" prefWidth="111.45" styleClass="button1" stylesheets="@add-word.css" text="  Back" />
       <Button onAction = "#save" layoutX="646.6" layoutY="120" mnemonicParsing="false" prefHeight="42.61" prefWidth="111.45" styleClass="buttonSave" stylesheets="@add-word.css" text="  Save" />
 
       <ImageView fitHeight="19.95" fitWidth="21.32" layoutX="279.57" layoutY="130.88" pickOnBounds="true" preserveRatio="true">

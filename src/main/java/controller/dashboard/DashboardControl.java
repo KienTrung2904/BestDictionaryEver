@@ -82,6 +82,9 @@ public class DashboardControl extends ScreenControl {
         return indexTopic;
     }
 
+    public void libra() {
+        super.library();
+    }
     public void translationButtonOnAction(ActionEvent actionEvent) {
         super.translationPage();
     }

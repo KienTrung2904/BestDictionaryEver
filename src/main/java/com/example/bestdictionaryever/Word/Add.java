@@ -102,7 +102,7 @@ public class Add extends Prepare{
             return false;
         }
 
-        for (Pair<String, String> p: definition) {
+        for (Pair<String, String> p : definition) {
             String key = p.getKey();
             String value = p.getValue();
             if (!setDefinition(target, key, value)) {

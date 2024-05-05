@@ -2,7 +2,6 @@ package controller.library;
 
 import com.example.bestdictionaryever.TextToSpeech;
 import com.example.bestdictionaryever.Word.Prepare;
-import com.example.bestdictionaryever.dashboard.search.Dictionary;
 import com.example.bestdictionaryever.dashboard.search.SearchBar;
 import com.example.bestdictionaryever.dictionary.API_Dictionary.DictionaryAPI;
 import controller.ScreenControl;
@@ -15,16 +14,13 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 import com.example.bestdictionaryever.dictionary.word;
 
-import javax.speech.Word;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Map;
 
 
-public class libraryController extends ScreenControl {
+public class searchControl extends ScreenControl {
     private static String target;
     @FXML
     protected TextField searchField;
@@ -76,7 +72,7 @@ public class libraryController extends ScreenControl {
     }
 
     public void back(ActionEvent actionEvent) {
-        super.dashboard();
+        super.library();
     }
 
     public void deleteAlert(ActionEvent actionEvent) {

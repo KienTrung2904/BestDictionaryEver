@@ -75,7 +75,7 @@
       </AnchorPane>
 
 
-      <Button layoutX="46.2" layoutY="160.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="143.85" styleClass="leftPanelButton" stylesheets="@dashboard.css" text="My library">
+      <Button onAction="#libra" layoutX="46.2" layoutY="160.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="143.85" styleClass="leftPanelButton" stylesheets="@dashboard.css" text="My library">
          <opaqueInsets>
             <Insets left="30.0" />
          </opaqueInsets>
