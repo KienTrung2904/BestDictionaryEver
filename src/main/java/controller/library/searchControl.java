@@ -1,6 +1,8 @@
 package controller.library;
 
+import com.example.bestdictionaryever.DatabaseConnection;
 import com.example.bestdictionaryever.TextToSpeech;
+import com.example.bestdictionaryever.Word.Delete;
 import com.example.bestdictionaryever.Word.Prepare;
 import com.example.bestdictionaryever.dashboard.search.SearchBar;
 import com.example.bestdictionaryever.dictionary.API_Dictionary.DictionaryAPI;
@@ -75,7 +77,10 @@ public class searchControl extends ScreenControl {
         super.library();
     }
 
-    public void deleteAlert(ActionEvent actionEvent) {
+    public void deleteAlert() {
+        DatabaseConnection.initialize();
+        Delete.delete(target);
+        super.dashboard();
     }
 
 
