@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1a62af0-7fc9-44f6-98a9-a3793cdaeab6" name="Changes" comment="add commandline&#10;test login, register, connect database and scene">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_28_2024_10_53_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_28_2024_10_53_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Word/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Word/Delete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Word/Edit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Word/Edit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Word/Prepare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Word/Prepare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ScreenControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ScreenControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/library/addControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/library/addControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/library/deleteControl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/library/searchControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/library/searchControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/addWord.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/addWord.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="CSS File" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -180,7 +183,8 @@
       <workItem from="1714892984605" duration="1203000" />
       <workItem from="1714912201595" duration="16852000" />
       <workItem from="1714976037795" duration="732000" />
-      <workItem from="1715016158338" duration="2103000" />
+      <workItem from="1715016158338" duration="4508000" />
+      <workItem from="1715050589287" duration="9413000" />
     </task>
     <task id="LOCAL-00001" summary="add commandline&#10;test login, register, connect database and scene">
       <option name="closed" value="true" />

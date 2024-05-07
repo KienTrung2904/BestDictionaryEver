@@ -145,7 +145,7 @@ public class Prepare extends DatabaseConnection {
         return false;
     }
 
-    public static void getUserEdit(word word) {
+    public static boolean getUserEdit(word word) {
         String target = word.getWordTarget();
         final String sql_query = "SELECT partOfSpeech, definition FROM userdictionary NATURAL JOIN userEdit WHERE accountID = ? AND word = ?;" ;
 
@@ -167,6 +167,7 @@ public class Prepare extends DatabaseConnection {
                             word.addWordExplain(partOfSpeech, s);
                         }
                     }
+                    return true;
                 } finally {
                     close(r);
                 }
@@ -175,6 +176,7 @@ public class Prepare extends DatabaseConnection {
             }
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
         }
     }
 

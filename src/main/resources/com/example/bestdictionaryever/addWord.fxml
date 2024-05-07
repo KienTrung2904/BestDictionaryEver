@@ -12,7 +12,7 @@
       <TextField fx:id="target" layoutX="52.0" layoutY="39.0" prefHeight="58.0" prefWidth="920.0" promptText="What word do you want to add?" styleClass="textFieldWord" />
 
       <Button layoutX="266" layoutY="120" mnemonicParsing="false" prefHeight="42.61" prefWidth="111.45" styleClass="button1" stylesheets="@add-word.css" text="Add" />
-      <Button layoutX="392.87" layoutY="120.0" mnemonicParsing="false" prefHeight="42.61" prefWidth="111.45" styleClass="button1" stylesheets="@add-word.css" text="  Remove" />
+      <Button onAction="#remove" layoutX="392.87" layoutY="120.0" mnemonicParsing="false" prefHeight="42.61" prefWidth="111.45" styleClass="button1" stylesheets="@add-word.css" text="  Remove" />
       <Button onAction = "#back" layoutX="519.73" layoutY="120" mnemonicParsing="false" prefHeight="42.61" prefWidth="111.45" styleClass="button1" stylesheets="@add-word.css" text="  Back" />
       <Button onAction = "#save" layoutX="646.6" layoutY="120" mnemonicParsing="false" prefHeight="42.61" prefWidth="111.45" styleClass="buttonSave" stylesheets="@add-word.css" text="  Save" />
 

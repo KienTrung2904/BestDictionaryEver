@@ -37,4 +37,8 @@ public class addControl extends ScreenControl implements EventListener {
     public void back(ActionEvent actionEvent) {
         super.library();
     }
+
+    public void remove(ActionEvent actionEvent) {
+        super.add();
+    }
 }

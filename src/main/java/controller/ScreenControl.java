@@ -1,5 +1,7 @@
 package controller;
 
+import com.example.bestdictionaryever.dictionary.word;
+import controller.library.editControl;
 import controller.library.searchControl;
 
 // add link page
@@ -36,9 +38,18 @@ public abstract class ScreenControl extends FXMLControl{
         super.loadScreenFXML("addWord");
     }
 
+    public void edit() {
+        super.loadScreenFXML("editWord");
+    }
+
     public void librarySelect(String target) {
         searchControl.setTarget(target);
         super.loadScreenFXML("search");
+    }
+
+    public void editSelect(word word) {
+        editControl.setWord(word);
+        edit();
     }
 
     public void game() {

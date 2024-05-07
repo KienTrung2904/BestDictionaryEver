@@ -42,12 +42,7 @@ public class searchControl extends ScreenControl {
     private ScrollPane scrollPane;
     @FXML
     private VBox explainBox;
-    @FXML
-    private Button speaker;
-    @FXML
-    private Button addButton;
-    @FXML
-    private Button editButton;
+
     protected SearchBar searchBar;
 
     private word wordData = new word();
@@ -73,7 +68,7 @@ public class searchControl extends ScreenControl {
         textToSpeech.speak(target);
     }
 
-    public void back(ActionEvent actionEvent) {
+    public void back() {
         super.library();
     }
 
@@ -90,6 +85,9 @@ public class searchControl extends ScreenControl {
     }
 
     public void editWord(ActionEvent actionEvent) {
+        if (Prepare.getUserEdit(wordData)) {
+            super.editSelect(wordData);
+        }
     }
 
     private void getWordDefinition() {
