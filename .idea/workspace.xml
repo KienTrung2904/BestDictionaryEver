@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cf5bda5-935f-4ae4-83fd-5183a788e5cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/hs_err_pid5880.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/TopicWord.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/TopicWord.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +50,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/dashboard.fxml" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
