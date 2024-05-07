@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cf5bda5-935f-4ae4-83fd-5183a788e5cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/hs_err_pid5880.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/TopicWord.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/TopicWord.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="0cf5bda5-935f-4ae4-83fd-5183a788e5cd" name="Changes" comment="add practice picture" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +26,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;history&quot;: [
@@ -68,7 +63,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Application.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
@@ -113,7 +110,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f1a62af0-7fc9-44f6-98a9-a3793cdaeab6" name="Changes" comment="" />
+      <changelist id="0cf5bda5-935f-4ae4-83fd-5183a788e5cd" name="Changes" comment="" />
       <created>1710771949561</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -219,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714313209261</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add practice picture">
+      <option name="closed" value="true" />
+      <created>1715089485531</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715089485531</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +251,8 @@
     <MESSAGE value="add commandline&#10;test login, register, connect database and scene" />
     <MESSAGE value="google translate, text to speech, translation page" />
     <MESSAGE value="translation page" />
-    <option name="LAST_COMMIT_MESSAGE" value="translation page" />
+    <MESSAGE value="add practice picture" />
+    <option name="LAST_COMMIT_MESSAGE" value="add practice picture" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
