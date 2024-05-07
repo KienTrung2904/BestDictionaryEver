@@ -85,8 +85,10 @@ public class searchControl extends ScreenControl {
     }
 
     public void editWord(ActionEvent actionEvent) {
-        if (Prepare.getUserEdit(wordData)) {
-            super.editSelect(wordData);
+       if (Prepare.isEditWord(wordData.getWordTarget())) {
+            if (Prepare.getUserEdit(wordData)) {
+                super.editSelect(wordData);
+            }
         }
     }
 
