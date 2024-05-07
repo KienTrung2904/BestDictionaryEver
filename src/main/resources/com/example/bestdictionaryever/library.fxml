@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="640" prefWidth="1024" stylesheets="@search.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.library.libraryControl">
+<AnchorPane fx:id="anchorPane" prefHeight="640" prefWidth="1024" stylesheets="@search.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.library.libraryControl">
 
 
     <VBox layoutX="858" layoutY="214" spacing="17">
