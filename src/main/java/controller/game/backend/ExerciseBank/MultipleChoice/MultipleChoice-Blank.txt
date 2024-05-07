@@ -1,0 +1,745 @@
+{
+"question": "The professor provided a detailed _____ of the scientific experiment.",
+"options": {"A": "Analysis", "B": "Synopsis", "C": "Summary", "D": "Outline"},
+"correctAnswer": "C",
+"explanation": "A: 'Analysis' means a detailed examination. B: 'Synopsis' means a brief summary. C: 'Summary' means a concise version of information. D: 'Outline' means a general plan."
+}
+
+{
+"question": "The detective carefully examined the _____ left at the crime scene.",
+"options": {"A": "Clues", "B": "Indicators", "C": "Signals", "D": "Traces"},
+"correctAnswer": "D",
+"explanation": "A: 'Clues' are hints or evidence. B: 'Indicators' point to something. C: 'Signals' suggest actions. D: 'Traces' are marks or signs left behind."
+}
+
+{
+"question": "The artist used vibrant colors to create a stunning _____ on the canvas.",
+"options": {"A": "Masterpiece", "B": "Composition", "C": "Sketch", "D": "Imitation"},
+"correctAnswer": "B",
+"explanation": "A: 'Masterpiece' is an outstanding work. B: 'Composition' is the arrangement of elements. C: 'Sketch' is a rough drawing. D: 'Imitation' is copying someone else's work."
+}
+
+{
+"question": "The chef added a unique _____ to the traditional recipe, enhancing its flavor.",
+"options": {"A": "Ingredient", "B": "Component", "C": "Element", "D": "Addition"},
+"correctAnswer": "C",
+"explanation": "A: 'Ingredient' is a component of a recipe. B: 'Component' is a part of a whole. C: 'Element' is a fundamental factor. D: 'Addition' is something added."
+}
+
+{
+"question": "The author concluded the novel with a surprising _____ that left readers in suspense.",
+"options": {"A": "Twist", "B": "Turn", "C": "Closure", "D": "Revelation"},
+"correctAnswer": "A",
+"explanation": "A: 'Twist' is an unexpected development. B: 'Turn' is a change in direction. C: 'Closure' is bringing something to an end. D: 'Revelation' is a surprising disclosure."
+}
+
+{
+"question": "The scientist conducted experiments to explore the _____ of the newly discovered element.",
+"options": {"A": "Properties", "B": "Characteristics", "C": "Attributes", "D": "Qualities"},
+"correctAnswer": "B",
+"explanation": "A: 'Properties' are inherent qualities. B: 'Characteristics' are distinctive features. C: 'Attributes' are inherent qualities. D: 'Qualities' are inherent characteristics."
+}
+
+{
+"question": "The speaker delivered a powerful _____ that resonated with the audience.",
+"options": {"A": "Lecture", "B": "Presentation", "C": "Speech", "D": "Address"},
+"correctAnswer": "C",
+"explanation": "A: 'Lecture' is an educational talk. B: 'Presentation' is a formal introduction. C: 'Speech' is a formal address. D: 'Address' is a formal speech."
+}
+
+{
+"question": "The architect carefully considered the _____ of the building to ensure harmony in its design.",
+"options": {"A": "Structure", "B": "Framework", "C": "Configuration", "D": "Layout"},
+"correctAnswer": "A",
+"explanation": "A: 'Structure' is the arrangement of parts. B: 'Framework' is a basic structure. C: 'Configuration' is the arrangement of elements. D: 'Layout' is the arrangement of components."
+}
+
+{
+"question": "The musician composed a beautiful _____ that evoked strong emotions in the audience.",
+"options": {"A": "Harmony", "B": "Melody", "C": "Rhythm", "D": "Symphony"},
+"correctAnswer": "B",
+"explanation": "A: 'Harmony' is the combination of musical notes. B: 'Melody' is a sequence of single pitches. C: 'Rhythm' is the pattern of beats. D: 'Symphony' is a complex musical composition."
+}
+
+{
+"question": "The teacher encouraged students to express their _____ through creative writing.",
+"options": {"A": "Thoughts", "B": "Feelings", "C": "Emotions", "D": "Expressions"},
+"correctAnswer": "D",
+"explanation": "A: 'Thoughts' are mental processes. B: 'Feelings' are emotional responses. C: 'Emotions' are strong feelings. D: 'Expressions' are ways of conveying thoughts or feelings."
+}
+
+
+{
+"question": "The athlete demonstrated exceptional _____ in overcoming the challenges during the competition.",
+"options": {"A": "Endurance", "B": "Stamina", "C": "Persistence", "D": "Resilience"},
+"correctAnswer": "D",
+"explanation": "A: 'Endurance' is the ability to endure hardship. B: 'Stamina' is physical and mental strength. C: 'Persistence' is the continued effort. D: 'Resilience' is the ability to bounce back from adversity."
+}
+
+{
+"question": "The journalist conducted interviews to gather _____ for the investigative report.",
+"options": {"A": "Information", "B": "Data", "C": "Facts", "D": "Details"},
+"correctAnswer": "A",
+"explanation": "A: 'Information' is knowledge obtained. B: 'Data' is raw information. C: 'Facts' are proven truths. D: 'Details' are specific pieces of information."
+}
+
+{
+"question": "The weather forecast predicted a sudden _____ in temperature later in the day.",
+"options": {"A": "Increase", "B": "Decline", "C": "Fluctuation", "D": "Variation"},
+"correctAnswer": "C",
+"explanation": "A: 'Increase' is a rise in amount. B: 'Decline' is a decrease in amount. C: 'Fluctuation' is an irregular change. D: 'Variation' is a difference or change."
+}
+
+{
+"question": "The CEO emphasized the importance of _____ in the workplace to foster a positive culture.",
+"options": {"A": "Collaboration", "B": "Cooperation", "C": "Teamwork", "D": "Unity"},
+"correctAnswer": "B",
+"explanation": "A: 'Collaboration' is working together. B: 'Cooperation' is the process of working together. C: 'Teamwork' is collaborative effort. D: 'Unity' is the state of being united."
+}
+
+{
+"question": "The dancer performed a graceful _____ that captivated the audience.",
+"options": {"A": "Routine", "B": "Choreography", "C": "Dance", "D": "Sequence"},
+"correctAnswer": "B",
+"explanation": "A: 'Routine' is a set of actions. B: 'Choreography' is the art of creating dances. C: 'Dance' is a series of movements. D: 'Sequence' is an ordered set of steps."
+}
+
+{
+"question": "The project manager assigned tasks based on each team member's _____ and expertise.",
+"options": {"A": "Skills", "B": "Capabilities", "C": "Proficiency", "D": "Competence"},
+"correctAnswer": "A",
+"explanation": "A: 'Skills' are abilities developed through experience. B: 'Capabilities' are the power to perform. C: 'Proficiency' is high skill level. D: 'Competence' is the ability to do something well."
+}
+
+{
+"question": "The artist used shading to create a _____ effect in the portrait.",
+"options": {"A": "Depth", "B": "Dimension", "C": "Perspective", "D": "Illusion"},
+"correctAnswer": "A",
+"explanation": "A: 'Depth' is the distance from front to back. B: 'Dimension' is a measurable extent. C: 'Perspective' is a point of view. D: 'Illusion' is a false impression."
+}
+
+{
+"question": "The teacher provided constructive _____ to help students improve their writing skills.",
+"options": {"A": "Critique", "B": "Feedback", "C": "Review", "D": "Assessment"},
+"correctAnswer": "B",
+"explanation": "A: 'Critique' is a detailed analysis. B: 'Feedback' is information about performance. C: 'Review' is an evaluation. D: 'Assessment' is the evaluation of something."
+}
+
+{
+"question": "The technology company introduced a groundbreaking _____ that revolutionized communication.",
+"options": {"A": "Innovation", "B": "Invention", "C": "Discovery", "D": "Breakthrough"},
+"correctAnswer": "D",
+"explanation": "A: 'Innovation' is the introduction of something new. B: 'Invention' is a newly created product. C: 'Discovery' is finding something previously unknown. D: 'Breakthrough' is a significant development or achievement."
+}
+
+{
+"question": "The teacher assigned a challenging _____ to test the students' problem-solving skills.",
+"options": {"A": "Task", "B": "Assignment", "C": "Project", "D": "Activity"},
+"correctAnswer": "C",
+"explanation": "A: 'Task' is a piece of work. B: 'Assignment' is a specific task. C: 'Project' is a planned undertaking. D: 'Activity' is a specific action or process."
+}
+
+{
+"question": "The novel's intricate _____ kept readers guessing until the very end.",
+"options": {"A": "Plot", "B": "Narrative", "C": "Storyline", "D": "Script"},
+"correctAnswer": "A",
+"explanation": "A: 'Plot' is the main events in a story. B: 'Narrative' is a spoken or written account. C: 'Storyline' is the course of a story. D: 'Script' is the written text of a play or movie."
+}
+
+{
+"question": "The astronomer discovered a celestial _____ using the powerful telescope.",
+"options": {"A": "Phenomenon", "B": "Entity", "C": "Body", "D": "Object"},
+"correctAnswer": "C",
+"explanation": "A: 'Phenomenon' is a remarkable occurrence. B: 'Entity' is something that exists. C: 'Body' refers to a celestial object. D: 'Object' is a thing that can be seen or touched."
+}
+
+{
+"question": "The political leader delivered a passionate _____ that resonated with the citizens.",
+"options": {"A": "Speech", "B": "Address", "C": "Declaration", "D": "Announcement"},
+"correctAnswer": "A",
+"explanation": "A: 'Speech' is a formal address. B: 'Address' is a formal speech. C: 'Declaration' is a formal statement. D: 'Announcement' is a public or formal statement."
+}
+
+{
+"question": "The economist analyzed the _____ trends to make predictions about the future market conditions.",
+"options": {"A": "Economic", "B": "Financial", "C": "Market", "D": "Trade"},
+"correctAnswer": "B",
+"explanation": "A: 'Economic' relates to the economy. B: 'Financial' relates to money or finance. C: 'Market' pertains to buying and selling. D: 'Trade' involves buying and selling goods or services."
+}
+
+{
+"question": "The chef used a unique _____ of spices to enhance the flavor of the dish.",
+"options": {"A": "Combination", "B": "Blend", "C": "Mixture", "D": "Medley"},
+"correctAnswer": "B",
+"explanation": "A: 'Combination' is a grouping of different things. B: 'Blend' is a mixture of different elements. C: 'Mixture' is a combination of different substances. D: 'Medley' is a varied mixture or assortment."
+}
+
+{
+"question": "The environmentalist advocated for sustainable _____ practices to protect the planet.",
+"options": {"A": "Conservation", "B": "Preservation", "C": "Management", "D": "Stewardship"},
+"correctAnswer": "D",
+"explanation": "A: 'Conservation' is the protection of resources. B: 'Preservation' is the act of preserving something. C: 'Management' is the process of controlling. D: 'Stewardship' is the responsible management of resources."
+}
+
+{
+"question": "The engineer designed a _____ structure that could withstand extreme weather conditions.",
+"options": {"A": "Robust", "B": "Sturdy", "C": "Durable", "D": "Resilient"},
+"correctAnswer": "A",
+"explanation": "A: 'Robust' is strong and sturdy. B: 'Sturdy' is strongly built. C: 'Durable' can withstand wear and tear. D: 'Resilient' can recover quickly from difficulties."
+}
+
+{
+"question": "The author used vivid descriptions to paint a _____ picture of the setting.",
+"options": {"A": "Clear", "B": "Lively", "C": "Vibrant", "D": "Colorful"},
+"correctAnswer": "D",
+"explanation": "A: 'Clear' is easily perceived. B: 'Lively' is full of life and energy. C: 'Vibrant' is bright and vivid. D: 'Colorful' is rich and varied in color."
+}
+
+{
+"question": "The explorer faced numerous _____ in the uncharted territory.",
+"options": {"A": "Challenges", "B": "Obstacles", "C": "Hurdles", "D": "Difficulties"},
+"correctAnswer": "B",
+"explanation": "A: 'Challenges' are tasks requiring effort. B: 'Obstacles' are things that block one's way. C: 'Hurdles' are obstacles to be overcome. D: 'Difficulties' are challenges or hardships."
+}
+
+{
+"question": "The technology company unveiled a cutting-edge _____ that set a new standard in the industry.",
+"options": {"A": "Innovation", "B": "Advancement", "C": "Breakthrough", "D": "Revolution"},
+"correctAnswer": "C",
+"explanation": "A: 'Innovation' is the introduction of something new. B: 'Advancement' is the process of moving forward. C: 'Breakthrough' is a significant development. D: 'Revolution' is a drastic change or improvement."
+}
+
+
+{
+"question": "The scientist conducted experiments to explore the _____ of the newly discovered substance.",
+"options": {"A": "Properties", "B": "Characteristics", "C": "Attributes", "D": "Qualities"},
+"correctAnswer": "A",
+"explanation": "A: 'Properties' are inherent qualities. B: 'Characteristics' are distinctive features. C: 'Attributes' are inherent qualities. D: 'Qualities' are inherent characteristics."
+}
+
+{
+"question": "The director carefully orchestrated the _____ of scenes to create a seamless film.",
+"options": {"A": "Sequence", "B": "Arrangement", "C": "Composition", "D": "Order"},
+"correctAnswer": "A",
+"explanation": "A: 'Sequence' is an ordered set of steps. B: 'Arrangement' is the way things are organized. C: 'Composition' is the arrangement of elements. D: 'Order' is a specific arrangement of things."
+}
+
+{
+"question": "The poet used metaphorical _____ to convey deep emotions in the poem.",
+"options": {"A": "Language", "B": "Expressions", "C": "Imagery", "D": "Words"},
+"correctAnswer": "C",
+"explanation": "A: 'Language' is the system of communication. B: 'Expressions' are the conveying of feelings. C: 'Imagery' is the use of vivid descriptions. D: 'Words' are individual units of language."
+}
+
+{
+"question": "The coach emphasized the importance of _____ in building a strong and cohesive team.",
+"options": {"A": "Unity", "B": "Harmony", "C": "Solidarity", "D": "Camaraderie"},
+"correctAnswer": "D",
+"explanation": "A: 'Unity' is the state of being united. B: 'Harmony' is the combination of different elements. C: 'Solidarity' is unity based on common interests. D: 'Camaraderie' is mutual trust and friendship among people."
+}
+
+{
+"question": "The photographer captured the _____ of the landscape in a breathtaking photograph.",
+"options": {"A": "Beauty", "B": "Elegance", "C": "Grandeur", "D": "Splendor"},
+"correctAnswer": "C",
+"explanation": "A: 'Beauty' is the quality of being pleasing. B: 'Elegance' is the quality of being refined. C: 'Grandeur' is the quality of being magnificent. D: 'Splendor' is the quality of being splendid."
+}
+
+{
+"question": "The detective carefully analyzed the _____ to solve the mystery of the missing artifacts.",
+"options": {"A": "Circumstances", "B": "Situation", "C": "Evidence", "D": "Incident"},
+"correctAnswer": "C",
+"explanation": "A: 'Circumstances' are the conditions surrounding a situation. B: 'Situation' is the set of circumstances. C: 'Evidence' is information indicating the truth. D: 'Incident' is an occurrence or event."
+}
+
+{
+"question": "The teacher encouraged students to develop a strong _____ in critical thinking.",
+"options": {"A": "Foundation", "B": "Base", "C": "Framework", "D": "Structure"},
+"correctAnswer": "A",
+"explanation": "A: 'Foundation' is the basis for something. B: 'Base' is the bottom support. C: 'Framework' is a basic structure. D: 'Structure' is a specific arrangement of components."
+}
+
+{
+"question": "The biologist studied the _____ of the ecosystem to understand the delicate balance of nature.",
+"options": {"A": "Structure", "B": "Composition", "C": "Configuration", "D": "Organization"},
+"correctAnswer": "D",
+"explanation": "A: 'Structure' is the arrangement of parts. B: 'Composition' is the combination of elements. C: 'Configuration' is the arrangement of elements. D: 'Organization' is the arrangement and coordination of parts."
+}
+
+{
+"question": "The historian researched the _____ of ancient civilizations to understand their cultural development.",
+"options": {"A": "Legacy", "B": "Heritage", "C": "Tradition", "D": "History"},
+"correctAnswer": "B",
+"explanation": "A: 'Legacy' is something inherited from the past. B: 'Heritage' is the cultural traditions passed down through generations. C: 'Tradition' is a custom or belief passed down. D: 'History' is the study of past events."
+}
+
+{
+"question": "The entrepreneur demonstrated _____ in overcoming obstacles to establish a successful business.",
+"options": {"A": "Determination", "B": "Persistence", "C": "Tenacity", "D": "Resolve"},
+"correctAnswer": "A",
+"explanation": "A: 'Determination' is the firmness of purpose. B: 'Persistence' is the continued effort. C: 'Tenacity' is the quality of holding fast. D: 'Resolve' is the determination to achieve something."
+}
+
+{
+"question": "What is the antonym for 'Benevolent'?",
+"options": {"A": "Malevolent", "B": "Kind", "C": "Generous", "D": "Altruistic"},
+"correctAnswer": "B",
+"explanation": "A: 'Malevolent' means having or showing a wish to do evil. B: 'Kind' means having a gentle nature. C: 'Generous' means showing a readiness to give more. D: 'Altruistic' means showing a selfless concern for others."
+}
+
+{
+"question": "What is the antonym for 'Opaque'?",
+"options": {"A": "Clear", "B": "Foggy", "C": "Translucent", "D": "Murky"},
+"correctAnswer": "D",
+"explanation": "A: 'Clear' means easily seen through. B: 'Foggy' means filled or abounding with fog. C: 'Translucent' means allowing light to pass through. D: 'Murky' means dark and gloomy, not transparent."
+}
+
+{
+"question": "What is the antonym for 'Loquacious'?",
+"options": {"A": "Talkative", "B": "Reserved", "C": "Chatty", "D": "Garrulous"},
+"correctAnswer": "B",
+"explanation": "A: 'Talkative' means inclined to talk a lot. B: 'Reserved' means slow to reveal one's emotions or thoughts. C: 'Chatty' means fond of chatting. D: 'Garrulous' means excessively talkative, especially on trivial matters."
+}
+
+{
+"question": "What is the antonym for 'Voracious'?",
+"options": {"A": "Hungry", "B": "Ravenous", "C": "Moderate", "D": "Insatiable"},
+"correctAnswer": "C",
+"explanation": "A: 'Hungry' means feeling or showing the need for food. B: 'Ravenous' means extremely hungry. C: 'Moderate' means avoiding extremes. D: 'Insatiable' means impossible to satisfy."
+}
+
+{
+"question": "What is the antonym for 'Ephemeral'?",
+"options": {"A": "Temporary", "B": "Transient", "C": "Enduring", "D": "Fleeting"},
+"correctAnswer": "C",
+"explanation": "A: 'Temporary' means lasting for only a limited time. B: 'Transient' means lasting only for a short time. C: 'Enduring' means lasting over a long period. D: 'Fleeting' means lasting for a very short time."
+}
+
+{
+"question": "What is the antonym for 'Ubiquitous'?",
+"options": {"A": "Omnipresent", "B": "Pervasive", "C": "Rare", "D": "Widespread"},
+"correctAnswer": "C",
+"explanation": "A: 'Omnipresent' means present everywhere. B: 'Pervasive' means spreading widely. C: 'Rare' means not occurring very often. D: 'Widespread' means found or distributed over a large area or number of people."
+}
+
+{
+"question": "What is the antonym for 'Malleable'?",
+"options": {"A": "Adaptable", "B": "Flexible", "C": "Rigid", "D": "Pliable"},
+"correctAnswer": "C",
+"explanation": "A: 'Adaptable' means able to adjust to new conditions. B: 'Flexible' means capable of bending easily. C: 'Rigid' means not flexible, stiff. D: 'Pliable' means easily bent, flexible."
+}
+
+{
+"question": "What is the antonym for 'Zenith'?",
+"options": {"A": "Apex", "B": "Summit", "C": "Nadir", "D": "Peak"},
+"correctAnswer": "C",
+"explanation": "A: 'Apex' means the highest point. B: 'Summit' means the highest point of a hill or mountain. C: 'Nadir' means the lowest point. D: 'Peak' means the pointed top of a mountain."
+}
+
+{
+"question": "What is the antonym for 'Austere'?",
+"options": {"A": "Simple", "B": "Plain", "C": "Lavish", "D": "Spartan"},
+"correctAnswer": "C",
+"explanation": "A: 'Simple' means easy to understand or do. B: 'Plain' means not decorated or elaborate. C: 'Lavish' means characterized by extravagance. D: 'Spartan' means showing indifference to comfort or luxury."
+}
+
+{
+"question": "What is the antonym for 'Cacophony'?",
+"options": {"A": "Harmony", "B": "Din", "C": "Discord", "D": "Clamor"},
+"correctAnswer": "A",
+"explanation": "A: 'Harmony' means a pleasing arrangement of parts. B: 'Din' means a loud, unpleasant noise. C: 'Discord' means lack of harmony. D: 'Clamor' means a loud and confused noise."
+}
+
+{
+"question": "What is the antonym for 'Serene'?",
+"options": {"A": "Calm", "B": "Tranquil", "C": "Turbulent", "D": "Placid"},
+"correctAnswer": "C",
+"explanation": "A: 'Calm' means peaceful and undisturbed. B: 'Tranquil' means free from disturbance. C: 'Turbulent' means characterized by conflict or disorder. D: 'Placid' means pleasantly calm or peaceful."
+}
+
+{
+"question": "What is the antonym for 'Lethargic'?",
+"options": {"A": "Sluggish", "B": "Energetic", "C": "Torpid", "D": "Indolent"},
+"correctAnswer": "B",
+"explanation": "A: 'Sluggish' means slow-moving or inactive. B: 'Energetic' means showing enthusiasm or vitality. C: 'Torpid' means mentally or physically inactive. D: 'Indolent' means wanting to avoid activity or exertion."
+}
+
+{
+"question": "What is the antonym for 'Candid'?",
+"options": {"A": "Frank", "B": "Open", "C": "Reserved", "D": "Sincere"},
+"correctAnswer": "C",
+"explanation": "A: 'Frank' means open, honest, and direct in speech. B: 'Open' means not closed or blocked up. C: 'Reserved' means slow to reveal one's emotions or thoughts. D: 'Sincere' means free from pretense or deceit; truthful."
+}
+
+{
+"question": "What is the antonym for 'Exuberant'?",
+"options": {"A": "Vibrant", "B": "Animated", "C": "Reserved", "D": "Lively"},
+"correctAnswer": "C",
+"explanation": "A: 'Vibrant' means full of energy and enthusiasm. B: 'Animated' means full of life or excitement. C: 'Reserved' means slow to reveal one's emotions or thoughts. D: 'Lively' means full of life and energy."
+}
+
+{
+"question": "What is the antonym for 'Debilitate'?",
+"options": {"A": "Weaken", "B": "Empower", "C": "Enervate", "D": "Undermine"},
+"correctAnswer": "B",
+"explanation": "A: 'Weaken' means to make or become weak. B: 'Empower' means to give power or authority to. C: 'Enervate' means to cause someone to feel drained of energy. D: 'Undermine' means to damage or weaken gradually."
+}
+
+{
+"question": "What is the antonym for 'Immutable'?",
+"options": {"A": "Changeable", "B": "Constant", "C": "Stable", "D": "Invariable"},
+"correctAnswer": "A",
+"explanation": "A: 'Changeable' means capable of or prone to change. B: 'Constant' means occurring continuously over a period of time. C: 'Stable' means not likely to change or fail. D: 'Invariable' means never changing."
+}
+
+{
+"question": "What is the antonym for 'Pernicious'?",
+"options": {"A": "Harmful", "B": "Innocuous", "C": "Malicious", "D": "Destructive"},
+"correctAnswer": "B",
+"explanation": "A: 'Harmful' means causing or likely to cause harm. B: 'Innocuous' means not harmful or offensive. C: 'Malicious' means intending to do harm. D: 'Destructive' means causing great and irreparable damage."
+}
+
+{
+"question": "What is the antonym for 'Dubious'?",
+"options": {"A": "Skeptical", "B": "Certain", "C": "Unsure", "D": "Ambiguous"},
+"correctAnswer": "B",
+"explanation": "A: 'Skeptical' means not easily convinced. B: 'Certain' means known for sure. C: 'Unsure' means not certain or confident. D: 'Ambiguous' means having a double meaning or unclear."
+}
+
+{
+"question": "What is the antonym for 'Ineffable'?",
+"options": {"A": "Indescribable", "B": "Expressive", "C": "Unutterable", "D": "Unspeakable"},
+"correctAnswer": "B",
+"explanation": "A: 'Indescribable' means too unusual or extreme to be expressed in words. B: 'Expressive' means effectively conveying thought or feeling. C: 'Unutterable' means too great or extreme to be expressed. D: 'Unspeakable' means too great or extreme to be spoken about."
+}
+
+{
+"question": "What is the antonym for 'Ubiquitous'?",
+"options": {"A": "Omnipresent", "B": "Pervasive", "C": "Scarce", "D": "Widespread"},
+"correctAnswer": "C",
+"explanation": "A: 'Omnipresent' means present everywhere. B: 'Pervasive' means spreading widely. C: 'Scarce' means in short supply. D: 'Widespread' means found or distributed over a large area or number of people."
+}
+
+
+{
+"question": "What is the antonym for 'Jubilant'?",
+"options": {"A": "Joyful", "B": "Exuberant", "C": "Melancholy", "D": "Elated"},
+"correctAnswer": "C",
+"explanation": "A: 'Joyful' means feeling, expressing, or causing great pleasure. B: 'Exuberant' means filled with lively energy and excitement. C: 'Melancholy' means a feeling of deep sadness. D: 'Elated' means extremely happy and excited."
+}
+
+{
+"question": "What is the antonym for 'Indolent'?",
+"options": {"A": "Lazy", "B": "Idle", "C": "Active", "D": "Leisurely"},
+"correctAnswer": "C",
+"explanation": "A: 'Lazy' means unwilling to work or use energy. B: 'Idle' means avoiding work; lazy. C: 'Active' means engaging or ready to engage in physically energetic pursuits. D: 'Leisurely' means acting or done without hurry, unhurried."
+}
+
+{
+"question": "What is the antonym for 'Exacerbate'?",
+"options": {"A": "Worsen", "B": "Aggravate", "C": "Alleviate", "D": "Intensify"},
+"correctAnswer": "C",
+"explanation": "A: 'Worsen' means to make or become worse. B: 'Aggravate' means to make a situation worse or more serious. C: 'Alleviate' means to make a situation more bearable. D: 'Intensify' means to become or make more intense."
+}
+
+{
+"question": "What is the antonym for 'Sycophant'?",
+"options": {"A": "Flatterer", "B": "Toady", "C": "Iconoclast", "D": "Adulator"},
+"correctAnswer": "C",
+"explanation": "A: 'Flatterer' means a person who lavishes praise. B: 'Toady' means a person who behaves obsequiously to someone important. C: 'Iconoclast' means a person who attacks or criticizes established beliefs. D: 'Adulator' means excessive flattery or praise."
+}
+
+{
+"question": "What is the antonym for 'Ubiquitous'?",
+"options": {"A": "Omnipresent", "B": "Limited", "C": "Pervasive", "D": "Widespread"},
+"correctAnswer": "B",
+"explanation": "A: 'Omnipresent' means present everywhere. B: 'Limited' means restricted in quantity. C: 'Pervasive' means spreading widely. D: 'Widespread' means found or distributed over a large area or number of people."
+}
+
+{
+"question": "What is the antonym for 'Ineffable'?",
+"options": {"A": "Unutterable", "B": "Expressive", "C": "Indescribable", "D": "Unspeakable"},
+"correctAnswer": "B",
+"explanation": "A: 'Unutterable' means too great or extreme to be expressed. B: 'Expressive' means effectively conveying thought or feeling. C: 'Indescribable' means too unusual or extreme to be expressed in words. D: 'Unspeakable' means too great or extreme to be spoken about."
+}
+
+{
+"question": "What is the antonym for 'Resilient'?",
+"options": {"A": "Flexible", "B": "Sturdy", "C": "Brittle", "D": "Tough"},
+"correctAnswer": "C",
+"explanation": "A: 'Flexible' means capable of bending easily. B: 'Sturdy' means strongly built or made. C: 'Brittle' means easily broken, fragile. D: 'Tough' means strong and durable; not easily broken or cut."
+}
+
+{
+"question": "What is the antonym for 'Revere'?",
+"options": {"A": "Admire", "B": "Respect", "C": "Despise", "D": "Honor"},
+"correctAnswer": "C",
+"explanation": "A: 'Admire' means to regard with respect or warm approval. B: 'Respect' means a feeling of deep admiration. C: 'Despise' means to feel contempt or a deep repugnance for. D: 'Honor' means to regard with great respect."
+}
+
+{
+"question": "What is the antonym for 'Obliterate'?",
+"options": {"A": "Erase", "B": "Destroy", "C": "Preserve", "D": "Annihilate"},
+"correctAnswer": "C",
+"explanation": "A: 'Erase' means to remove from existence. B: 'Destroy' means to put an end to the existence of. C: 'Preserve' means to maintain in its original or existing state. D: 'Annihilate' means to destroy utterly; obliterate."
+}
+
+{
+"question": "What is the antonym for 'Verbose'?",
+"options": {"A": "Wordy", "B": "Concise", "C": "Loquacious", "D": "Garrulous"},
+"correctAnswer": "B",
+"explanation": "A: 'Wordy' means using or expressed in too many words. B: 'Concise' means giving much information clearly and in a few words. C: 'Loquacious' means very talkative. D: 'Garrulous' means excessively talkative, especially on trivial matters."
+}
+
+{
+"question": "What is the antonym for 'Munificent'?",
+"options": {"A": "Generous", "B": "Stingy", "C": "Bountiful", "D": "Liberal"},
+"correctAnswer": "B",
+"explanation": "A: 'Generous' means showing a readiness to give more. B: 'Stingy' means unwilling to give or spend. C: 'Bountiful' means giving generously. D: 'Liberal' means giving freely."
+}
+
+{
+"question": "What is the antonym for 'Mitigate'?",
+"options": {"A": "Lessen", "B": "Aggravate", "C": "Alleviate", "D": "Moderate"},
+"correctAnswer": "B",
+"explanation": "A: 'Lessen' means to make or become less. B: 'Aggravate' means to make a situation worse or more serious. C: 'Alleviate' means to make a situation more bearable. D: 'Moderate' means avoiding extremes."
+}
+
+{
+"question": "What is the antonym for 'Reclusive'?",
+"options": {"A": "Isolated", "B": "Sociable", "C": "Withdrawn", "D": "Secluded"},
+"correctAnswer": "B",
+"explanation": "A: 'Isolated' means far away from other places, buildings, or people. B: 'Sociable' means willing to talk and engage in activities with others. C: 'Withdrawn' means not wanting to communicate with other people. D: 'Secluded' means hidden from general view or use."
+}
+
+{
+"question": "What is the antonym for 'Voracious'?",
+"options": {"A": "Hungry", "B": "Moderate", "C": "Insatiable", "D": "Ravenous"},
+"correctAnswer": "B",
+"explanation": "A: 'Hungry' means feeling or showing the need for food. B: 'Moderate' means avoiding extremes. C: 'Insatiable' means impossible to satisfy. D: 'Ravenous' means extremely hungry."
+}
+
+{
+"question": "What is the antonym for 'Convoluted'?",
+"options": {"A": "Complex", "B": "Straightforward", "C": "Intricate", "D": "Complicated"},
+"correctAnswer": "B",
+"explanation": "A: 'Complex' means consisting of many different and connected parts. B: 'Straightforward' means direct and clear; easy to understand. C: 'Intricate' means very detailed and complicated. D: 'Complicated' means consisting of many interconnecting parts or elements."
+}
+
+{
+"question": "What is the antonym for 'Sycophant'?",
+"options": {"A": "Flatterer", "B": "Iconoclast", "C": "Maverick", "D": "Toady"},
+"correctAnswer": "C",
+"explanation": "A: 'Flatterer' means a person who lavishes praise. B: 'Iconoclast' means a person who attacks or criticizes established beliefs. C: 'Maverick' means an independent-minded person. D: 'Toady' means a person who behaves obsequiously to someone important."
+}
+
+{
+"question": "What is the antonym for 'Ephemeral'?",
+"options": {"A": "Transient", "B": "Enduring", "C": "Fleeting", "D": "Permanent"},
+"correctAnswer": "B",
+"explanation": "A: 'Transient' means lasting only for a short time. B: 'Enduring' means lasting over a long period. C: 'Fleeting' means lasting for a very short time. D: 'Permanent' means lasting or intended to last indefinitely."
+}
+
+{
+"question": "What is the antonym for 'Ostentatious'?",
+"options": {"A": "Flashy", "B": "Modest", "C": "Extravagant", "D": "Showy"},
+"correctAnswer": "B",
+"explanation": "A: 'Flashy' means attracting attention because of their stylishness. B: 'Modest' means unassuming or moderate in the estimation of one's abilities or achievements. C: 'Extravagant' means lacking restraint in spending money or using resources. D: 'Showy' means designed to attract attention or admiration."
+}
+
+{
+"question": "What is the antonym for 'Sycophant'?",
+"options": {"A": "Flatterer", "B": "Critic", "C": "Maverick", "D": "Toady"},
+"correctAnswer": "B",
+"explanation": "A: 'Flatterer' means a person who lavishes praise. B: 'Critic' means a person who judges the merits of literary, artistic, or musical works. C: 'Maverick' means an independent-minded person. D: 'Toady' means a person who behaves obsequiously to someone important."
+}
+
+{
+"question": "What is the antonym for 'Ambiguous'?",
+"options": {"A": "Vague", "B": "Clear", "C": "Dubious", "D": "Uncertain"},
+"correctAnswer": "B",
+"explanation": "A: 'Vague' means of uncertain, indefinite, or unclear character or meaning. B: 'Clear' means easy to perceive, understand, or interpret. C: 'Dubious' means hesitating or doubting. D: 'Uncertain' means not able to be relied on; not known or definite."
+}
+
+{
+"question": "What is the antonym for 'Reticent'?",
+"options": {"A": "Reserved", "B": "Talkative", "C": "Taciturn", "D": "Silent"},
+"correctAnswer": "B",
+"explanation": "A: 'Reserved' means slow to reveal one's emotions or thoughts. B: 'Talkative' means inclined to talk a lot. C: 'Taciturn' means reserved or uncommunicative in speech. D: 'Silent' means not making or accompanied by any sound."
+}
+
+{
+"question": "What is the synonym for 'Eloquent'?",
+"options": {"A": "Inarticulate", "B": "Vociferous", "C": "Loquacious", "D": "Taciturn"},
+"correctAnswer": "C",
+"explanation": "A: 'Inarticulate' means unable to express oneself clearly. B: 'Vociferous' means loud and noisy. C: 'Loquacious' means talkative. D: 'Taciturn' means reserved or uncommunicative."
+}
+
+{
+"question": "What is the synonym for 'Ubiquitous'?",
+"options": {"A": "Scarce", "B": "Omnipresent", "C": "Limited", "D": "Sparse"},
+"correctAnswer": "B",
+"explanation": "A: 'Scarce' means in short supply. B: 'Omnipresent' means everywhere at the same time. C: 'Limited' means restricted in quantity. D: 'Sparse' means thinly scattered."
+}
+
+{
+"question": "What is the synonym for 'Austere'?",
+"options": {"A": "Opulent", "B": "Simple", "C": "Lavish", "D": "Gaudy"},
+"correctAnswer": "B",
+"explanation": "A: 'Opulent' means ostentatiously rich and luxurious. B: 'Simple' means plain or basic. C: 'Lavish' means extravagant. D: 'Gaudy' means excessively bright and showy, typically in a tasteless way."
+}
+
+{
+"question": "What is the synonym for 'Conundrum'?",
+"options": {"A": "Solution", "B": "Enigma", "C": "Clarity", "D": "Simplicity"},
+"correctAnswer": "B",
+"explanation": "A: 'Solution' means the answer to a problem. B: 'Enigma' means a mysterious or puzzling situation. C: 'Clarity' means clearness. D: 'Simplicity' means the state of being simple."
+}
+
+{
+"question": "What is the synonym for 'Mitigate'?",
+"options": {"A": "Aggravate", "B": "Alleviate", "C": "Intensify", "D": "Exacerbate"},
+"correctAnswer": "B",
+"explanation": "A: 'Aggravate' means to make a situation worse. B: 'Alleviate' means to make a situation more bearable. C: 'Intensify' means to make more intense. D: 'Exacerbate' means to make a situation more severe."
+}
+
+{
+"question": "What is the synonym for 'Precarious'?",
+"options": {"A": "Secure", "B": "Stable", "C": "Perilous", "D": "Certain"},
+"correctAnswer": "C",
+"explanation": "A: 'Secure' means free from danger or risk. B: 'Stable' means firmly established. C: 'Perilous' means full of danger or risk. D: 'Certain' means known for sure."
+}
+
+{
+"question": "What is the synonym for 'Ubiquitous'?",
+"options": {"A": "Scarce", "B": "Omnipresent", "C": "Limited", "D": "Sparse"},
+"correctAnswer": "B",
+"explanation": "A: 'Scarce' means in short supply. B: 'Omnipresent' means everywhere at the same time. C: 'Limited' means restricted in quantity. D: 'Sparse' means thinly scattered."
+}
+
+{
+"question": "What is the synonym for 'Sycophant'?",
+"options": {"A": "Flatterer", "B": "Rebel", "C": "Maverick", "D": "Contrarian"},
+"correctAnswer": "A",
+"explanation": "A: 'Flatterer' means a person who lavishes excessive praise or admiration. B: 'Rebel' means a person who resists authority or control. C: 'Maverick' means an independent-minded person. D: 'Contrarian' means a person who opposes or rejects popular opinion."
+}
+
+{
+"question": "What is the synonym for 'Pernicious'?",
+"options": {"A": "Harmless", "B": "Benevolent", "C": "Innocuous", "D": "Malevolent"},
+"correctAnswer": "D",
+"explanation": "A: 'Harmless' means not causing harm. B: 'Benevolent' means showing kindness and goodwill. C: 'Innocuous' means not harmful or offensive. D: 'Malevolent' means having or showing a wish to do evil to others."
+}
+
+{
+"question": "What is the synonym for 'Indigenous'?",
+"options": {"A": "Foreign", "B": "Native", "C": "Alien", "D": "Exotic"},
+"correctAnswer": "B",
+"explanation": "A: 'Foreign' means from another country. B: 'Native' means originating or produced in a particular place. C: 'Alien' means belonging to a foreign country or nation. D: 'Exotic' means attractive or striking because it is unusual or different from what is familiar."
+}
+
+
+{
+"question": "What is the synonym for 'Mellifluous'?",
+"options": {"A": "Harsh", "B": "Melodious", "C": "Jarring", "D": "Grating"},
+"correctAnswer": "B",
+"explanation": "A: 'Harsh' means unpleasantly rough or jarring to the senses. B: 'Melodious' means pleasant-sounding. C: 'Jarring' means incongruous or harsh in sound. D: 'Grating' means irritating or unpleasant to the senses."
+}
+
+{
+"question": "What is the synonym for 'Sycophant'?",
+"options": {"A": "Flatterer", "B": "Rebel", "C": "Maverick", "D": "Contrarian"},
+"correctAnswer": "A",
+"explanation": "A: 'Flatterer' means a person who lavishes excessive praise or admiration. B: 'Rebel' means a person who resists authority or control. C: 'Maverick' means an independent-minded person. D: 'Contrarian' means a person who opposes or rejects popular opinion."
+}
+
+{
+"question": "What is the synonym for 'Ephemeral'?",
+"options": {"A": "Perpetual", "B": "Transient", "C": "Enduring", "D": "Permanent"},
+"correctAnswer": "B",
+"explanation": "A: 'Perpetual' means lasting forever. B: 'Transient' means lasting only for a short time. C: 'Enduring' means lasting over a long time. D: 'Permanent' means lasting or intended to last indefinitely."
+}
+
+{
+"question": "What is the synonym for 'Pernicious'?",
+"options": {"A": "Harmless", "B": "Benevolent", "C": "Innocuous", "D": "Malevolent"},
+"correctAnswer": "D",
+"explanation": "A: 'Harmless' means not causing harm. B: 'Benevolent' means showing kindness and goodwill. C: 'Innocuous' means not harmful or offensive. D: 'Malevolent' means having or showing a wish to do evil to others."
+}
+
+{
+"question": "What is the synonym for 'Ineffable'?",
+"options": {"A": "Expressive", "B": "Indescribable", "C": "Articulate", "D": "Eloquent"},
+"correctAnswer": "B",
+"explanation": "A: 'Expressive' means effectively conveying thought or feeling. B: 'Indescribable' means too extraordinary or extreme to be expressed in words. C: 'Articulate' means expressing oneself clearly and effectively. D: 'Eloquent' means fluent or persuasive in speaking or writing."
+}
+
+{
+"question": "What is the synonym for 'Nefarious'?",
+"options": {"A": "Virtuous", "B": "Wicked", "C": "Righteous", "D": "Moral"},
+"correctAnswer": "B",
+"explanation": "A: 'Virtuous' means having high moral standards. B: 'Wicked' means morally wrong or evil. C: 'Righteous' means morally right or justifiable. D: 'Moral' means concerned with the principles of right and wrong behavior."
+}
+
+{
+"question": "What is the synonym for 'Ineffable'?",
+"options": {"A": "Expressive", "B": "Indescribable", "C": "Articulate", "D": "Eloquent"},
+"correctAnswer": "B",
+"explanation": "A: 'Expressive' means effectively conveying thought or feeling. B: 'Indescribable' means too extraordinary or extreme to be expressed in words. C: 'Articulate' means expressing oneself clearly and effectively. D: 'Eloquent' means fluent or persuasive in speaking or writing."
+}
+
+{
+"question": "What is the synonym for 'Esoteric'?",
+"options": {"A": "Exoteric", "B": "Common", "C": "Profound", "D": "Simple"},
+"correctAnswer": "C",
+"explanation": "A: 'Exoteric' means intended for or likely to be understood by the general public. B: 'Common' means occurring or appearing frequently. C: 'Profound' means having deep meaning or significance. D: 'Simple' means easily understood or done; presenting no difficulty."
+}
+
+{
+"question": "What is the synonym for 'Cacophony'?",
+"options": {"A": "Harmony", "B": "Discord", "C": "Melody", "D": "Symphony"},
+"correctAnswer": "B",
+"explanation": "A: 'Harmony' means a consistent, orderly, or pleasing arrangement of parts. B: 'Discord' means a harsh and disagreeable combination of sounds. C: 'Melody' means a sequence of single pitches that is musically satisfying. D: 'Symphony' means a long musical composition for full orchestra."
+}
+
+{
+"question": "What is the synonym for 'Benevolent'?",
+"options": {"A": "Malevolent", "B": "Altruistic", "C": "Malignant", "D": "Hostile"},
+"correctAnswer": "B",
+"explanation": "A: 'Malevolent' means having or showing a wish to do evil to others. B: 'Altruistic' means showing a selfless concern for the well-being of others. C: 'Malignant' means evil in nature or effect. D: 'Hostile' means unfriendly and antagonistic."
+}
+
+{
+"question": "What is the synonym for 'Exacerbate'?",
+"options": {"A": "Alleviate", "B": "Intensify", "C": "Mitigate", "D": "Ameliorate"},
+"correctAnswer": "B",
+"explanation": "A: 'Alleviate' means to make a situation more bearable. B: 'Intensify' means to make more intense. C: 'Mitigate' means to make less severe or painful. D: 'Ameliorate' means to make a situation better or more tolerable."
+}
+
+{
+"question": "What is the synonym for 'Amiable'?",
+"options": {"A": "Hostile", "B": "Genial", "C": "Unfriendly", "D": "Aloof"},
+"correctAnswer": "B",
+"explanation": "A: 'Hostile' means unfriendly and antagonistic. B: 'Genial' means friendly and cheerful. C: 'Unfriendly' means not disposed to friendship or friendliness. D: 'Aloof' means not friendly or forthcoming; cool and distant."
+}
+
+{
+"question": "What is the synonym for 'Hypocrite'?",
+"options": {"A": "Sincere", "B": "Genuine", "C": "Authentic", "D": "Phony"},
+"correctAnswer": "D",
+"explanation": "A: 'Sincere' means free from pretense or deceit; truthful and straightforward. B: 'Genuine' means truly what something is said to be; authentic. C: 'Authentic' means of undisputed origin; genuine. D: 'Phony' means not genuine or real; fraudulent."
+}
+
+{
+"question": "What is the synonym for 'Cacophony'?",
+"options": {"A": "Harmony", "B": "Discord", "C": "Melody", "D": "Symphony"},
+"correctAnswer": "B",
+"explanation": "A: 'Harmony' means a consistent, orderly, or pleasing arrangement of parts. B: 'Discord' means a harsh and disagreeable combination of sounds. C: 'Melody' means a sequence of single pitches that is musically satisfying. D: 'Symphony' means a long musical composition for full orchestra."
+}
+
+{
+"question": "What is the synonym for 'Nefarious'?",
+"options": {"A": "Virtuous", "B": "Wicked", "C": "Righteous", "D": "Moral"},
+"correctAnswer": "B",
+"explanation": "A: 'Virtuous' means having high moral standards. B: 'Wicked' means morally wrong or evil. C: 'Righteous' means morally right or justifiable. D: 'Moral' means concerned with the principles of right and wrong behavior."
+}

@@ -160,17 +160,19 @@ public class User extends DatabaseConnection {
     }
 
     public void updateScore(int bonus) {
+        System.out.println("Old TotalScore = " + this.score + ". Bonus = "
+                + bonus + ". New TotalScore = " + (this.score + bonus));
         this.score += bonus;
 
-        final String sql_query = "UPDATE user_account SET score = ? WHERE username = ?;";
+        final String sql_query = "UPDATE user_account SET score = ? WHERE accountID = ?;";
 
         try {
             PreparedStatement p = databaseLink.prepareStatement(sql_query);
             p.setInt(1, this.score);
-            p.setString(2, userName);
+            p.setInt(2, id);
 
             try {
-                p.executeQuery();
+                p.executeUpdate();
             } finally {
                 DatabaseConnection.close(p);
             }
@@ -178,5 +180,64 @@ public class User extends DatabaseConnection {
             e.printStackTrace();
         }
     }
+    public void updateScoreTopic(String column, int newScore) {
+        int oldScore;
+        // get old score from mysql database
+        final String sql_queryGetOldScore = "SELECT " + column + " FROM user_score WHERE accountID = " + id + ";";
+        // execute query
+        try {
+            PreparedStatement p = databaseLink.prepareStatement(sql_queryGetOldScore);
+            try {
+                ResultSet r = p.executeQuery();
+                try {
+                    if (r.next()) {
+                        oldScore = r.getInt(column);
+                        System.out.println("Old Score of " + column + " = " + oldScore);
+                        // update new score
+                        if (newScore > oldScore) {
+                            System.out.println("New score is higher than old score! Can update!");
+                            updateScore(newScore - oldScore);
+                            final String sql_queryUpdateNewScore = "UPDATE user_score SET " + column + " = ? WHERE accountID = ?;";
+                            PreparedStatement p2 = databaseLink.prepareStatement(sql_queryUpdateNewScore);
+                            p2.setInt(1, newScore);
+                            p2.setInt(2, id);
+                            p2.executeUpdate();
 
+                        }
+                    }
+                } finally {
+                    DatabaseConnection.close(r);
+                }
+            } finally {
+                DatabaseConnection.close(p);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+    }
+
+    public int getHighestScore(String column) {
+        int highestScore = 0;
+        if (score == 0) return 0;
+        final String sql_query = "SELECT " + column + " FROM user_score WHERE accountID = " + id + ";";
+        try {
+            PreparedStatement p = databaseLink.prepareStatement(sql_query);
+            try {
+                ResultSet r = p.executeQuery();
+                try {
+                    if (r.next()) {
+                        highestScore = r.getInt(column);
+                    }
+                } finally {
+                    DatabaseConnection.close(r);
+                }
+            } finally {
+                DatabaseConnection.close(p);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+    }
+        return highestScore;
+    }
 }

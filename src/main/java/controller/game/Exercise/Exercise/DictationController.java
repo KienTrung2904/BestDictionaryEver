@@ -1,0 +1,126 @@
+package controller.game.Exercise.Exercise;
+
+import com.example.bestdictionaryever.TextToSpeech;
+import controller.TopicWord.backend.TopicWords.DetailedTopicWord.DetailedTopicWord;
+import controller.game.Exercise.Utils.ExerciseController;
+import controller.game.backend.Exercises.Dictation.Dictation;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
+
+import static controller.TopicWord.backend.TopicWords.DetailedTopicWord.DetailTopicWordLoad.globalFullDetailedTopicWordMap;
+
+public class DictationController extends ExerciseController<Dictation> implements Initializable {
+
+    @FXML
+    private Label sentenceWithBlank;
+    @FXML
+    private TextField answerTextField;
+    @FXML
+    private Button submitButton;
+    @FXML
+    private ImageView speaker;
+    @FXML
+    private AnchorPane listeningPane;
+
+    private TextToSpeech textToSpeech;
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        listeningPane.setVisible(true);
+        finishPane.setVisible(false);
+        setExerciseList(getDictationExerciseList());
+        randomizeExerciseList();
+        setNextQuestion();
+        submitButton.setOnAction(actionEvent -> {
+            userAnswer = answerTextField.getText().toLowerCase();
+            try {
+                checkAnswer(null, currentExercise.getSentence() + "\n" + currentExercise.getTranslation());
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        speaker.setOnMouseClicked(mouseEvent -> {
+            textToSpeech = new TextToSpeech();
+            textToSpeech.speak(currentExercise.getSentence());
+        });
+    }
+
+    @Override
+    public void setNextQuestion() {
+        if (health == -1 || questionIndex == QUESTIONNUMBER) {
+            playCongratulationsEffect();
+            finishGameScreen();
+        }
+        if (health == 3) {
+            blood1.setVisible(true);
+            blood2.setVisible(true);
+            blood3.setVisible(true);
+        }
+        gameIcon.setImage(exerciseIcon.getImage());
+        showScore_Ques();
+        answerTextField.setText("");
+        if (questionIndex < QUESTIONNUMBER) {
+            currentExercise = exerciseList.get(questionIndex);
+            sentenceWithBlank.setText(currentExercise.getQuestion());
+            questionIndexLabel.setText("Question " + (questionIndex + 1) +  "/" + QUESTIONNUMBER);
+        }
+        System.out.println("Question: " + currentExercise.getQuestion() + " -- Answer: " + currentExercise.getWordBlank());
+    }
+
+    public void showHighestScore() {
+        int currentHighestScore = getHighestScore("Dictation");
+        if (score > currentHighestScore) {
+            UpdateScore("Dictation", score);
+            highestScoreLabel.setText("Your highest Score: " + score);
+        } else {
+            highestScoreLabel.setText("Your highest Score: " + currentHighestScore);
+        }
+    }
+    public static ArrayList<Dictation> getDictationExerciseList() {
+        ArrayList<Dictation> dicList = new ArrayList<>();
+
+        ArrayList<DetailedTopicWord> detailedTopicWords = new ArrayList<>();
+        for (String topicName : globalFullDetailedTopicWordMap.keySet()) {
+            detailedTopicWords = globalFullDetailedTopicWordMap.get(topicName);
+            for (DetailedTopicWord detailedTopicWord : detailedTopicWords) {
+                if (detailedTopicWord.getQuiz().getExerciseType().contains("Dictation")) {
+                    Dictation exercise = (Dictation) detailedTopicWord.getQuiz().getExercise();
+                    dicList.add(exercise);
+                }
+            }
+        }
+        return dicList;
+    }
+    @Override
+    public void backToChooseGame() {
+        alertInformation("Back to choose game", "Are you sure you want to back to choose game?\n Your score will be saved!").showAndWait();
+        if (alert.getResult().getText().equals("OK")) {
+            UpdateScore("Dictation", score);
+            chooseGame();
+        }
+    }
+    @Override
+    public void finishGameScreen() {
+        finishPane.setVisible(true);
+        listeningPane.setVisible(false);
+        finishGameScoreLabel.setText("Score: " + score);
+        finishGameHighestScoreLabel.setText("Your highest score: " + getHighestScore("Dictation"));
+    }
+    @Override
+    public void playAgain() {
+        super.listening();
+    }
+    @Override
+    public void quit() {
+        super.backToChooseGame();
+    }
+
+}

@@ -1,0 +1,46 @@
+.background{
+    -fx-background-color: linear-gradient(to bottom right, rgba(255, 150, 140, 0.7) 0%,
+    rgba(255, 150, 140, 0.7) 8.01%, rgba(255, 77, 86, 0.7) 56.95%);
+}
+.scoreLabel {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 28.44;
+    -fx-font-weight: 600;
+    -fx-line-height: 34.67;
+}
+.highestScoreLabel {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 19.91;
+    -fx-font-weight: 500;
+    -fx-line-height: 24.27;
+}
+.playAgainButton {
+    -fx-background-color: linear-gradient(to bottom right, #FF968C 0%, #FF968C 8.01%, #FF4D56 56.95%);
+    -fx-background-radius: 15;
+    -fx-border-width: 0.71;
+    -fx-text-fill: rgba(255, 255, 255, 1);
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 14.22;
+    -fx-font-weight: 600;
+    -fx-line-height: 17.34;
+}
+.playAgainButton:hover {
+    -fx-cursor: hand;
+    -fx-font-size: 17;
+    -fx-background-color: linear-gradient(to bottom right, #FFB2A5 0%, #FFB2A5 8.01%, #FF6E70 56.95%);
+}
+.quit {
+    -fx-background-color: rgba(217, 217, 217, 1);
+    -fx-background-radius: 15;
+    -fx-border-width: 0.71;
+    -fx-text-fill: rgba(0, 0, 0, 0.8);
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 14.22;
+    -fx-font-weight: 600;
+    -fx-line-height: 17.34;
+}
+.quit:hover {
+    -fx-cursor: hand;
+    -fx-font-size: 17;
+    -fx-background-color: #E8D3C9;
+}

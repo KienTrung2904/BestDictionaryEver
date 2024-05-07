@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" styleClass="background" stylesheets="@../CSS/MultipleChoice.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.game.Exercise.Exercise.MultipleChoiceController">
+   <children>
+      <AnchorPane fx:id="topicPane" visible="false" AnchorPane.bottomAnchor="-7.399999999999977" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.19999999999999996">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#backToChooseGame" pickOnBounds="true" preserveRatio="true" styleClass="imageView">
+               <image>
+                  <Image url="@../Image/back2.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="AnimalButton" contentDisplay="TOP" layoutX="91.0" layoutY="213.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="144.0" styleClass="topicButton" text="Animal" />
+            <Button fx:id="BodyButton" layoutX="322.0" layoutY="213.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="144.0" styleClass="topicButton" text="Body" />
+            <Button fx:id="FoodButton" layoutX="563.0" layoutY="213.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="144.0" styleClass="topicButton" text="Food" />
+            <Button fx:id="SportsButton" layoutX="803.0" layoutY="213.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="144.0" styleClass="topicButton" text="Sports" />
+            <Button fx:id="FashionButton" layoutX="91.0" layoutY="438.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="144.0" styleClass="topicButton" text="Fashion" />
+            <Button fx:id="WeatherButton" layoutX="322.0" layoutY="438.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="144.0" styleClass="topicButton" text="Weather" />
+            <Button fx:id="BusinessButton" layoutX="563.0" layoutY="438.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="144.0" styleClass="topicButton" text="Business" />
+            <Button fx:id="PlantsButton" layoutX="803.0" layoutY="438.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="144.0" styleClass="topicButton" text="Plants" />
+            <ImageView fitHeight="85.0" fitWidth="197.0" layoutX="413.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/chooseYourText.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="exercisePane" layoutX="-0.19999999999999996" prefHeight="640.0" prefWidth="1024.0" AnchorPane.bottomAnchor="-7.2000000000000455" AnchorPane.leftAnchor="-0.19999999999999996" AnchorPane.rightAnchor="0.20000000000004547" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#backToChooseTopic" pickOnBounds="true" preserveRatio="true" styleClass="imageView">
+               <image>
+                  <Image url="@../Image/back2.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="yourTurnLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="82.0" layoutY="56.0" prefHeight="41.96" prefWidth="240.36" styleClass="smallLabel" text="Your turn:" wrapText="true" />
+            <ImageView fx:id="blood1" fitHeight="39.0" fitWidth="51.0" layoutX="135.62" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/carrot.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="blood2" fitHeight="39.0" fitWidth="51.0" layoutX="184.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/carrot.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="blood3" fitHeight="39.0" fitWidth="51.0" layoutX="233.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/carrot.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="questionIndexLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="392.0" layoutY="63.0" prefHeight="47.0" prefWidth="232.0" styleClass="questionIndexLabel" text="Question 1/10" wrapText="true" />
+            <Label fx:id="highestScoreLabel" alignment="CENTER" layoutX="721.0" layoutY="56.0" prefHeight="41.96" prefWidth="240.36" styleClass="smallLabel" text="Your highest score: 1" />
+            <Label fx:id="scoreLabel" alignment="CENTER" layoutX="719.0" layoutY="104.0" prefHeight="41.96" prefWidth="240.36" styleClass="smallLabel" text="Score: 0" />
+            <Label fx:id="questionLabel" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="197.0" layoutY="164.0" prefHeight="141.51" prefWidth="630.47" styleClass="sentenceWithBlankLabel" wrapText="true" />
+            <ImageView fx:id="gameIcon" fitHeight="156.56" fitWidth="178.56" layoutX="677.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/gameIcon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="optionA" alignment="CENTER" layoutX="183.0" layoutY="343.36" mnemonicParsing="false" prefHeight="96.71" prefWidth="315.02" styleClass="optionButton" text="A. Invertebrate" />
+            <Button fx:id="optionC" alignment="CENTER" layoutX="183.0" layoutY="461.4" mnemonicParsing="false" prefHeight="96.71" prefWidth="315.02" styleClass="optionButton" text="C. Fish" />
+            <Button fx:id="optionB" alignment="CENTER" layoutX="525.76" layoutY="343.36" mnemonicParsing="false" prefHeight="96.71" prefWidth="315.02" styleClass="optionButton" text="B. Reptile" />
+            <Button fx:id="optionD" alignment="CENTER" layoutX="525.76" layoutY="461.4" mnemonicParsing="false" prefHeight="96.71" prefWidth="315.02" styleClass="optionButton" text="D. Mammal" />
+            <Button fx:id="checkButton" layoutX="482.0" layoutY="587.0" mnemonicParsing="false" onMouseClicked="#clickCheck" styleClass="checkButton">
+               <graphic>
+                  <ImageView fitHeight="38.08" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" styleClass="imageView">
+                     <image>
+                        <Image url="@../Image/check.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="question" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="207.0" layoutY="175.0" prefHeight="125.0" prefWidth="486.0" styleClass="sentenceWithBlankLabel" text="What is a synonym for ‘Vertebrate’" wrapText="true" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+      <AnchorPane fx:id="finishPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" styleClass="background" stylesheets="@../CSS/FinishGame.css" visible="false">
+         <children>
+            <Label fx:id="finishGameScoreLabel" alignment="CENTER" layoutX="58.0" layoutY="56.0" prefHeight="34.0" prefWidth="312.0" styleClass="scoreLabel" text="Score: 10" />
+            <Label fx:id="finishGameHighestScoreLabel" alignment="CENTER" layoutX="58.0" layoutY="90.0" prefHeight="34.0" prefWidth="312.0" styleClass="highestScoreLabel" text="Your highest Score:  18" />
+            <AnchorPane layoutX="80.0" layoutY="162.0" prefHeight="413.16" prefWidth="864.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 21.33;">
+               <children>
+                  <ImageView fitHeight="413.0" fitWidth="482.0" layoutX="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/finishGameIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="613.0" layoutY="143.0" mnemonicParsing="false" onMouseClicked="#playAgain" prefHeight="54.04" prefWidth="166.4" styleClass="playAgainButton" text="Play again" />
+                  <Button layoutX="613.0" layoutY="209.0" mnemonicParsing="false" onMouseClicked="#quit" prefHeight="54.04" prefWidth="166.4" styleClass="quit" text="Quit" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

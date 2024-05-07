@@ -1,0 +1,119 @@
+.background {
+    -fx-background-color: #F0F0F0;
+}
+.choose-your_label{
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: rgba(0, 0, 0, 0.8);
+    -fx-font-size: 24.89px;
+}
+.topic-Label {
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 100%, #FF968C 0%, #FF968C 8.01%, #FF4D56 56.95%);
+    -fx-font-size: 54.76;
+}
+.optionButton {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 16.36;
+    -fx-background-radius: 10.67px;
+    -fx-background-color: white;
+}
+.optionButton:hover {
+    -fx-cursor: hand;
+    -fx-border-radius: 15px;
+    -fx-border-color: rgba(255, 104, 104, 1);
+    -fx-border-width: 3px;
+}
+.choosingButton {
+    -fx-border-color: rgba(255, 104, 104, 1);
+    -fx-border-width: 3px;
+    -fx-border-radius: 10.67;
+}
+.correctOption {
+    -fx-border-color: transparent;
+    -fx-background-color: rgba(112, 255, 88, 1);
+;
+}
+.incorrectOption {
+    -fx-border-color: transparent;
+    -fx-background-color: rgba(255, 0, 0, 1);
+}
+.bigLabel {
+    -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );
+    // color of text is turtle green
+    -fx-text-fill: #8B4726;
+    -fx-wrap-text: true;
+    -fx-background-radius: 10px;
+    -fx-font-family: Helvetica;
+    -fx-font-size: 30px;
+}
+.topicLabel {
+    -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );
+    -fx-text-fill: #8B4726;
+    -fx-wrap-text: true;
+    -fx-background-radius: 10px;
+    -fx-font-family: Helvetica;
+    -fx-font-size: 60px;
+
+}
+.smallLabel {
+    -fx-font-family: "Times New Roman";
+    -fx-background-color: transparent;
+    -fx-text-fill: rgba(255, 77, 86, 1);
+    -fx-font-weight: bold;
+    -fx-wrap-text: true;
+    -fx-background-radius: 10px;
+    -fx-font-size: 17.78px;
+}
+.questionIndexLabel {
+    -fx-font-family: "Times New Roman";
+    -fx-font-weight: bold;
+    -fx-background-color: transparent;
+    -fx-text-fill: rgba(0, 0, 0, 0.8);
+    -fx-font-size: 25;
+}
+.smallButton {
+    -fx-background-color: linear-gradient(to bottom right, #87C4FF , #61B8FF );
+    -fx-cursor: hand;
+    -fx-background-radius: 7px;
+}
+.smallButton:hover {
+    -fx-background-color: #bad7f2;
+}
+.topicButton{
+    -fx-background-color: white;
+    -fx-cursor: hand;
+    -fx-text-fill: rgba(0, 0, 0, 0.8);
+    -fx-font-size: 20px;
+    -fx-font-family: "Times New Roman";
+    -fx-background-radius: 21.33;
+    /*-fx-border-radius: 15px;*/
+    -fx-alignment: center;
+}
+.topicButton:hover{
+    -fx-border-radius: 21.33;
+    -fx-border-color: rgba(255, 104, 104, 1);
+    -fx-border-width: 3px;
+}
+.checkButton {
+    -fx-background-color: transparent;
+}
+.checkButton:hover {
+    -fx-cursor: hand;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+.imageView:hover {
+    -fx-cursor: hand;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+.sentenceWithBlankLabel {
+    -fx-background-color: rgba(255, 255, 255, 1);
+    -fx-font-family: "Times New Roman";
+    -fx-text-fill: rgba(0, 0, 0, 0.8);
+    -fx-background-radius: 10.67;
+    -fx-font-size: 18.36;
+    -fx-font-weight: 600;
+    -fx-line-height: 19.94;
+    -fx-text-align: center;
+}
