@@ -66,6 +66,7 @@ public class DictationController extends ExerciseController<Dictation> implement
         }
         gameIcon.setImage(exerciseIcon.getImage());
         showScore_Ques();
+        showHighestScore();
         answerTextField.setText("");
         if (questionIndex < QUESTIONNUMBER) {
             currentExercise = exerciseList.get(questionIndex);

@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cf5bda5-935f-4ae4-83fd-5183a788e5cd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Word/Prepare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bestdictionaryever/Word/Prepare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/library/editControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/library/editControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/library/searchControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/library/searchControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/library.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/library.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hs_err_pid5880.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/TopicWord.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/bestdictionaryever/Game/FXML/TopicWord.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +68,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Application.executor": "Run",
-    "git-widget-placeholder": "Merging master",
+    "git-widget-placeholder": "master",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
@@ -90,6 +89,26 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.bestdictionaryever" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.bestdictionaryever.Application" />
+      <module name="BestDictionaryEver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.bestdictionaryever.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
