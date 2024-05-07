@@ -15,7 +15,7 @@
     <children>
         <AnchorPane focusTraversable="true" layoutX="247.0" layoutY="113.0" prefHeight="471.0" prefWidth="564.0" styleClass="innerBackground" stylesheets="@sign-in.css">
             <children>
-                <Button fx:id="registerButton" layoutX="217.0" layoutY="402.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="44.0" prefWidth="133.0" stylesheets="@sign-in.css" text="Sign up">
+                <Button fx:id="registerButton" layoutX="217.0" layoutY="402.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="44.0" prefWidth="133.0" style="-fx-cursor: hand;" stylesheets="@sign-in.css" text="Sign up">
                     <styleClass>
                         <String fx:value="button" />
                         <String fx:value="signInButton" />

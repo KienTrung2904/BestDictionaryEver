@@ -137,6 +137,7 @@ public class MultipleChoiceController extends ExerciseController<MultipleChoice>
     }
     private void setCurrentTopic(String topic) {
         currentTopic = topic;
+        userAnswer = null;
         setExerciseList(getMultipleChoiceExerciseListWithTopic(currentTopic));
         randomizeExerciseList();
         totalQuestions = exerciseList.size();

@@ -53,10 +53,34 @@ CREATE TABLE `user_account` (
 --
 -- Dumping data for table `user_account`
 --
+CREATE TABLE `trungdic`.`user_score` (
+  `accountID` INT NOT NULL AUTO_INCREMENT,
+  `Animal` INT NOT NULL DEFAULT 0,
+  `Body` INT NOT NULL DEFAULT 0,
+  `Food` INT NOT NULL DEFAULT 0,
+  `Sports` INT NOT NULL DEFAULT 0,
+  `Fashion` INT NOT NULL DEFAULT 0,
+  `Weather` INT NOT NULL DEFAULT 0,
+  `Business` INT NOT NULL DEFAULT 0,
+  `Plants` INT NOT NULL DEFAULT 0,
+  `Dictation` INT NOT NULL DEFAULT 0,
+  PRIMARY KEY (`accountID`));
 
+USE trungdic;
+DELIMITER //
+
+CREATE TRIGGER after_user_account_insert
+AFTER INSERT ON user_account
+FOR EACH ROW
+BEGIN
+    -- Chèn một hàng mới vào bảng user_score với accountID giống như hàng mới trong user_account
+    INSERT INTO user_score (accountID, Animal, Body, Food, Fashion, Sports, Weather, Business, Plants, Dictation)
+    VALUES (NEW.accountID, 0, 0, 0, 0, 0, 0, 0, 0, 0); -- Giá trị mặc định là 0
+END //
+
+DELIMITER ;
 LOCK TABLES `user_account` WRITE;
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-INSERT INTO `user_account` VALUES (1,'1','123','123',NULL),(6,'chau','chauanh123','123',NULL),(7,'me','meme123','123',NULL),(8,'','','',NULL),(12,'Dang Chau Anh','chauanh','chauanh',NULL),(13,'','c','',NULL),(31,'chau anh','chauchau','123',NULL),(32,'chauanhdang','chauanhdang','1234',NULL),(33,'Dang Chau Anh','chaua','123',NULL),(34,'Pham Mai Anh','maianh123','123',NULL),(35,'chauanh','chauanh241','123',NULL),(36,'Nguyễn Kiên Trung','trung29','29042004',NULL);
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
 UNLOCK TABLES;
 -- Dump completed on 2024-04-12 15:54:59

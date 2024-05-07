@@ -58,6 +58,7 @@
 }
 
 .leftPanelButton:hover {
+    -fx-cursor: hand;
     -fx-background-color: rgba(240, 240, 240, 1);
     -fx-background-radius: 13;
     -fx-border-radius: 13;
@@ -185,7 +186,7 @@
     -fx-text-fill: rgba(28, 27, 27, 0.6);
 }
 
-.
+
 
 
 

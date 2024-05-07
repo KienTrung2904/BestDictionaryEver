@@ -104,6 +104,7 @@ public class DictationController extends ExerciseController<Dictation> implement
         alertInformation("Back to choose game", "Are you sure you want to back to choose game?\n Your score will be saved!").showAndWait();
         if (alert.getResult().getText().equals("OK")) {
             UpdateScore("Dictation", score);
+            userAnswer = null;
             chooseGame();
         }
     }

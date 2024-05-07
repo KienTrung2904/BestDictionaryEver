@@ -15,7 +15,6 @@ public class Application extends javafx.application.Application {
          stage.setTitle("Dictionary");
          stage.setScene(scene);
          stage.show();
-
          FXMLControl.setPrimaryStage(stage);
          DatabaseConnection.initialize();
      }

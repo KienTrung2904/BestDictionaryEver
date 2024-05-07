@@ -9,24 +9,16 @@
 
 <AnchorPane prefHeight="640.0" prefWidth="1024.0" styleClass="backGround" stylesheets="@translation-page.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.translation.TranslationPage">
     <children>
-        <Button fx:id="backButton" layoutX="842.0" layoutY="190.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="55.0" prefWidth="130.0" styleClass="backButton" stylesheets="@translation-page.css" text="      Back" />
+        <Button fx:id="backButton" layoutX="842.0" layoutY="190.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="55.0" prefWidth="130.0" style="-fx-cursor: hand;" styleClass="backButton" stylesheets="@translation-page.css" text="      Back" />
 
         <Label fx:id="inputLang" layoutX="70.0" layoutY="55.0" styleClass="translationLabel" stylesheets="@translation-page.css" text="English" />
 
         <Label fx:id="outputLang" layoutX="70.0" layoutY="363" styleClass="translationLabel" stylesheets="@translation-page.css" text="Vietnamese" />
 
-        <TextArea fx:id="inputText"
-                  layoutX="65" layoutY="85"
-                  wrapText="true"
-                  prefHeight="180" prefWidth="703"
-                  promptText="Type something..."
-                  styleClass="inputTextArea" />
+        <TextArea fx:id="inputText" layoutX="65" layoutY="85" prefHeight="180" prefWidth="703" promptText="Type something..." styleClass="inputTextArea" wrapText="true" />
 
 
-        <TextArea fx:id="outputText"
-                  layoutX="65" layoutY="393"
-                  prefHeight="180" prefWidth="703"
-                  styleClass="inputTextArea" />
+        <TextArea fx:id="outputText" layoutX="65" layoutY="393" prefHeight="180" prefWidth="703" styleClass="inputTextArea" />
 
 
 
@@ -40,13 +32,13 @@
                 <Image url="@Login/Image/arrow-narrow-left.png" />
             </image>
         </ImageView>
-        <Button layoutX="842.0" layoutY="104" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" styleClass="backButton" stylesheets="@translation-page.css" text="       Help" />
+        <Button layoutX="842.0" layoutY="104" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-cursor: hand;" styleClass="backButton" stylesheets="@translation-page.css" text="       Help" />
         <ImageView fitHeight="28.09" fitWidth="25.38" layoutX="858.92" layoutY="116.87" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@Login/Image/question-mark-circle.png" />
             </image>
         </ImageView>
-        <Button fx:id="listenButton" layoutX="842.0" layoutY="515.0" mnemonicParsing="false" onAction="#listenButtonOnAction" prefHeight="55.0" prefWidth="130.0" styleClass="backButton" stylesheets="@translation-page.css" text="        Listen" />
+        <Button fx:id="listenButton" layoutX="842.0" layoutY="515.0" mnemonicParsing="false" onAction="#listenButtonOnAction" prefHeight="55.0" prefWidth="130.0" style="-fx-cursor: hand;" styleClass="backButton" stylesheets="@translation-page.css" text="        Listen" />
         <ImageView fitHeight="25.74" fitWidth="24.87" layoutX="859.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@Login/Image/volume-up.png" />
@@ -62,7 +54,7 @@
                 <Image url="@Login/Image/switch-vertical.png" />
             </image>
         </ImageView>
-        <Button fx:id="tranButton" layoutX="504.0" layoutY="306.0" minHeight="29.0" mnemonicParsing="false" onAction="#tranButtonOnAction" prefWidth="29.0" styleClass="transparent" stylesheets="@sign-up.css" />
-        <Button fx:id="switchButton" layoutX="330.0" layoutY="306.0" mnemonicParsing="false" onAction="#switchButtonOnAction" prefHeight="29.0" prefWidth="29.0" styleClass="transparent" stylesheets="@translation-page.css" />
+        <Button fx:id="tranButton" layoutX="504.0" layoutY="306.0" minHeight="29.0" mnemonicParsing="false" onAction="#tranButtonOnAction" prefWidth="29.0" style="-fx-cursor: hand;" styleClass="transparent" stylesheets="@sign-up.css" />
+        <Button fx:id="switchButton" layoutX="330.0" layoutY="306.0" mnemonicParsing="false" onAction="#switchButtonOnAction" prefHeight="29.0" prefWidth="29.0" style="-fx-cursor: hand;" styleClass="transparent" stylesheets="@translation-page.css" />
     </children>
 </AnchorPane>

@@ -51,7 +51,7 @@ public class DashboardControl extends ScreenControl {
     private static topicIntroduction topic;
 
 
-    private topicIntroduction topic;
+   // private topicIntroduction topic;
     @FXML
     private Button gameButton;
 
@@ -93,7 +93,7 @@ public class DashboardControl extends ScreenControl {
     }
 
     public void game () {
-        super.game();
+        super.chooseGame();
     }
 
     public void logOutButtonOnAction(ActionEvent actionEvent) {
