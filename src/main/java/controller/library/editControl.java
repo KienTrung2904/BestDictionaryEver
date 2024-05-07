@@ -36,10 +36,24 @@ public class editControl extends ScreenControl {
         part = wordExplain.entrySet().iterator().next().getKey();
         partOfSpeech.setText(part);
         ArrayList <String> s = new ArrayList<>(wordExplain.entrySet().iterator().next().getValue());
-        d = s.get(0);
-        e = s.get(1);
-        definition.setText(d.substring(2));
-        example.setText(e.substring(6));
+        if (!s.isEmpty()) {
+            d = s.get(0);
+            definition.setText(d.substring(2));
+            if (s.size() > 1) {
+                e = s.get(1);
+                example.setText(e.substring(6));
+            }
+            else {
+                example.setText(e);
+            }
+        }
+        else {
+            definition.setText(d);
+            example.setText(e);
+
+        }
+
+
     }
     public void remove() {
     }

@@ -145,6 +145,57 @@ public class Prepare extends DatabaseConnection {
         return false;
     }
 
+    public static boolean isEditWord(String target) {
+        final String sql_query = "SELECT * FROM userdictionary WHERE word = ? AND accountID = ?;";
+
+        try {
+            PreparedStatement p = databaseLink.prepareStatement(sql_query);
+            p.setString(1, target);
+            p.setInt(2, DatabaseConnection.getUser().getId());
+            try {
+                ResultSet r = p.executeQuery();
+
+                try {
+                    return r.next();
+                } finally {
+                    close(r);
+                }
+            } finally {
+                close(p);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+    public static boolean checkWordUserEdit(word word) {
+        String target = word.getWordTarget();
+        final String sql_query = "SELECT partOfSpeech, definition FROM userdictionary NATURAL JOIN userEdit WHERE accountID = ? AND word = ?;" ;
+
+        try {
+            PreparedStatement p = databaseLink.prepareStatement(sql_query);
+            p.setInt(1, DatabaseConnection.getUser().getId());
+            p.setString(2, target);
+
+            try {
+                ResultSet r = p.executeQuery();
+
+                try {
+                     return r.next();
+                } finally {
+                    close(r);
+                }
+            } finally {
+                close(p);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
     public static boolean getUserEdit(word word) {
         String target = word.getWordTarget();
         final String sql_query = "SELECT partOfSpeech, definition FROM userdictionary NATURAL JOIN userEdit WHERE accountID = ? AND word = ?;" ;
