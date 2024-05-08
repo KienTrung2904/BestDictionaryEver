@@ -55,7 +55,7 @@ Now let's take a closer look at some features:
 
 ## **Translating**
 
-![add_edit](https://github.com/KienTrung2904/BestDictionaryEver/assets/125575520/96e2d99f-a58f-41a3-a45c-1d82f4806858)
+![translate](https://github.com/KienTrung2904/BestDictionaryEver/assets/125575520/92462010-fadb-4164-9703-a8206ea71aad)
 - Users can translate long sentences or paragraphs by entering text into the text box, English to Vietnamese or vice versa.
 
 ## **Game**
